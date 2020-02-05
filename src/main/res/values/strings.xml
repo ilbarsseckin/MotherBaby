@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Mother</string>
+
+    <!--MAINMENU-->
+    <string name="Baby">BEBEK</string>
+    <string name="Mother">ANNE</string>
+    <string name="MyBaby">BEBEĞİM</string>
+    <string name="Options">SEÇENEKLER</string>
+
+    <!--OPTIONS-->
+    <string name="KgTakip">KG TAKİP</string>
+    <string name="IlacTakip">İLAÇ TAKİP</string>
+    <string name="TekmeSayar">TEKME SAYAR</string>
+    <string name="KasilmaSayar">KASILMA SAYAR</string>
+    <string name="Album">ALBÜM</string>
+    <string name="IhtiyacListesi">İHTİYAÇ LİSTESİ</string>
+    <string name="Ayarlar">AYARLAR</string>
+    <string name="SaglikTestleri">SAĞLIK TESTLERİ</string>
+    <string name="Isimler">İSİMLER</string>
+
+    <!--OPTIONS_SETTINGS-->
+    <string name="babyname">BEBEK ADI</string>
+    <string name="babykin">BEBEĞİN</string>
+    <string name="babysex">CİNSİYETİ</string>
+    <string name="savesetbtn">KAYDET</string>
+    <string name="mybabybirthdayrandom">BEBEĞİN TAHMİNİ DOĞUMU</string>
+    <string name="lastadet">SON ADET BAŞLANGIÇ GÜNÜ</string>
+    <string name="load_picture">Load Picture</string>
+
+
+</resources>

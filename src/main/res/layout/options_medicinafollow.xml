@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:fontFamily="serif"
+                    android:text="İLAÇ TAKİP"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="serif"
+                    android:hint="İLAÇ ADI"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/addtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="serif"
+                    android:hint="SAAT"
+                    android:padding="8dp" />
+
+                <Spinner
+                    android:id="@+id/actokswitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="serif"
+                    android:hint="AÇ/TOK"
+                    android:padding="8dp"
+                    android:textColor="#fff" />
+
+                <Spinner
+                    android:id="@+id/switchdurum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="serif"
+                    android:hint="ALARM DURUMU"
+                    android:padding="8dp"
+                    android:textColor="#fff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/clearbtn"
+                        android:layout_width="127dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TEMİZLE" />
+
+                    <Button
+                        android:id="@+id/BtnSave"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="serif"
+                        android:onClick="AddEmployee"
+                        android:text="EKLE" />
+
+                    <Button
+                        android:id="@+id/updatebtn"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:text="GÜNCELLE" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/List"
+                android:layout_width="match_parent"
+                android:layout_height="393dp"
+                android:layout_below="@+id/a"
+                android:divider="#8DB3E1"
+                android:dividerHeight="2dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

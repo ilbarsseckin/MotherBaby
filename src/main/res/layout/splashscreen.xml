@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/grey"
+    android:layout_height="match_parent">
+
+
+    <VideoView
+        android:id="@+id/vv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+    />
+
+    <TextView
+        android:layout_width="204dp"
+        android:layout_height="95dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="bottom|center"
+        android:drawableTop="@drawable/splashicon"
+        android:textSize="48dp" />
+
+</GridLayout>

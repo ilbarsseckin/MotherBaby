@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "267941008375",
+    "firebase_url": "https://mother-e387b.firebaseio.com",
+    "project_id": "mother-e387b",
+    "storage_bucket": "mother-e387b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267941008375:android:e29a8a241306ce2bf354f2",
+        "android_client_info": {
+          "package_name": "com.ilbarsseckinapp.mother"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267941008375-bpbuqdlsg47lnvi5gl9m3rol1e74i35g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ilbarsseckinapp.mother",
+            "certificate_hash": "9360bf45de2c0907349fec1ccf374fe39af831c0"
+          }
+        },
+        {
+          "client_id": "267941008375-hl1cpsnpe2a6kumej2p284vq3ut9g7dr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ilbarsseckinapp.mother",
+            "certificate_hash": "bfb485114dce935005b24ae4fe30bd45f18c1a3e"
+          }
+        },
+        {
+          "client_id": "267941008375-p0gkjne2jv3l3ciclk4cnaic762p9n13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNfujK97TLxRczONhPWVn3hCYDvzY1oa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267941008375-p0gkjne2jv3l3ciclk4cnaic762p9n13.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

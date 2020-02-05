@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/KgBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/KgTakip" />
+
+            <Button
+                android:id="@+id/Drugbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/IlacTakip" />
+
+            <Button
+                android:id="@+id/TekmeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TekmeSayar" />
+
+            <Button
+                android:id="@+id/KasilmaBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/KasilmaSayar" />
+
+            <Button
+                android:id="@+id/albumbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Album" />
+
+            <Button
+                android:id="@+id/ihtiyacbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/IhtiyacListesi" />
+
+            <Button
+                android:id="@+id/SetBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Ayarlar" />
+
+            <Button
+                android:id="@+id/SaglikTestBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SaglikTestleri" />
+
+            <Button
+                android:id="@+id/namebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Isimler" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
