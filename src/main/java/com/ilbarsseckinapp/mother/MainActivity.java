@@ -30,7 +30,7 @@ private  Options_Settings_Service settingsinfo;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("ELİS (DAYI)");
+        getSupportActionBar().setTitle("ELİS (DAYISI)");
 
         BabyDay=(TextView) findViewById(R.id.BabyDaytxt);
         PregnancyDay=(TextView) findViewById(R.id.PregnancyDaytxt);
