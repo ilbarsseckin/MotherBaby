@@ -32,8 +32,8 @@ private  Options_Settings_Service settingsinfo;
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("ELİS (DAYI)");
 
-
         //seckin
+
         BabyDay=(TextView) findViewById(R.id.BabyDaytxt);
         PregnancyDay=(TextView) findViewById(R.id.PregnancyDaytxt);
         BirthDay=(TextView)findViewById(R.id.BirthDaytxt);
