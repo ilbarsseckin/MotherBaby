@@ -32,8 +32,11 @@ private Button savebtn;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_settings);
-        getSupportActionBar().setTitle("ELİS (DAYI)");
 
+        Options_Settings_SqlLite info = new Options_Settings_SqlLite(this);
+        info.Info();
+        String getinfo= info.getBabyname();
+        getSupportActionBar().setTitle(getinfo +"-"+info.getBabyakraba());
 
         init();
         initData();

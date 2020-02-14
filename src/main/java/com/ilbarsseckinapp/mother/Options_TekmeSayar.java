@@ -1,30 +1,27 @@
 package com.ilbarsseckinapp.mother;
 
-import java.text.FieldPosition;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.ContentValues;
-import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.widget.Toolbar;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * activity to display all records from SQLite database
@@ -44,13 +41,36 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
     private ListView kasilmalist;
     private Button kickbtn;
     private static int count=0;
+    private static TextView kickcount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_tekmesayar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
+        Options_Settings_SqlLite info = new Options_Settings_SqlLite(this);
+        info.Info();
+        String getinfo= info.getBabyname();
+        toolbar.setTitle("Tekme Sayar");
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         initView();
+        kasilmalist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int pos, long id) {
+                // TODO Auto-generated method stub
+                Log.e("turna",  Id.get(pos));
+                mHelper.delete(Id.get(pos));
+                displayData();
+                return true;
+            }
+        });
 
     }
 
@@ -126,6 +146,7 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
         mButtonStart.setText("BAŞLAT");
         kasilmalist = (ListView) findViewById(R.id.kasilmalist);
         mHelper = new Options_TekmeSayar_SqlLite(this);
+        kickcount =(TextView) findViewById(R.id.kickcounttxt);
     }
 
     @Override
@@ -165,6 +186,7 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
                 break;
             case R.id.kickbtn:
                 count++;
+                kickcount.setText(String.valueOf(count));
                 break;
 
         }
@@ -220,5 +242,14 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(Options_TekmeSayar.this, Options.class);
+        startActivity(intent);
+        this.finish();
+        super.onBackPressed();
     }
 }

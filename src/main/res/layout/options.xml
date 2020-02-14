@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -11,62 +13,131 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:orientation="vertical">
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:id="@+id/KgBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:drawableRight="@drawable/kg"
+                android:background="@drawable/custom_button"
                 android:text="@string/KgTakip" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <Button
                 android:id="@+id/Drugbtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/ilac"
                 android:text="@string/IlacTakip" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:id="@+id/TekmeBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/foot"
                 android:text="@string/TekmeSayar" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:id="@+id/KasilmaBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/kasilma"
                 android:text="@string/KasilmaSayar" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:id="@+id/albumbtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/photo"
                 android:text="@string/Album" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:id="@+id/ihtiyacbtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/ihtiyac"
                 android:text="@string/IhtiyacListesi" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <Button
+                android:id="@+id/dogumcntasibtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/bag"
+                android:text="DOĞUM ÇANTASI" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:id="@+id/SetBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/set"
                 android:text="@string/Ayarlar" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:id="@+id/SaglikTestBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/healt"
                 android:text="@string/SaglikTestleri" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
             <Button
                 android:id="@+id/namebtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/name"
                 android:text="@string/Isimler" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <Button
+                android:id="@+id/backbtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/custom_button"
+                android:drawableRight="@drawable/back"
+                android:text="GERİ" />
+
+
 
         </LinearLayout>
     </ScrollView>

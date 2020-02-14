@@ -1,21 +1,31 @@
 package com.ilbarsseckinapp.mother;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.widget.Toolbar;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * activity to display all records from SQLite database
@@ -37,111 +47,73 @@ public class Options_KgFollow extends Activity {
     Options_Settings_Service settingsinfo;
     private TextView enterkg;
     private static Boolean on;
+    private static  YoYo.YoYoString rope;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_kgfollow);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
+        toolbar.setTitle("Kilo Takip");
         userList = (ListView) findViewById(R.id.List);
         enterkg=(TextView)findViewById(R.id.enterkgtxt);
         mHelper = new Options_KgFollow_SqlLite(this);
-
+        if(FileTask.readData("motherkg").equals("") || FileTask.readData("motherkg").equals(null)){
+         firstkg();
+        }
         //add new record
         findViewById(R.id.btnAdd).setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
 
-            /*    Intent i = new Intent(getApplicationContext(),
-                        AddActivity.class);
-                i.putExtra("update", false);
-                startActivity(i)*/;
-                Date tarih = new Date();
-                SimpleDateFormat bugun = new SimpleDateFormat("dd/MM/yyyy");
 
-                String gun=info(getApplicationContext());
-                String date =bugun.format(tarih);
-                String kg =enterkg.getText().toString();
-                dataBase=mHelper.getWritableDatabase();
-                ContentValues values=new ContentValues();
 
-                String difdate= String.valueOf(mHelper.Info(date));
-                Log.e("sonra", String.valueOf(difdate.length()));
-                mHelper.InfoOrder();
-                int girilen=Integer.valueOf(kg);
-                int oncekikg=Integer.valueOf(mHelper.orderkg());
-                int sonuc=girilen-oncekikg;
-                if(difdate.length()>2){//bugunun tarihi daha önce ekli guncelle
-                 saveDataupdate(gun, String.valueOf(sonuc),kg,date);
+                if (enterkg.getText().toString().length() > 1) {
+                    Date tarih = new Date();
+                    SimpleDateFormat bugun = new SimpleDateFormat("dd/MM/yyyy");
+                    String gun = info(getApplicationContext());
+
+                    String date = bugun.format(tarih);
+                    Log.e("sonra", date);
+                    String kg = enterkg.getText().toString();
+                    dataBase = mHelper.getWritableDatabase();
+                    ContentValues values = new ContentValues();
+
+                    String difdate = String.valueOf(mHelper.Info("10/02/2020"));
+                    mHelper.updatedatecount("11/02/2020");
+
+                    Log.e("sonray", String.valueOf(mHelper.getDatecount()));
+                    mHelper.getDatecount();
+                    mHelper.InfoOrder();
+                    int girilen = Integer.valueOf(kg);
+                    mHelper.getcountt();
+                    Log.e("sonraz", String.valueOf(mHelper.getcountkg()));
+
+                    if (mHelper.getDatecount() == 0) {//aynı tarih yoksa ekle
+                        int oncekikg = Integer.valueOf(mHelper.orderkg());
+                        int sonuc = girilen - oncekikg;
+                        saveData(gun + ".hafta", String.valueOf(sonuc), kg, date);
+                    } else {//aynı tarih varsa
+                        if (mHelper.getcountkg() == 1) {
+
+                            saveDataupdate(gun + ".hafta", "0", kg, date);
+                        } else {
+                            int oncekikg = Integer.valueOf(mHelper.orderkg());
+                            int sonuc = girilen - oncekikg;
+                            saveDataupdate(gun + ".hafta", String.valueOf(sonuc), kg, date);
+                        }
+                    }
+                    displayData();
+
                 }else{
-                  saveData(gun, String.valueOf(sonuc),kg,date);
+              /*      YoYo.with(Techniques.Tada)
+                            .duration(700)
+                            .playOn(findViewById(R.id.enterkgtxt));*/
+                    YoYo.with(Techniques.Shake).playOn(findViewById(R.id.enterkgtxt));
                 }
-                displayData();
-
             }
         });
 
-/*        //click to update data
-        userList.setOnItemClickListener(new OnItemClickListener() {
 
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-                                    long arg3) {
-
-                Intent i = new Intent(getApplicationContext(),
-                        AddActivity.class);
-                i.putExtra("Fname", user_fName.get(arg2));
-                i.putExtra("Lname", user_lName.get(arg2));
-                i.putExtra("ID", userId.get(arg2));
-                i.putExtra("update", true);
-                startActivity(i);
-
-            }
-        });*/
-
-        //long click to delete data
-  /*      userList.setOnItemLongClickListener(new OnItemLongClickListener() {
-
-            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
-                                           final int arg2, long arg3) {
-
-                build = new AlertDialog.Builder(getApplicationContext());
-                build.setTitle("Delete " + user_fName.get(arg2) + " "
-                        + user_lName.get(arg2));
-                build.setMessage("Do you want to delete ?");
-                build.setPositiveButton("Yes",
-                        new DialogInterface.OnClickListener() {
-
-                            public void onClick(DialogInterface dialog,
-                                                int which) {
-
-                                Toast.makeText(
-                                        getApplicationContext(),
-                                        user_fName.get(arg2) + " "
-                                                + user_lName.get(arg2)
-                                                + " is deleted.", 3000).show();
-
-                                dataBase.delete(
-                                        Options_DbHelper.TABLE_NAME,
-                                        Options_DbHelper.ID + "="
-                                                + userId.get(arg2), null);
-                                displayData();
-                                dialog.cancel();
-                            }
-                        });
-
-                build.setNegativeButton("No",
-                        new DialogInterface.OnClickListener() {
-
-                            public void onClick(DialogInterface dialog,
-                                                int which) {
-                                dialog.cancel();
-                            }
-                        });
-                AlertDialog alert = build.create();
-                alert.show();
-
-                return true;
-            }
-        });*/
     }
 
     @Override
@@ -156,7 +128,7 @@ public class Options_KgFollow extends Activity {
     private void displayData() {
         dataBase = mHelper.getWritableDatabase();
         Cursor mCursor = dataBase.rawQuery("SELECT * FROM "
-                + Options_KgFollow_SqlLite.TABLE_NAME, null);
+                + Options_KgFollow_SqlLite.TABLE_NAME+" ORDER BY "+"id" +" DESC", null);
 
         userId.clear();
         day.clear();
@@ -188,22 +160,6 @@ public class Options_KgFollow extends Activity {
         values.put(Options_KgFollow_SqlLite.DATE,tarih );
         System.out.println("");
         dataBase.insert(Options_KgFollow_SqlLite.TABLE_NAME, null, values);
-
-
-    /*    if(on)
-        {
-            Log.e("yenisi",tarih);
-            //update database with new data
-
-            dataBase.update(Options_DbHelper.TABLE_NAME, values, Options_DbHelper.DATE+"="+tarih, null);
-        }
-        else
-        {
-            Log.e("suskun",tarih);
-            //insert data into database
-            dataBase.insert(Options_DbHelper.TABLE_NAME, null, values);
-        }*/
-        //close database
         dataBase.close();
 
 
@@ -242,7 +198,67 @@ public class Options_KgFollow extends Activity {
             settingsinfo.guessbirthday(info.getBabytahmin());
 
         }
-        return settingsinfo.dogumagecensure();
+        return settingsinfo.kachaftalik();
 
+    }
+
+    public void firstkg(){
+
+        LayoutInflater li = LayoutInflater.from(this);
+        View promptsView = li.inflate(R.layout.prompts, null);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                this);
+
+        // set prompts.xml to alertdialog builder
+        alertDialogBuilder.setView(promptsView);
+
+        final EditText userInput = (EditText) promptsView
+                .findViewById(R.id.editTextDialogUserInput);
+
+        // set dialog message
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton("KAYDET",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                if(userInput.getText().toString().length()>1) {
+                                    String kg = enterkg.getText().toString();
+                                    String gun = info(getApplicationContext());
+                                    Date tarih = new Date();
+                                    SimpleDateFormat bugun = new SimpleDateFormat("dd/MM/yyyy");
+                                    String date = bugun.format(tarih);
+                                    saveData(gun + ".hafta", "0", userInput.getText().toString(), date);
+                                    FileTask.writeData("motherkg", "1");
+                                    displayData();
+                                }else{
+
+                                    Toast.makeText(getApplicationContext(), "Lütfen kilonuzu giriniz :)",
+                                            Toast.LENGTH_LONG).show();
+                                    firstkg();
+                                }
+                            }
+                        })
+                .setNegativeButton("İPTAL",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
+
+    }
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(Options_KgFollow.this, Options.class);
+        startActivity(intent);
+        this.finish();
+        super.onBackPressed();
     }
 }

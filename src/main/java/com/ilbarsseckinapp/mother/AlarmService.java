@@ -9,9 +9,6 @@ import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
-import com.ilbarsseckinapp.mother.AlarmActivity;
-import com.ilbarsseckinapp.mother.R;
-
 
 public class AlarmService extends IntentService {
     private NotificationManager alarmNotificationManager;
@@ -23,11 +20,6 @@ public class AlarmService extends IntentService {
     @Override
     public void onHandleIntent(Intent intent) {
         sendNotification("Wake Up! Wake Up!");
-        Intent i = new Intent(intent);
-        i.setClassName("com.ilbarsseckinapp.mother", "com.ilbarsseckinapp.mother.AlarmMessagePushNotifcation");
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        this.startActivity(i);
-
     }
 
     private void sendNotification(String msg) {
@@ -39,7 +31,7 @@ public class AlarmService extends IntentService {
                 new Intent(this, AlarmActivity.class), 0);
 
         NotificationCompat.Builder alamNotificationBuilder = new NotificationCompat.Builder(
-                this).setContentTitle("Alarm").setSmallIcon(R.drawable.common_google_signin_btn_icon_dark)
+                this).setContentTitle("Alarm").setSmallIcon(R.drawable.splashicon)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(msg))
                 .setContentText(msg);
 

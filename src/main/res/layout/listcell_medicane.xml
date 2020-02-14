@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:visibility="gone"
         android:textColor="#000" />
 
     <TextView
@@ -26,18 +27,21 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:gravity="center"
         android:textColor="#000" />
     <TextView
         android:id="@+id/txt_actok"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:gravity="center"
         android:textColor="#000" />
     <TextView
         android:id="@+id/txt_durum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:gravity="center"
         android:textColor="#000" />
 
 </LinearLayout>

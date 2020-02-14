@@ -23,6 +23,8 @@ public class Options_KgFollow_SqlLite extends SQLiteOpenHelper {
 	public static final String KG="kg";
 	public static final String ID="id";
 	private static String oldkg;
+	private static int getcount;
+	private static int datecount;
 	public Options_KgFollow_SqlLite(Context context) {
 		super(context, DATABASE_NAME, null, 1);
 		
@@ -67,7 +69,7 @@ public class Options_KgFollow_SqlLite extends SQLiteOpenHelper {
 					map.put(cursor.getColumnName(i), cursor.getString(i));
 
 					Log.e("merhabaxxx",cursor.getColumnName(i)+"   "+cursor.getString(i));
-
+					Log.e("merhabaxxxy", String.valueOf(cursor.getColumnCount()));
 				}
 
 				info.add(map);
@@ -78,7 +80,34 @@ public class Options_KgFollow_SqlLite extends SQLiteOpenHelper {
 
 		return info;
 	}
-	public void InfoOrder(){
+
+	public void updatedatecount(String date) {
+
+		SQLiteDatabase db = this.getReadableDatabase();
+		String selectQuery = "SELECT * FROM " + TABLE_NAME + " WHERE date= '" + date + "'";
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
+
+		if (cursor.moveToFirst()) {
+			do {
+				HashMap<String, String> map = new HashMap<String, String>();
+				for (int i = 0; i < cursor.getColumnCount(); i++) {
+					map.put(cursor.getColumnName(i), cursor.getString(i));
+
+					Log.e("merhabaxxx", cursor.getColumnName(i) + "   " + cursor.getString(i));
+					Log.e("merhabaxxxy", String.valueOf(cursor.getCount()));
+					datecount=cursor.getCount();
+				}
+
+				info.add(map);
+			} while (cursor.moveToNext());
+		}
+		db.close();
+
+
+
+	}
+	public void InfoOrdercountone(){
 
 		//Bu methodda ise tablodaki tüm değerleri alıyoruz
 		//ArrayList adı üstünde Array lerin listelendiği bir Array.Burda hashmapleri listeleyeceğiz
@@ -110,11 +139,66 @@ public class Options_KgFollow_SqlLite extends SQLiteOpenHelper {
 
 		return;
 	}
+
+	public void InfoOrder(){
+
+		//Bu methodda ise tablodaki tüm değerleri alıyoruz
+		//ArrayList adı üstünde Array lerin listelendiği bir Array.Burda hashmapleri listeleyeceğiz
+		//Herbir satırı değer ve value ile hashmap a atıyoruz. Her bir satır 1 tane hashmap arrayı demek.
+		//olusturdugumuz tüm hashmapleri ArrayList e atıp geri dönüyoruz(return).
+
+		SQLiteDatabase db = this.getReadableDatabase();
+
+		Cursor cursor = db.rawQuery("SELECT kg FROM " + TABLE_NAME+" ORDER BY id DESC LIMIT 1 OFFSET 0", null);
+		ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
+
+		if (cursor.moveToFirst()) {
+			do {
+				HashMap<String, String> map = new HashMap<String, String>();
+				for(int i=0; i<cursor.getColumnCount();i++)
+				{
+					map.put(cursor.getColumnName(i), cursor.getString(i));
+
+					//Log.e("merhabaxxxy",cursor.getColumnName(i)+"   "+cursor.getString(i));
+
+				}
+				oldkg= (cursor.getString(0));
+				Log.e("asasas",cursor.getString(0));
+				info.add(map);
+			} while (cursor.moveToNext());
+		}
+		db.close();
+		// return kitap liste
+
+		return;
+	}
+	public int getcountkg(){
+		return getcount;
+	}
 	public String orderkg(){
 		return oldkg;
 	}
 
 
+	public void getcountt(){
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery("SELECT kg FROM " + TABLE_NAME, null);
+		ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
+		if (cursor.moveToFirst()) {
+			do {
+				HashMap<String, String> map = new HashMap<String, String>();
+				for(int i=0; i<cursor.getColumnCount();i++)
+				{
+					map.put(cursor.getColumnName(i), cursor.getString(i));
+				getcount=cursor.getCount();
+				Log.e("tumkg", String.valueOf(getcount));
+				}
+				info.add(map);
+			} while (cursor.moveToNext());
+		}
+		db.close();
+		return;
+	}
 
 	public ArrayList update (String date,String kg){
 
@@ -127,5 +211,7 @@ public class Options_KgFollow_SqlLite extends SQLiteOpenHelper {
 		return info;
 	}
 
-
+	public int getDatecount(){
+		return datecount;
+	}
 }

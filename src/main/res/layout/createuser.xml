@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-
+    android:gravity="center"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/hamile"
+            />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+
+            style="@style/SpinKitView.Large.DoubleBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="#F3CAE5" />
+
+
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,117 +39,132 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:gravity="center"
-                android:padding="20dp"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="99dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:shadowColor="#94000000"
-                    android:shadowDy="2"
-                    android:shadowRadius="4"
-                    android:text="@string/babyname"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/golgelibuton"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/mybabynametxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="isim giriniz" />
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/babyicon"
+                    android:hint="Bebeğinizin İsmi"
+                    android:textColor="@color/Oil"
+                    android:textSize="18dp" />
             </LinearLayout>
 
-            <LinearLayout
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
+                android:layout_height="20dp" />
 
-                <TextView
-                    android:layout_width="99dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/babykin" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/golgelibuton"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <Spinner
                     android:id="@+id/mybabykinspn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/Oil"
+                    android:textSize="18dp" />
 
             </LinearLayout>
 
-            <LinearLayout
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
+                android:layout_height="20dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/babysex" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/golgelibuton"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <Spinner
                     android:id="@+id/mybabysexspn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/Oil"
+                    android:textSize="18dp" />
             </LinearLayout>
 
-            <LinearLayout
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
+                android:layout_height="20dp" />
+
+
 
                 <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/mybabybirthdayrandom" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/mybabybirthdayrandom"
+                    android:textColor="@color/Oil"
+                    android:textSize="18dp" />
 
                 <TextView
                     android:id="@+id/mybabybirthdayrandomtxt"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="01.01.0000"
+                    android:textColor="@color/Oil"
+                    android:background="@drawable/golgelibuton"
+                    android:textSize="18dp" />
 
-            <LinearLayout
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
+                android:layout_height="20dp"
+                android:text="vs."
+                android:gravity="center"/>
+
+
 
                 <TextView
-                    android:layout_width="158dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/lastadet" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/lastadet"
+                    android:textColor="@color/Oil"
+                    android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/myadetdaytxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="30.08.2019" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/myadetdaytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/golgelibuton"
+                android:text="01.01.0000"
+                android:textColor="@color/Oil"
+                android:textSize="18dp" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <Button
                 android:id="@+id/savesetbtn"
                 android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:text="@string/savesetbtn" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/golgelibuton"
+                android:text="KAYDET" />
 
         </LinearLayout>
     </ScrollView>

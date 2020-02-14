@@ -32,5 +32,15 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'ru.github.igla:ferriswheel:1.2'
 
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'com.nightonke:boommenu:2.1.1'
+    implementation 'io.github.yavski:fab-speed-dial:1.0.6'
+    implementation 'com.ramotion.circlemenu:circle-menu:0.3.2'
+    implementation 'com.github.uin3566:AllAngleExpandableButton:v1.2.0'
+    implementation 'com.github.clans:fab:1.6.2'
 }

@@ -24,6 +24,7 @@ public class Options_MedicineFollow_SqlLite extends SQLiteOpenHelper {
     public static final String DURUM="durum";
 
     private static String oldkg;
+    private static String lastid="";
     public Options_MedicineFollow_SqlLite(Context context) {
         super(context, DATABASE_NAME, null, 1);
 
@@ -79,6 +80,64 @@ public class Options_MedicineFollow_SqlLite extends SQLiteOpenHelper {
 
         return info;
     }
+    public String gettime(String time){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selectQuery = "SELECT * FROM " + TABLE_NAME +" WHERE saat= '"+time+"'";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
+        String data = "";
+        if (cursor.moveToFirst()) {
+            do {
+                HashMap<String, String> map = new HashMap<String, String>();
+                for(int i=0; i<cursor.getColumnCount();i++)
+                {
+                    map.put(cursor.getColumnName(i), cursor.getString(i));
+
+                    Log.e("merhabaxxx",cursor.getColumnName(i)+"   "+cursor.getString(i));
+                    data=cursor.getString(1)+"-"+cursor.getString(2);
+                }
+
+                info.add(map);
+            } while (cursor.moveToNext());
+        }
+        db.close();
+        // return kitap liste
+
+        return data;
+    }
+    public int IDLastCount(){
+        // MAX İD DEĞERİNİ BULUP ÇOKLU ALARMIN RQS ID BELİRLEMEM LAZIM
+
+        //Bu methodda ise tablodaki tüm değerleri alıyoruz
+        //ArrayList adı üstünde Array lerin listelendiği bir Array.Burda hashmapleri listeleyeceğiz
+        //Herbir satırı değer ve value ile hashmap a atıyoruz. Her bir satır 1 tane hashmap arrayı demek.
+        //olusturdugumuz tüm hashmapleri ArrayList e atıp geri dönüyoruz(return).
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selectQuery = "SELECT * FROM " + TABLE_NAME+" ORDER BY id "+"DESC" ;
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
+        int count = 0;
+        if (cursor.moveToFirst()) {
+            do {
+                HashMap<String, String> map = new HashMap<String, String>();
+                for(int i=0; i<cursor.getColumnCount();i++)
+                {
+                    map.put(cursor.getColumnName(i), cursor.getString(i));
+
+                    Log.e("merhabaxxx",cursor.getColumnName(i)+"   "+cursor.getString(i));
+                    count=cursor.getCount();
+                }
+
+                info.add(map);
+            } while (cursor.moveToNext());
+        }
+        db.close();
+        // return kitap liste
+
+        return count;
+    }
     public void InfoOrder(){
 
         //Bu methodda ise tablodaki tüm değerleri alıyoruz
@@ -127,6 +186,29 @@ public class Options_MedicineFollow_SqlLite extends SQLiteOpenHelper {
         db.close();
         return info;
     }*/
+public void delete(String id){
 
+    SQLiteDatabase db = this.getReadableDatabase();
+    String selectQuery = "DELETE  FROM " + TABLE_NAME +" WHERE id= '"+id+"'";
+    Cursor cursor = db.rawQuery(selectQuery, null);
+    ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
+    String data = "";
+    if (cursor.moveToFirst()) {
+        do {
+            HashMap<String, String> map = new HashMap<String, String>();
+            for(int i=0; i<cursor.getColumnCount();i++)
+            {
+                map.put(cursor.getColumnName(i), cursor.getString(i));
+
+                Log.e("merhabaxxx",cursor.getColumnName(i)+"   "+cursor.getString(i));
+                data=cursor.getString(1)+"-"+cursor.getString(2);
+            }
+
+            info.add(map);
+        } while (cursor.moveToNext());
+    }
+    db.close();
+
+}
 
 }

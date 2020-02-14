@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff">
+    android:background="@color/white"
+>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,17 +24,32 @@
                 android:layout_centerVertical="true"
                 android:layout_margin="10dp"
                 android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="16dp"
-                    android:fontFamily="serif"
-                    android:text="İLAÇ TAKİP"
-                    android:textColor="#000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btnAdd"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:background="@drawable/custombuttonping"
+                        android:drawableTop="@drawable/hap"
+                        android:layout_gravity="center"
+                        android:textColor="#F3CAE5"
+                        android:typeface="sans"
+
+                        />
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+
+                        style="@style/SpinKitView.Large.MultiplePulse"
+                        android:layout_width="match_parent"
+                        android:layout_height="169dp"
+                        android:layout_gravity="center"
+                        app:SpinKit_Color="#F3CAE5" />
+
+                </FrameLayout>
+
 
                 <EditText
                     android:id="@+id/edtName"
@@ -41,7 +57,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:fontFamily="serif"
-                    android:hint="İLAÇ ADI"
+                    android:textColor="@color/Baby_Blue"
+                    android:hint="İLAÇ ADI GİRİNİZ"
                     android:padding="8dp" />
 
                 <TextView
@@ -50,33 +67,67 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:fontFamily="serif"
-                    android:hint="SAAT"
+                    android:textColor="@color/White"
+                    android:background="@drawable/golgelibuton"
+                    android:hint="SAAT GİRİNİZ"
                     android:padding="8dp" />
-
-                <Spinner
-                    android:id="@+id/actokswitch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:fontFamily="serif"
-                    android:hint="AÇ/TOK"
-                    android:padding="8dp"
-                    android:textColor="#fff" />
-
-                <Spinner
-                    android:id="@+id/switchdurum"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:fontFamily="serif"
-                    android:hint="ALARM DURUMU"
-                    android:padding="8dp"
-                    android:textColor="#fff" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="@color/Baby_Blue"
+                        android:text="  AÇ/TOK" />
+
+                    <Spinner
+                        android:id="@+id/actokswitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="serif"
+                        android:hint="  AÇ/TOK"
+                        android:padding="8dp"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:textColor="@color/Baby_Blue"
+                        android:text="  ALARM DURUMU" />
+
+                    <Spinner
+                        android:id="@+id/switchdurum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="serif"
+                        android:hint="ALARM DURUMU"
+                        android:padding="8dp"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
                     android:gravity="center"
+                    android:background="@color/White"
                     android:orientation="horizontal">
 
                     <Button
@@ -84,26 +135,82 @@
                         android:layout_width="127dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TEMİZLE" />
+                        android:text="TEMİZLE"
+                        android:visibility="gone" />
 
                     <Button
                         android:id="@+id/BtnSave"
                         android:layout_width="124dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:background="@drawable/golgelibuton"
+                        android:textColor="@color/Baby_Blue"
                         android:fontFamily="serif"
                         android:onClick="AddEmployee"
                         android:text="EKLE" />
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
 
                     <Button
                         android:id="@+id/updatebtn"
                         android:layout_width="124dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/golgelibuton"
+                        android:fontFamily="serif"
+                        android:onClick="AddEmployee"
+                        android:textColor="@color/Baby_Blue"
                         android:text="GÜNCELLE" />
                 </LinearLayout>
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="İLAÇ ADI"
+                    android:textColor="@color/Baby_Blue"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="SAAT"
+                    android:textColor="@color/Baby_Blue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="AÇ/TOK"
+                    android:textColor="@color/Baby_Blue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="ALARM DURUMU"
+                    android:textColor="@color/Baby_Blue"
+                    android:textStyle="bold" />
+            </LinearLayout>
             <ListView
                 android:id="@+id/List"
                 android:layout_width="match_parent"

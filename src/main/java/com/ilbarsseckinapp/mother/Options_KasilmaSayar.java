@@ -1,30 +1,25 @@
 package com.ilbarsseckinapp.mother;
 
-import java.text.FieldPosition;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.SystemClock;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import androidx.appcompat.widget.Toolbar;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * activity to display all records from SQLite database
@@ -47,7 +42,15 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_kasilmasayar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
+        toolbar.setTitle("Kasilma Sayar");
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
           initView();
 
         kasilmalist = (ListView) findViewById(R.id.kasilmalist);
@@ -229,5 +232,14 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent = new Intent(Options_KasilmaSayar.this, Options.class);
+        startActivity(intent);
+        this.finish();
+        super.onBackPressed();
     }
 }

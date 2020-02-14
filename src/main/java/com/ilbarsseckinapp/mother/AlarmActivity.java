@@ -13,7 +13,6 @@ import android.widget.ToggleButton;
 
 import java.util.Calendar;
 
-
 public class AlarmActivity extends Activity {
 
     AlarmManager alarmManager;
@@ -46,8 +45,6 @@ public class AlarmActivity extends Activity {
         if (((ToggleButton) view).isChecked()) {
             Log.d("MyActivity", "Alarm On");
             Calendar calendar = Calendar.getInstance();
-            Log.e("saat", String.valueOf(alarmTimePicker.getCurrentHour()));
-            Log.e("dakika", String.valueOf(alarmTimePicker.getCurrentMinute()));
             calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getCurrentHour());
             calendar.set(Calendar.MINUTE, alarmTimePicker.getCurrentMinute());
             Intent myIntent = new Intent(AlarmActivity.this, AlarmReceiver.class);

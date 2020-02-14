@@ -12,17 +12,14 @@ import android.net.Uri;
 
 import static androidx.legacy.content.WakefulBroadcastReceiver.startWakefulService;
 
+
 public class AlarmReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        Intent i = new Intent(/*context,Login.class*/);
-        i.setClassName("com.ilbarsseckinapp.mother", "com.ilbarsseckinapp.mother.AlarmMessagePushNotifcation");
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(i);
         //this will update the UI with message
-     /*   AlarmActivity inst = AlarmActivity.instance();
-        inst.setAlarmText("Alarm! Wake up! Wake up!");*/
+        AlarmActivity inst = AlarmActivity.instance();
+        inst.setAlarmText("Alarm! Wake up! Wake up!");
 
         //this will sound the alarm tone
         //this will sound the alarm once, if you wish to

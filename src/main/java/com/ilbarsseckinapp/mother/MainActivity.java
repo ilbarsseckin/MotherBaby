@@ -1,10 +1,9 @@
 package com.ilbarsseckinapp.mother;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -12,60 +11,99 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.VideoView;
 
-import com.google.firebase.database.ChildEventListener;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.github.clans.fab.FloatingActionMenu;
+import com.github.clans.fab.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 private Button Baby,Mother;
 private TextView BabyDay,PregnancyDay,BirthDay,Dimensions;
 private TextView info;
 private Intent intent;
+private VideoView view;
 private  Options_Settings_Service settingsinfo;
+private TextView artikgun;
+    FloatingActionMenu materialDesignFAM;
+    FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3,floatingActionButton4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("ELİS (DAYISI)");
+        setContentView(R.layout.test);
 
+
+        materialDesignFAM = (FloatingActionMenu) findViewById(R.id.material_design_android_floating_action_menu);
+        floatingActionButton1 = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item1);
+        floatingActionButton2 = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item2);
+        floatingActionButton3 = (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item3);
+        floatingActionButton4= (FloatingActionButton) findViewById(R.id.material_design_floating_action_menu_item4);
+        floatingActionButton1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //TODO something when floating action menu first item clicked
+
+            }
+        });
+        floatingActionButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //TODO something when floating action menu second item clicked
+
+            }
+        });
+        floatingActionButton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //TODO something when floating action menu third item clicked
+
+            }
+        });
+        floatingActionButton4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //TODO something when floating action menu third item clicked
+
+            }
+        });
         BabyDay=(TextView) findViewById(R.id.BabyDaytxt);
         PregnancyDay=(TextView) findViewById(R.id.PregnancyDaytxt);
         BirthDay=(TextView)findViewById(R.id.BirthDaytxt);
         Dimensions=(TextView) findViewById(R.id.Dimensionstxt);
         info=(TextView)findViewById(R.id.MainInfoTxt);
+        artikgun=(TextView)findViewById(R.id.artikguntxt);
 
         Baby=(Button)findViewById(R.id.MyBabyBtn);
         Mother=(Button) findViewById(R.id.MotherBtn);
 
+        view = (VideoView)findViewById(R.id.Main_videoView);
 
         Baby.setOnClickListener(this);
         Mother.setOnClickListener(this);
 
 
+
         info(this);
+        maininfo("baby");
+        Baby.setTextColor(getResources().getColor(R.color.Basket_Ball_Orange));
+        Mother.setTextColor(getResources().getColor(R.color.Beetle_Green));
 
-        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference newRef = rootRef.child("baby");
-        ValueEventListener valueEventListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+        if(settingsinfo.kachaftalik().equals("0")){
+          firstweekvideo();
+          Dimensions.setText("-");
+        }
+        if(settingsinfo.kachaftalik().equals("1")){
+            Dimensions.setText("-");
+        }
+        if(settingsinfo.kachaftalik().equals("2")){
 
-                    Log.e("ammmm", String.valueOf(dataSnapshot.child("1-").getValue(String.class)));
-
-                info.setText(String.valueOf(dataSnapshot.child("1-").getValue(String.class)));
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
-        };
-        newRef.addListenerForSingleValueEvent(valueEventListener);
-
-
+            Dimensions.setText("-");
+        }
+        if(settingsinfo.kachaftalik().equals("3")){
+            firstweekvideo();
+            Dimensions.setText("-");
+        }
     }
 
     @Override
@@ -83,13 +121,16 @@ private  Options_Settings_Service settingsinfo;
     }
 
     private void  Mybaby(){
-
+        Baby.setTextColor(getResources().getColor(R.color.Basket_Ball_Orange));
+        Mother.setTextColor(getResources().getColor(R.color.Beetle_Green));
+        maininfo("baby");
 
     }
 
     private void  Mother(){
-
-
+        maininfo("mother");
+        Mother.setTextColor(getResources().getColor(R.color.Basket_Ball_Orange));
+        Baby.setTextColor(getResources().getColor(R.color.Beetle_Green));
     }
     private void  MainMenu(){
 
@@ -117,9 +158,11 @@ private  Options_Settings_Service settingsinfo;
         settingsinfo.guessbirthday(info.getBabytahmin());
 
     }
-    BabyDay.setText(settingsinfo.dogumagecensure()+" günlük");
-    PregnancyDay.setText(settingsinfo.kachaftalik()+" haftalık"+" "+settingsinfo.artikgun()+" gün");
-    BirthDay.setText(settingsinfo.dogumakalansure()+" gün kaldı");
+    BabyDay.setText(settingsinfo.dogumagecensure());
+    PregnancyDay.setText(settingsinfo.kachaftalik()+".");
+    artikgun.setText(settingsinfo.artikgun()+".");
+    BirthDay.setText(settingsinfo.dogumakalansure());
+
     }
 
     @Override
@@ -141,4 +184,50 @@ private  Options_Settings_Service settingsinfo;
         }
         return super.onOptionsItemSelected(item);
     }
+    private void maininfo(String data){
+        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference newRef = rootRef.child(data);
+        ValueEventListener valueEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                Log.e("ammmm", String.valueOf(dataSnapshot.child(settingsinfo.dogumagecensure()+"-").getValue(String.class)));
+
+                info.setText(String.valueOf(dataSnapshot.child(settingsinfo.dogumagecensure()+"-").getValue(String.class)));
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        };
+        newRef.addListenerForSingleValueEvent(valueEventListener);
+
+    }
+    public void firstweekvideo(){
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.firstweek;
+        view.setVideoURI(Uri.parse(path));
+        view.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                view.start();
+                mp.setLooping(true);
+            }
+        });
+        view.setOnPreparedListener(PreparedListener);
+        view.requestFocus();
+    }
+
+
+    MediaPlayer.OnPreparedListener PreparedListener = new MediaPlayer.OnPreparedListener(){
+
+        @Override
+        public void onPrepared(MediaPlayer m) {
+            try {
+          //      m.setVolume(0f, 0f);
+                view.start();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    };
 }

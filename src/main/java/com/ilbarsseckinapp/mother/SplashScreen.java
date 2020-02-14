@@ -5,12 +5,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.MediaController;
 import android.widget.VideoView;
 
 public class SplashScreen extends Activity {
 
-    private static int gosterim_suresi = 3000;
+    private static int gosterim_suresi = 0000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
