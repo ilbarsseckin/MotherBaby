@@ -41,6 +41,30 @@ public class Options_TekmeSayar_SqlLite extends SQLiteOpenHelper {
         onCreate(db);
 
     }
+    public void delete(){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selectQuery = "DELETE  FROM " + TABLE_NAME;
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
+        String data = "";
+        if (cursor.moveToFirst()) {
+            do {
+                HashMap<String, String> map = new HashMap<String, String>();
+                for(int i=0; i<cursor.getColumnCount();i++)
+                {
+                    map.put(cursor.getColumnName(i), cursor.getString(i));
+
+                    Log.e("merhabaxxx",cursor.getColumnName(i)+"   "+cursor.getString(i));
+                    data=cursor.getString(1)+"-"+cursor.getString(2);
+                }
+
+                info.add(map);
+            } while (cursor.moveToNext());
+        }
+        db.close();
+
+    }
     public void delete(String id){
 
         SQLiteDatabase db = this.getReadableDatabase();

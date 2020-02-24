@@ -5,9 +5,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
->
+    android:background="@color/white">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,6 +36,7 @@
 
                     <Button
                         android:id="@+id/btnAdd"
+                        android:paddingTop="15dp"
                         android:layout_width="128dp"
                         android:layout_height="128dp"
                         android:background="@drawable/custombuttonping"
@@ -58,6 +65,7 @@
                     android:layout_margin="8dp"
                     android:fontFamily="serif"
                     android:textColor="@color/Baby_Blue"
+                    android:textColorHint="@color/Baby_Blue"
                     android:hint="İLAÇ ADI GİRİNİZ"
                     android:padding="8dp" />
 
@@ -67,10 +75,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:fontFamily="serif"
-                    android:textColor="@color/White"
-                    android:background="@drawable/golgelibuton"
                     android:hint="SAAT GİRİNİZ"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:textSize="18dp"
+                    android:textColor="@color/Baby_Blue" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

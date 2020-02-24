@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.shashank.sony.fancygifdialoglib.FancyGifDialog;
+import com.shashank.sony.fancygifdialoglib.FancyGifDialogListener;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -46,8 +49,9 @@ public class Options_KgFollow extends Activity {
     private AlertDialog.Builder build;
     Options_Settings_Service settingsinfo;
     private TextView enterkg;
-    private static Boolean on;
+    private static Button clean;
     private static  YoYo.YoYoString rope;
+    private Intent intent;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +60,8 @@ public class Options_KgFollow extends Activity {
         toolbar.setTitle("Kilo Takip");
         userList = (ListView) findViewById(R.id.List);
         enterkg=(TextView)findViewById(R.id.enterkgtxt);
+        clean=(Button)findViewById(R.id.kgclean);
+
         mHelper = new Options_KgFollow_SqlLite(this);
         if(FileTask.readData("motherkg").equals("") || FileTask.readData("motherkg").equals(null)){
          firstkg();
@@ -64,8 +70,6 @@ public class Options_KgFollow extends Activity {
         findViewById(R.id.btnAdd).setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-
-
 
                 if (enterkg.getText().toString().length() > 1) {
                     Date tarih = new Date();
@@ -113,7 +117,12 @@ public class Options_KgFollow extends Activity {
             }
         });
 
+        findViewById(R.id.kgclean).setOnClickListener(new OnClickListener() {
 
+            public void onClick(View v) {
+            deletekg();
+            }
+        });
     }
 
     @Override
@@ -201,7 +210,36 @@ public class Options_KgFollow extends Activity {
         return settingsinfo.kachaftalik();
 
     }
+    public void deletekg(){
 
+        new FancyGifDialog.Builder(Options_KgFollow.this)
+                .setTitle("Kg Verileri Sil")
+                .setMessage("Tüm Verileriniz Silinecektir.")
+                .setNegativeBtnText("İptal")
+                .setPositiveBtnBackground("#95B9C7")
+                .setPositiveBtnText("Sil")
+                .setNegativeBtnBackground("#FFC0CB")
+                .setGifResource(R.drawable.cleangif)   //Pass your Gif here
+                .isCancellable(true)
+                .OnPositiveClicked(new FancyGifDialogListener() {
+                    @Override
+                    public void OnClick() {
+                        mHelper.delete();
+                        intent = new Intent(Options_KgFollow.this, Options.class);
+                        startActivity(intent);
+                        FileTask.deleteFile("motherkg");
+                    }
+                })
+                .OnNegativeClicked(new FancyGifDialogListener() {
+                    @Override
+                    public void OnClick() {
+                        intent = new Intent(Options_KgFollow.this, Options_KgFollow.class);
+                        startActivity(intent);
+                    }
+                })
+                .build();
+
+    }
     public void firstkg(){
 
         LayoutInflater li = LayoutInflater.from(this);
@@ -256,9 +294,16 @@ public class Options_KgFollow extends Activity {
     @Override
     public void onBackPressed()
     {
-        Intent intent = new Intent(Options_KgFollow.this, Options.class);
-        startActivity(intent);
-        this.finish();
-        super.onBackPressed();
+        if(MainActivity.mainback==true){
+            Intent intent = new Intent(Options_KgFollow.this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }else {
+            Intent intent = new Intent(Options_KgFollow.this, Options.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }
     }
 }

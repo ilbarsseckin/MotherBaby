@@ -29,6 +29,7 @@
                 android:layout_gravity="center"
                 android:text="BAŞLAT"
                 android:background="@drawable/golge"
+                android:textColor="@color/Baby_Blue"
 
                 />
 
@@ -42,6 +43,7 @@
 
             <Chronometer
                 android:id="@+id/chronometer"
+                android:paddingRight="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|center"
@@ -62,7 +64,7 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="TARİH"
-                android:textColor="@color/black"
+                android:textColor="@color/Baby_Blue"
                 android:textStyle="bold" />
 
 
@@ -73,7 +75,7 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="KASILMA SAYISI"
-                android:textColor="@color/black"
+                android:textColor="@color/Baby_Blue"
                 android:textStyle="bold" />
 
         </LinearLayout>

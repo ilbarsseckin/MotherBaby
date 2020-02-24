@@ -1,13 +1,9 @@
 package com.ilbarsseckinapp.mother;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -16,6 +12,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import androidx.appcompat.widget.Toolbar;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 
@@ -33,7 +34,8 @@ public class Options_IhtiyacListesi extends Activity implements View.OnClickList
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_ihtiyaclistesi);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
+        toolbar.setTitle("ihtiyaç Listesi");
         initView();
         displayDataalinacak("0");
         displayDataalindi("1");
@@ -225,5 +227,19 @@ public class Options_IhtiyacListesi extends Activity implements View.OnClickList
         // return kitap
         return kitap;
     }
-
+    @Override
+    public void onBackPressed()
+    {
+        if(MainActivity.mainback==true){
+            Intent intent = new Intent(Options_IhtiyacListesi.this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }else {
+            Intent intent = new Intent(Options_IhtiyacListesi.this, Options.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }
+    }
 }

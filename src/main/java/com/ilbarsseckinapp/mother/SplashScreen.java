@@ -9,7 +9,7 @@ import android.widget.VideoView;
 
 public class SplashScreen extends Activity {
 
-    private static int gosterim_suresi = 0000;
+    private static int gosterim_suresi = 2500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

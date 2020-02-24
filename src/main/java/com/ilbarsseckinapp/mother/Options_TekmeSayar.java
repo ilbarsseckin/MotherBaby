@@ -2,11 +2,13 @@ package com.ilbarsseckinapp.mother;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,7 +44,6 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
     private Button kickbtn;
     private static int count=0;
     private static TextView kickcount;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +87,7 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
     private void displayData() {
         dataBase = mHelper.getWritableDatabase();
         Cursor mCursor = dataBase.rawQuery("SELECT * FROM "
-                + Options_TekmeSayar_SqlLite.TABLE_NAME, null);
+                + Options_TekmeSayar_SqlLite.TABLE_NAME +" ORDER BY id DESC", null);
 
         Id.clear();
         date.clear();
@@ -177,6 +178,7 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
                     break;
                 }
                 if(mButtonStart.getText().toString().equals("BAŞLAT")){
+
                     mButtonStart.setText("DURDUR");
                     count=0;
                     startChronometer();
@@ -185,13 +187,17 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
 
                 break;
             case R.id.kickbtn:
-                count++;
-                kickcount.setText(String.valueOf(count));
-                break;
-
+                    count++;
+                    kickcount.setText(String.valueOf(count));
+                    vibrate();
+                    break;
         }
     }
-
+    public void vibrate ()
+    {
+        Vibrator vv = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vv.vibrate(100);
+    }
     private void startChronometer() {
         mChronometer.setBase(SystemClock.elapsedRealtime());
         mChronometer.start();
@@ -247,9 +253,16 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
     @Override
     public void onBackPressed()
     {
-        Intent intent = new Intent(Options_TekmeSayar.this, Options.class);
-        startActivity(intent);
-        this.finish();
-        super.onBackPressed();
+        if(MainActivity.mainback==true){
+            Intent intent = new Intent(Options_TekmeSayar.this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }else {
+            Intent intent = new Intent(Options_TekmeSayar.this, Options.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }
     }
 }

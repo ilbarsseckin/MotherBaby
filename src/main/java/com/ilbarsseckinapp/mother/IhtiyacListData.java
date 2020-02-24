@@ -1,6 +1,8 @@
 package com.ilbarsseckinapp.mother;
 
 public class IhtiyacListData {
-    public static String liste="biberon,araba,mama,sandalye";
-    public static String dogumcantasilistesi="biberon,araba,mama,sandalye,asdasd,dvfv,fvf,tthyt,juju,juju,gbg,uju,bgbg";
+    public static String liste="Burun Aspiratörü,Pişik Kremi,Islak Mendil,Tırnak Makası,Burun Damlası,Temassız Ateş Ölçer, Bebek Bezi,Bez Çöp Kovası,Bebek Pamuğu,Ağız Bezi,Emzik,120ml’lik Biberon, Biberon fırçası,Alt Değiştirme Pedi,Tek Parça Pijama,Patikli Pantolon,Kundak,Muslin Örtü,Pamuklu Battaniye,Yün Battaniye,Kanguru Taşıyıcı,Bebek Arabası,Kamera,Banyo,Bebek Küveti,Maşrapa,Doğal Sünger,Bebek Şampuanı,Bebek Bornozu,Küvet Filesi,Anne için,Göğüs Ucu Kremi,Göğüs Pedi,Emzirme Sütyeni,Göğüs Pompası,Doğum Sonrası Pedi,Kokusuz Duş Jeli";
+    public static String dogumcantasilistesi="Gecelik,Pijama takımı,Sabahlık veya hırka,Lohusa takımları,Lohusa tacı,emzirme sütyeni ,Emzirme atleti,Süt sağma pompası,Terlik,Çorap,Lohusa külodu,Hijyenik pedler,En az 4 adet külot,Diş macunu ve fırçası,Makyaj malzemeleri,Kağıt havlu,Islak mendil,İkramlıklar";
+    public static String sagliktestleri="1.AY\nSmear Testi-1.AY\nHemogram(Kan Sayımı)Rutin Biyokimya Testleri(Demir,KolesterolKalsiyum,Klor,Fosfor,Potasyum,Sodyum,Üre,Ürik asit gibi bir çok testi içerir.)-1.AY\nTORCH Taraması-1.AY\nIGM_IGG tespiti(Bebeğin ana rahmindeyen mikroplu bir hastalığa yakılıp yakalanmadığını ortaya çıkartmak için yapılan enfeksiyon testleri)-1.AY\nHepatit-1.AY\nHIV-1.AY\nTrioit Testleri-1.AY\nVarsa kronik,genetik ve cinsel hastalıklar ile ilgili testler-Akraba evliliği ve genetik anomalili hamileliklerde genetik test-1.AY\nYapılan aşı kontrolleri-1.AY\nUSG(ulutrason ile takip)-3.AY\nİkili Test-3.AY\nHemogram Takibi(Kan Sayımı)-" +
+            "3.AY\nUSG(ultrason)takibi-3.AY\nGereğinde CVS(Genetik hastalık takibi için)-3.AY\nÜçlü Test-3.AY\nGecikmiş vakalarda Dörtlü test-5.AY\nİkinci Düzey USG-6.AY\nOGTT(Oral glukoz tolerans testi)-7.AY\nGerektiğinde indirek coombs testi-8.AY\nUSG(ultrason)testi-9.AY\nSNT(Cihaz yardımı ile bebeğin hareketleri sonucu kalp atışındaki artma ve azalmaların saptanması)";
 }

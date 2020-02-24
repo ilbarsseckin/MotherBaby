@@ -23,6 +23,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import androidx.appcompat.widget.Toolbar;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -52,7 +57,7 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
     AlarmManager alarmManager;
     private PendingIntent pendingIntent;
     private TimePicker alarmTimePicker;
-    private static AlarmActivity inst;
+
     private TextView alarmTextView;
     private static Boolean status = false;
 
@@ -60,6 +65,8 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_medicinafollow);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
+        toolbar.setTitle("İlaç Takip");
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         userList = (ListView) findViewById(R.id.List);
         entermedicanename = (EditText) findViewById(R.id.edtName);
@@ -112,7 +119,7 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
             public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
                                            int pos, long id) {
                 // TODO Auto-generated method stub
-                Log.e("turna",  userId.get(pos));
+                Log.e("turna", userId.get(pos));
                 mHelper.delete(userId.get(pos));
                 displayData();
                 return true;
@@ -154,7 +161,7 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
     private void displayData() {
         dataBase = mHelper.getWritableDatabase();
         Cursor mCursor = dataBase.rawQuery("SELECT * FROM "
-                + Options_MedicineFollow_SqlLite.TABLE_NAME, null);
+                + Options_MedicineFollow_SqlLite.TABLE_NAME +" ORDER BY id DESC", null);
 
         userId.clear();
         name.clear();
@@ -234,14 +241,23 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
                 break;
 
             case R.id.BtnSave:
-                int a = mHelper.IDLastCount();
-                setAlarm(a++);
-                displayData();
+                if (entermedicanename.getText().toString().length() > 0&&entertime.getText().toString().length()>0) {
+                    int a = mHelper.IDLastCount();
+                    setAlarm(a++);
+                    Log.e( "pasta", String.valueOf(a));
+                    displayData();
+                } else {
+                    YoYo.with(Techniques.Flash).playOn(findViewById(R.id.edtName));
+                    YoYo.with(Techniques.Flash).playOn(findViewById(R.id.addtime));
+                }
                 break;
 
             case R.id.updatebtn:
                 Log.e("isaret", selectid);
-                updateAlarm(Integer.parseInt(selectid));
+                if (!selectid.isEmpty()) {
+                    updateAlarm(Integer.parseInt(selectid));
+                    YoYo.with(Techniques.Flash).playOn(findViewById(R.id.List));
+                }
                 break;
 
             case R.id.clearbtn:
@@ -254,35 +270,47 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(Options_MedicinaFollow.this, Options.class);
-        startActivity(intent);
-        this.finish();
-        super.onBackPressed();
+
+        if (MainActivity.mainback == true) {
+            Intent intent = new Intent(Options_MedicinaFollow.this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        } else {
+            Intent intent = new Intent(Options_MedicinaFollow.this, Options.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }
+
+
     }
+
     private void setAlarm1(int RSQ) {
 
-            Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt("11"));
-            calendar.set(Calendar.MINUTE, Integer.parseInt("57"));
-            Intent myIntent = new Intent(Options_MedicinaFollow.this, AlarmBroadcast.class);
-            pendingIntent = PendingIntent.getBroadcast(Options_MedicinaFollow.this, RSQ, myIntent, 0);
-            alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
-
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt("11"));
+        calendar.set(Calendar.MINUTE, Integer.parseInt("57"));
+        Intent myIntent = new Intent(Options_MedicinaFollow.this, AlarmBroadcast.class);
+        pendingIntent = PendingIntent.getBroadcast(Options_MedicinaFollow.this, RSQ, myIntent, 0);
+        alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
 
 
     }
+
     private void setAlarm2(int RSQ) {
 
 
-            Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt("11"));
-            calendar.set(Calendar.MINUTE, Integer.parseInt("58"));
-            Intent myIntent = new Intent(Options_MedicinaFollow.this, AlarmBroadcast.class);
-            pendingIntent = PendingIntent.getBroadcast(Options_MedicinaFollow.this, RSQ, myIntent, 0);
-            alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt("11"));
+        calendar.set(Calendar.MINUTE, Integer.parseInt("58"));
+        Intent myIntent = new Intent(Options_MedicinaFollow.this, AlarmBroadcast.class);
+        pendingIntent = PendingIntent.getBroadcast(Options_MedicinaFollow.this, RSQ, myIntent, 0);
+        alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
 
 
     }
+
     private void setAlarm(int RSQ) {
         String ilacadi = entermedicanename.getText().toString();
         String zaman = entertime.getText().toString();
@@ -319,21 +347,23 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
         displayData();
 
     }
-    private void updateAlarm(int RSQ,int h,int m) {
 
-            Log.e("deli4", String.valueOf(h));
-            Log.e("deli5", String.valueOf(m));
-            Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.HOUR_OF_DAY, h);
-            calendar.set(Calendar.MINUTE, m);
-            Intent myIntent = new Intent(Options_MedicinaFollow.this, AlarmBroadcast.class);
-            pendingIntent = PendingIntent.getBroadcast(Options_MedicinaFollow.this, RSQ, myIntent, 0);
-            alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
-            Log.e("deli", String.valueOf(RSQ));
-            Log.e("deli2", String.valueOf(calendar.getTimeInMillis()));
+    private void updateAlarm(int RSQ, int h, int m) {
+
+        Log.e("deli4", String.valueOf(h));
+        Log.e("deli5", String.valueOf(m));
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, h);
+        calendar.set(Calendar.MINUTE, m);
+        Intent myIntent = new Intent(Options_MedicinaFollow.this, AlarmBroadcast.class);
+        pendingIntent = PendingIntent.getBroadcast(Options_MedicinaFollow.this, RSQ, myIntent, 0);
+        alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
+        Log.e("deli", String.valueOf(RSQ));
+        Log.e("deli2", String.valueOf(calendar.getTimeInMillis()));
 
 
     }
+
     private void updateAlarm(int RSQ) {
         String id = selectid;
         String ilacadii = entermedicanename.getText().toString();

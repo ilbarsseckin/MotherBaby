@@ -1,171 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/white"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <FrameLayout
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@color/lightgoldenrodyellow"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        card_view:cardCornerRadius="14dp"
+        card_view:cardElevation="8dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/hamile"
-            />
-
-        <com.github.ybq.android.spinkit.SpinKitView
-
-            style="@style/SpinKitView.Large.DoubleBounce"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:SpinKit_Color="#F3CAE5" />
-
-
-    </FrameLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="40dp" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/golgelibuton"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/mybabynametxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:drawableLeft="@drawable/babyicon"
-                    android:hint="Bebeğinizin İsmi"
-                    android:textColor="@color/Oil"
-                    android:textSize="18dp" />
-            </LinearLayout>
-
-            <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/golgelibuton"
-                android:layout_gravity="center"
                 android:orientation="vertical">
 
-                <Spinner
-                    android:id="@+id/mybabykinspn"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/Oil"
-                    android:textSize="18dp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
 
+                    android:padding="8dp">
+
+
+                    <EditText
+                        android:id="@+id/mybabynametxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:drawableLeft="@drawable/babyicon"
+                        android:hint="Bebeğinizin İsmi"
+                        android:textColor="@color/Baby_Blue"
+                        android:textColorHint="@color/Baby_Blue"
+                        android:textSize="18dp" />
+
+
+                    <Spinner
+                        android:id="@+id/mybabykinspn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/Baby_Blue"
+                        android:textSize="18dp" />
+
+
+                    <Spinner
+                        android:id="@+id/mybabysexspn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/Baby_Blue"
+                        android:textSize="18dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/bebektahminbtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/mybabybirthdayrandom"
+                            android:textColor="@color/lightslategray"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/mybabybirthdayrandomtxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:text="01.01.0000"
+                            android:textColor="@color/Baby_Blue"
+                            android:textSize="18dp" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:gravity="center"
+                            android:text="vs." />
+
+
+                        <TextView
+                            android:id="@+id/bebekadetbtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/lastadet"
+                            android:textColor="@color/lightslategray"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/myadetdaytxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:text="01.01.0000"
+                            android:textColor="@color/Baby_Blue"
+                            android:textSize="18dp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
             </LinearLayout>
+        </ScrollView>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
+    </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/golgelibuton"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-
-                <Spinner
-                    android:id="@+id/mybabysexspn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/Oil"
-                    android:textSize="18dp" />
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
-
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="@string/mybabybirthdayrandom"
-                    android:textColor="@color/Oil"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:id="@+id/mybabybirthdayrandomtxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:text="01.01.0000"
-                    android:textColor="@color/Oil"
-                    android:background="@drawable/golgelibuton"
-                    android:textSize="18dp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="vs."
-                android:gravity="center"/>
-
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="@string/lastadet"
-                    android:textColor="@color/Oil"
-                    android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/myadetdaytxt"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/golgelibuton"
-                android:text="01.01.0000"
-                android:textColor="@color/Oil"
-                android:textSize="18dp" />
-
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/savesetbtn"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/golgelibuton"
-                android:text="KAYDET" />
+                android:layout_gravity="center"
+                android:background="@drawable/hamile"
+                />
 
-        </LinearLayout>
-    </ScrollView>
+            <com.github.ybq.android.spinkit.SpinKitView
+                style="@style/SpinKitView.Large.DoubleBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:SpinKit_Color="#DC143C" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/Baby_Blue"
+        android:text="Kaydet" />
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:padding="8dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/gifbaby"
+        />
+
 </LinearLayout>

@@ -57,8 +57,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left|center"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/golge"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/golgelibuton"
+                    android:textColor="@color/Baby_Blue"
                     android:textSize="16sp"
+                    android:textStyle="bold"
                     android:text="BAŞLAT" />
                 <Button
                     android:id="@+id/kickbtn"
@@ -79,6 +82,7 @@
 
                 <Chronometer
                     android:id="@+id/chronometer"
+                    android:paddingRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|center"
@@ -108,7 +112,7 @@
                     android:layout_weight="2"
                     android:gravity="center"
                     android:text="TARİH"
-                    android:textColor="@color/black"
+                    android:textColor="@color/Baby_Blue"
                     android:textStyle="bold" />
 
                 <TextView
@@ -118,7 +122,7 @@
                     android:layout_weight="2"
                     android:gravity="center"
                     android:text="SÜRE"
-                    android:textColor="@color/black"
+                    android:textColor="@color/Baby_Blue"
                     android:textStyle="bold" />
 
                 <TextView
@@ -128,7 +132,7 @@
                     android:layout_weight="2"
                     android:gravity="center"
                     android:text="TEKME SAYISI"
-                    android:textColor="@color/black"
+                    android:textColor="@color/Baby_Blue"
                     android:textStyle="bold" />
 
             </LinearLayout>

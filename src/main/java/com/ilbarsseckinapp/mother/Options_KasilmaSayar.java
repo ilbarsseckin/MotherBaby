@@ -8,9 +8,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.os.Vibrator;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ListView;
@@ -23,10 +26,11 @@ import java.util.Date;
 
 /**
  * activity to display all records from SQLite database
- * @author ketan(Visit my <a
- *         href="http://androidsolution4u.blogspot.in/">blog</a>)
+ *
+ * @author ketan(Visit my < a
+ *href = " http : / / androidsolution4u.blogspot.in / " > blog < / a >)
  */
-public class Options_KasilmaSayar extends Activity implements View.OnClickListener  {
+public class Options_KasilmaSayar extends Activity implements View.OnClickListener {
 
     private SQLiteDatabase dataBase;
     private ArrayList<String> Id = new ArrayList<String>();
@@ -37,6 +41,7 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
     private Button mButtonStart;
     private Options_KasilmaSayar_SqlLite mHelper;
     private ListView kasilmalist;
+    private Intent intent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,10 +56,23 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
                 finish();
             }
         });
-          initView();
+        initView();
+
 
         kasilmalist = (ListView) findViewById(R.id.kasilmalist);
         mHelper = new Options_KasilmaSayar_SqlLite(this);
+
+        kasilmalist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int pos, long id) {
+                // TODO Auto-generated method stub
+                Log.e("turna", Id.get(pos));
+                mHelper.delete(Id.get(pos));
+                displayData();
+                return true;
+            }
+        });
     }
 
     @Override
@@ -69,7 +87,7 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
     private void displayData() {
         dataBase = mHelper.getWritableDatabase();
         Cursor mCursor = dataBase.rawQuery("SELECT * FROM "
-                + Options_KasilmaSayar_SqlLite.TABLE_NAME, null);
+                + Options_KasilmaSayar_SqlLite.TABLE_NAME +" ORDER BY id DESC", null);
 
         Id.clear();
         date.clear();
@@ -84,50 +102,49 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
 
             } while (mCursor.moveToNext());
         }
-        Options_DisplayAdapter_KasilmaSayar disadpt= new Options_DisplayAdapter_KasilmaSayar(this,Id, date,timer);
+        Options_DisplayAdapter_KasilmaSayar disadpt = new Options_DisplayAdapter_KasilmaSayar(this, Id, date, timer);
         kasilmalist.setAdapter(disadpt);
         mCursor.close();
     }
 
-    private void saveData(String tarih,String time){
-        dataBase=mHelper.getWritableDatabase();
-        ContentValues values=new ContentValues();
-        values.put(Options_KasilmaSayar_SqlLite.DATE,tarih );
-        values.put(Options_KasilmaSayar_SqlLite.TIMER,time);
+    private void saveData(String tarih, String time) {
+        dataBase = mHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Options_KasilmaSayar_SqlLite.DATE, tarih);
+        values.put(Options_KasilmaSayar_SqlLite.TIMER, time);
         dataBase.insert(Options_KasilmaSayar_SqlLite.TABLE_NAME, null, values);
         dataBase.close();
 
 
-
     }
 
-    private void saveDataupdate(String gun,String degisim,String kg,String tarih){
-        dataBase=mHelper.getWritableDatabase();
-        ContentValues values=new ContentValues();
+    private void saveDataupdate(String gun, String degisim, String kg, String tarih) {
+        dataBase = mHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
 
-        values.put(Options_KasilmaSayar_SqlLite.DATE,tarih );
-        values.put(Options_KasilmaSayar_SqlLite.TIMER,gun);
+        values.put(Options_KasilmaSayar_SqlLite.DATE, tarih);
+        values.put(Options_KasilmaSayar_SqlLite.TIMER, gun);
         System.out.println("");
 
-        dataBase.update(Options_KasilmaSayar_SqlLite.TABLE_NAME, values, "date='" + tarih+"'", null);
+        dataBase.update(Options_KasilmaSayar_SqlLite.TABLE_NAME, values, "date='" + tarih + "'", null);
 
         dataBase.close();
 
 
-
     }
-    public String info(Context context){
+
+    public String info(Context context) {
 
         Options_Settings_SqlLite info = new Options_Settings_SqlLite(context);
         info.Info();
-        String getinfo= info.getBabyname();
+        String getinfo = info.getBabyname();
 
 
-        if(!info.getBabyadet().equals("0")){//matematik islemleri icin
-            settingsinfo =new Options_Settings_Service();
+        if (!info.getBabyadet().equals("0")) {//matematik islemleri icin
+            settingsinfo = new Options_Settings_Service();
             settingsinfo.lastadet(info.getBabyadet());
-        }else{
-            settingsinfo =new Options_Settings_Service();
+        } else {
+            settingsinfo = new Options_Settings_Service();
             settingsinfo.guessbirthday(info.getBabytahmin());
 
         }
@@ -151,28 +168,30 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
                 break;
 
             case R.id.buttonStart:
-                if(mButtonStart.getText().toString().equals("DURDUR")){
+                if (mButtonStart.getText().toString().equals("DURDUR")) {
                     Date curDate = new Date();
                     SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
                     String DateToStr = format.format(curDate);
                     long time = SystemClock.elapsedRealtime() - mChronometer.getBase();
-                    int h   = (int)(time /3600000);
-                    int m = (int)(time - h*3600000)/60000;
-                    int s= (int)(time - h*3600000- m*60000)/1000 ;
-                    String hh = h < 10 ? "0"+h: h+"";
-                    String mm = m < 10 ? "0"+m: m+"";
-                    String ss = s < 10 ? "0"+s: s+"";
-                    String kronometre=mm+":"+ss;
-                    saveData(DateToStr,kronometre);
+                    int h = (int) (time / 3600000);
+                    int m = (int) (time - h * 3600000) / 60000;
+                    int s = (int) (time - h * 3600000 - m * 60000) / 1000;
+                    String hh = h < 10 ? "0" + h : h + "";
+                    String mm = m < 10 ? "0" + m : m + "";
+                    String ss = s < 10 ? "0" + s : s + "";
+                    String kronometre = mm + ":" + ss;
+                    saveData(DateToStr, kronometre);
                     mButtonStart.setText("BAŞLAT");
                     stopChronometer();
                     restartChronometer();
                     displayData();
+                    vibrate();
                     break;
                 }
-                if(mButtonStart.getText().toString().equals("BAŞLAT")){
+                if (mButtonStart.getText().toString().equals("BAŞLAT")) {
                     mButtonStart.setText("DURDUR");
                     startChronometer();
+                    vibrate();
                     break;
                 }
 
@@ -181,7 +200,11 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
 
         }
     }
-
+    public void vibrate ()
+    {
+        Vibrator vv = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vv.vibrate(100);
+    }
     private void startChronometer() {
         mChronometer.setBase(SystemClock.elapsedRealtime());
         mChronometer.start();
@@ -235,11 +258,18 @@ public class Options_KasilmaSayar extends Activity implements View.OnClickListen
     }
 
     @Override
-    public void onBackPressed()
-    {
-        Intent intent = new Intent(Options_KasilmaSayar.this, Options.class);
-        startActivity(intent);
-        this.finish();
-        super.onBackPressed();
+    public void onBackPressed() {
+        if(MainActivity.mainback==true){
+            Intent intent = new Intent(Options_KasilmaSayar.this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }else {
+            Intent intent = new Intent(Options_KasilmaSayar.this, Options.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }
     }
+
 }

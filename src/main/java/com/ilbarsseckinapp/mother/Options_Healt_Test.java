@@ -1,53 +1,223 @@
 package com.ilbarsseckinapp.mother;
 
+
+import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.Pair;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
-import com.nightonke.boommenu.BoomMenuButton;
-import com.nightonke.boommenu.ButtonEnum;
-import com.nightonke.boommenu.Piece.PiecePlaceEnum;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Options_Healt_Test extends AppCompatActivity {
 
-    private BoomMenuButton bmb;
-    private ArrayList<Pair> piecesAndButtons = new ArrayList<>();
+public class Options_Healt_Test extends Activity implements View.OnClickListener  {
+
+    private SQLiteDatabase dataBase;
+    private ArrayList<String> ihtiyac = new ArrayList<String>();
+    private ArrayList<String> status = new ArrayList<String>();
+    private Options_Healt_Test_SqlLite mHelper;
+    private ListView alindi;
+    private ListView alinmadi;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_healt_test);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
+        toolbar.setTitle("Sağlık Testleri");
+        initView();
 
-        bmb = (BoomMenuButton) findViewById(R.id.bmb);
-        assert bmb != null;
-        bmb.setButtonEnum(ButtonEnum.Ham);
-        bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_1);
-        bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_1);
-        bmb.addBuilder(BuilderManager.getHamButtonBuilder());
+        Log.e("nalan",mHelper.countgetdata());
+        if((mHelper.countgetdata().equals("0"))){
+            String data[]=  IhtiyacListData.sagliktestleri.split("-");
+            for(int i=0;i< data.length;i++){
+                Log.e("nalan1",data[i]);
+                saveData(data[i],"0");
 
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        assert listView != null;
-        listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1,
-                BuilderManager.getHamButtonData(piecesAndButtons)));
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                bmb.setPiecePlaceEnum((PiecePlaceEnum) piecesAndButtons.get(position).first);
-                bmb.setButtonPlaceEnum((ButtonPlaceEnum) piecesAndButtons.get(position).second);
-                bmb.clearBuilders();
-                for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++)
-                    bmb.addBuilder(BuilderManager.getHamButtonBuilder());
-                Log.e("nerde", String.valueOf(bmb.getPiecePlaceEnum().pieceNumber()));
             }
+        }
+
+
+        alinmadi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View view, int position, long arg3) {
+
+                saveDataupdatealindi(alinmadi.getItemAtPosition(position).toString(),"1");
+                displayDataalinacak("0");
+                displayDataalindi("1");
+            }
+
         });
+        alindi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View view, int position, long arg3) {
+                saveDataupdatealindi(alindi.getItemAtPosition(position).toString(),"0");
+                displayDataalinacak("0");
+                displayDataalindi("1");
+            }
+
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        displayDataalinacak("0");
+        displayDataalindi("1");
+        super.onResume();
+    }
+
+
+    private void displayDataalinacak(String durum) {
+        dataBase = mHelper.getReadableDatabase();
+        ArrayList<String > results  = new ArrayList<>();
+
+        Cursor mCursor = dataBase.rawQuery("SELECT * FROM sagliktesti WHERE durum= ? ",new String[]{durum});
+        ihtiyac.clear();
+        status.clear();
+        if (mCursor != null ) {
+            if  (mCursor.moveToFirst()) {
+                do {  results.add(mCursor.getString(mCursor.getColumnIndex("name")));
+                }while (mCursor.moveToNext());
+            }
+        }
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, results);
+
+        alinmadi.setAdapter(adapter);
+
+        mCursor.close();
+
+
+
+    }
+
+    private void displayDataalindi(String durum) {
+        dataBase = mHelper.getReadableDatabase();
+        ArrayList<String > results  = new ArrayList<>();
+
+        Cursor mCursor = dataBase.rawQuery("SELECT * FROM sagliktesti WHERE durum= ? ",new String[]{durum});
+        ihtiyac.clear();
+        status.clear();
+        if (mCursor != null ) {
+            if  (mCursor.moveToFirst()) {
+                do {  results.add(mCursor.getString(mCursor.getColumnIndex("name")));
+                }while (mCursor.moveToNext());
+            }
+        }
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, results);
+
+        alindi.setAdapter(adapter);
+
+        mCursor.close();
+
+
+
+    }
+
+
+    private void saveData(String ihtiyac,String durum){
+        dataBase=mHelper.getWritableDatabase();
+        ContentValues values=new ContentValues();
+        values.put(Options_Healt_Test_SqlLite.NAME,ihtiyac );
+        values.put(Options_Healt_Test_SqlLite.STATUS,durum);
+
+        dataBase.insert(Options_Healt_Test_SqlLite.TABLE_NAME, null, values);
+        dataBase.close();
+
+    }
+
+
+    private void saveDataupdatealindi(String ihtiyac,String durum){
+        dataBase=mHelper.getWritableDatabase();
+        ContentValues values=new ContentValues();
+
+        values.put(Options_Healt_Test_SqlLite.NAME,ihtiyac );
+        values.put(Options_Healt_Test_SqlLite.STATUS,durum);
+        System.out.println("");
+
+        dataBase.update(Options_Healt_Test_SqlLite.TABLE_NAME, values, "name='" + ihtiyac+"'", null);
+
+        dataBase.close();
+
+    }
+    private void saveDataupdatealinmadi(String ihtiyac,String durum){
+        dataBase=mHelper.getWritableDatabase();
+        ContentValues values=new ContentValues();
+
+        values.put(Options_Healt_Test_SqlLite.NAME,ihtiyac );
+        values.put(Options_Healt_Test_SqlLite.STATUS,durum);
+        System.out.println("");
+
+        dataBase.update(Options_Healt_Test_SqlLite.TABLE_NAME, values, "name='" + ihtiyac+"'", null);
+
+        dataBase.close();
+
+    }
+
+
+    private void initView() {
+        alinmadi = (ListView) findViewById(R.id.alinacaklistview);
+        alindi=(ListView) findViewById(R.id.alindilistview);
+        mHelper = new Options_Healt_Test_SqlLite(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            default:
+                break;
+        }
+    }
+    public HashMap<String, String> kitapDetay(int id){
+        //Databeseden id si belli olan row u çekmek için.
+        //Bu methodda sadece tek row değerleri alınır.
+
+        //HashMap bir çift boyutlu arraydir.anahtar-değer ikililerini bir arada tutmak için tasarlanmıştır.
+        //mesala map.put("x","300"); mesala burda anahtar x değeri 300.
+
+        HashMap<String,String> kitap = new HashMap<String,String>();
+        String selectQuery = "SELECT * FROM " + Options_DogumCantasi_SqlLite.TABLE_NAME+ " WHERE durum="+id;
+
+        SQLiteDatabase db = mHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        // Move to first row
+        cursor.moveToFirst();
+        if(cursor.getCount() > 0){
+            kitap.put("ihtiyac", cursor.getString(1));
+            kitap.put("durum", cursor.getString(2));
+
+        }
+        cursor.close();
+        db.close();
+        // return kitap
+        return kitap;
+    }
+    @Override
+    public void onBackPressed()
+    {
+        if(MainActivity.mainback==true){
+            Intent intent = new Intent(Options_Healt_Test.this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }else {
+            Intent intent = new Intent(Options_Healt_Test.this, Options.class);
+            startActivity(intent);
+            this.finish();
+            super.onBackPressed();
+        }
     }
 }

@@ -19,6 +19,17 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/kgclean"
+            android:paddingRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginTop="20dp"
+            android:drawableRight="@drawable/kgcleanicon"
+            android:background="@color/sysTransparent"
+            android:text="" />
+
+        <Button
             android:id="@+id/btnAdd"
             android:layout_width="128dp"
             android:layout_height="wrap_content"
@@ -52,6 +63,7 @@
             android:layout_width="146dp"
             android:layout_height="wrap_content"
             android:hint="kilonuzu giriniz"
+            android:textColorHint="@color/Baby_Blue"
             android:inputType="number"
             android:textColor="@color/black"
             android:textSize="24dp" />
@@ -79,9 +91,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="GEBELİK HAFTANIZ"
+            android:paddingRight="5dp"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:textColor="@color/Baby_Blue" />
 
         <TextView
 
@@ -91,7 +104,7 @@
             android:text="DEĞİŞİM"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:textColor="@color/Baby_Blue" />
 
         <TextView
 
@@ -101,7 +114,7 @@
             android:text="KİLONUZ"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:textColor="@color/Baby_Blue" />
 
         <TextView
 
@@ -112,7 +125,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:visibility="gone"
-            android:textColor="@color/black" />
+            android:textColor="@color/Baby_Blue" />
 
 
     </LinearLayout>

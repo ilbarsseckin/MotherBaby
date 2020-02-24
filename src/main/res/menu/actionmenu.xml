@@ -4,6 +4,7 @@
         android:id="@+id/mybutton"
         android:title=""
         app:showAsAction="always"
-        android:icon="@drawable/actionbutton"
+        android:icon="@drawable/optionsmenuicon"
         />
+
 </menu>

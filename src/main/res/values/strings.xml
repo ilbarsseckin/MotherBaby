@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mother</string>
+    <string name="app_name">BEBEĞİM</string>
 
     <!--MAINMENU-->
     <string name="Baby">BEBEK</string>
@@ -8,7 +8,7 @@
     <string name="Options">SEÇENEKLER</string>
 
     <!--OPTIONS-->
-    <string name="KgTakip">KG TAKİP</string>
+    <string name="KgTakip">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020KG TAKİP\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
     <string name="IlacTakip">İLAÇ TAKİP</string>
     <string name="TekmeSayar">TEKME SAYAR</string>
     <string name="KasilmaSayar">KASILMA SAYAR</string>
