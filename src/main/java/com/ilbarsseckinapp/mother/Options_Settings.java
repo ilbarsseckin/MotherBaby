@@ -16,7 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -48,9 +47,7 @@ public class Options_Settings extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_settings);
-        getSupportActionBar().hide();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
-        toolbar.setTitle("Ayarlar");
+
         init();
         initData();
 
@@ -80,13 +77,13 @@ public class Options_Settings extends AppCompatActivity implements View.OnClickL
     private void initData() {
 
         String[] arraySpinner = new String[]{"KIZ", "ERKEK", "BELLİ DEĞİL"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item , arraySpinner);
+        adapter.setDropDownViewResource(R.layout.spinner_item);
         babysex.setAdapter(adapter);
 
         String[] arraySpinnerkin = new String[]{"ANNE", "BABA", "DAYI", "AMCA", "KARDEŞ", "ABİ", "ABLA"};
-        ArrayAdapter<String> adapterkin = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinnerkin);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapterkin = new ArrayAdapter<String>(this, R.layout.spinner_item , arraySpinnerkin);
+        adapter.setDropDownViewResource(R.layout.spinner_item);
         babykin.setAdapter(adapterkin);
 
 
@@ -230,6 +227,11 @@ public class Options_Settings extends AppCompatActivity implements View.OnClickL
                         String currentDBPath7 ="/data/com.ilbarsseckinapp.mother/databases/" + "motherkg";
                         File currentDB7 = new File(data7, currentDBPath7);
                         SQLiteDatabase.deleteDatabase(currentDB7);
+
+                        File data8 = Environment.getDataDirectory();
+                        String currentDBPath8 ="/data/com.ilbarsseckinapp.mother/databases/" + "motherihtiyac";
+                        File currentDB8 = new File(data8, currentDBPath8);
+                        SQLiteDatabase.deleteDatabase(currentDB8);
 
                         FileTask.deleteFile("motherkg");
                         FileTask.deleteFile("createuser");

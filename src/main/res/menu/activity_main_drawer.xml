@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/kgitem"
+            android:icon="@drawable/kgnew"
+            android:title="Kg Takip" />
+        <item
+            android:id="@+id/ilacitem"
+            android:icon="@drawable/hapnew"
+            android:title="İlac Hatirlatici" />
+        <item
+            android:id="@+id/Sayaritem"
+            android:icon="@drawable/footnew"
+            android:title="Sayar" />
+        <item
+            android:id="@+id/nameitem"
+            android:icon="@drawable/namenew"
+            android:title="Bebeğimin İsmi" />
+        <item
+            android:id="@+id/ihtyiaclaritem"
+            android:icon="@drawable/listnew"
+            android:title="İhtiyaçlar" />
+        <item
+            android:id="@+id/resimleritem"
+            android:icon="@drawable/fotonew"
+            android:title="Resim Albümü" />
+        <item
+            android:id="@+id/testleritem"
+            android:icon="@drawable/testnew"
+            android:title="Testlerim" />
+
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/ayarlaritem"
+                android:icon="@drawable/setnew"
+                android:title="AYARLAR" />
+        </menu>
+
+    </item>
+    <item
+        android:id="@+id/oneriitem"
+        android:icon="@drawable/oneriitem"
+        android:title="Öneri" />
+    <item
+        android:id="@+id/puanitem"
+        android:icon="@drawable/staritem"
+        android:title="Puan Ver" />
+</menu>

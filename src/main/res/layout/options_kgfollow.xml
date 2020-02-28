@@ -10,7 +10,7 @@
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/sysTransparent"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right|center"
             android:layout_marginTop="20dp"
+            android:paddingEnd="20dp"
             android:drawableRight="@drawable/kgcleanicon"
             android:background="@color/sysTransparent"
             android:text="" />
@@ -33,11 +34,12 @@
             android:id="@+id/btnAdd"
             android:layout_width="128dp"
             android:layout_height="wrap_content"
+            android:drawableTop="@drawable/kgnew2"
             android:background="@drawable/custom_button"
-            android:drawableTop="@drawable/tarti"
             android:text="EKLE"
             android:layout_gravity="center"
-            android:textColor="@color/black"
+            android:textColor="@color/AppColor"
+            android:fontFamily="@font/baloo"
             android:textSize="18dp"
             android:typeface="sans"
 
@@ -60,23 +62,15 @@
 
         <EditText
             android:id="@+id/enterkgtxt"
-            android:layout_width="146dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="kilonuzu giriniz"
-            android:textColorHint="@color/Baby_Blue"
+            android:textColorHint="@color/AppColor"
+            android:fontFamily="@font/baloo"
             android:inputType="number"
-            android:textColor="@color/black"
+            android:textColor="@color/AppColor"
             android:textSize="24dp" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="KG"
-            android:textColor="@color/white"
-            android:textSize="18dp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,15 +80,14 @@
 
 
         <TextView
-
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="GEBELİK HAFTANIZ"
             android:paddingRight="5dp"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/Baby_Blue" />
+            android:textColor="@color/AppColor"
+            android:fontFamily="@font/baloo" />
 
         <TextView
 
@@ -103,8 +96,8 @@
             android:layout_weight="2"
             android:text="DEĞİŞİM"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/Baby_Blue" />
+            android:textColor="@color/AppColor"
+            android:fontFamily="@font/baloo" />
 
         <TextView
 
@@ -113,8 +106,8 @@
             android:layout_weight="2"
             android:text="KİLONUZ"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/Baby_Blue" />
+            android:textColor="@color/AppColor"
+            android:fontFamily="@font/baloo" />
 
         <TextView
 
@@ -123,9 +116,9 @@
             android:layout_weight="2"
             android:text="TARİH"
             android:gravity="center"
-            android:textStyle="bold"
             android:visibility="gone"
-            android:textColor="@color/Baby_Blue" />
+            android:textColor="@color/AppColor"
+            android:fontFamily="@font/baloo" />
 
 
     </LinearLayout>
@@ -135,7 +128,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/a"
-        android:divider="#8DB3E1"
+        android:divider="@color/AppColor"
         android:dividerHeight="2dp" />
 
 </LinearLayout>

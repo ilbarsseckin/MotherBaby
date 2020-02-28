@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -67,6 +68,7 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
         setContentView(R.layout.options_medicinafollow);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
         toolbar.setTitle("İlaç Takip");
+        toolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(), R.color.AppColor));
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         userList = (ListView) findViewById(R.id.List);
         entermedicanename = (EditText) findViewById(R.id.edtName);
@@ -90,13 +92,13 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
 
 
         String[] arraySpinner = new String[]{"AÇ", "TOK", "FARK ETMEZ"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item, arraySpinner);
+        adapter.setDropDownViewResource( R.layout.spinner_item);
         infoactok.setAdapter(adapter);
 
         String[] arraySpinnerkin = new String[]{"AÇIK", "KAPALI"};
-        ArrayAdapter<String> adapterkin = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinnerkin);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapterkin = new ArrayAdapter<String>(this,  R.layout.spinner_item, arraySpinnerkin);
+        adapter.setDropDownViewResource( R.layout.spinner_item);
         infodurum.setAdapter(adapterkin);
 
         userList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -230,6 +232,8 @@ public class Options_MedicinaFollow extends Activity implements OnClickListener 
                             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                 // hourOfDay ve minute değerleri seçilen saat değerleridir.
                                 // Edittextte bu değerleri gösteriyoruz.
+                               if(String.valueOf(hourOfDay).length()==1)hourOfDay=0+hourOfDay;
+                               if(String.valueOf(minute).length()==1)minute=0+minute;
                                 entertime.setText(hourOfDay + ":" + minute);
                             }
                         }, saat, dakika, true);

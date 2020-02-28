@@ -8,10 +8,12 @@ android {
         applicationId "com.ilbarsseckinapp.mother"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "2.0"
+        versionCode 2
+        versionName "3.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -44,5 +46,12 @@ dependencies {
     implementation 'com.github.Shashank02051997:FancyGifDialog-Android:1.1'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
     implementation 'com.google.firebase:firebase-core:11.8.0'
-
+    implementation 'com.rom4ek:arcnavigationview:1.0.3'
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
+    implementation  "com.google.android.material:material:1.0.0-rc01"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.mikhaellopez:circularprogressbar:1.0.0'
+    implementation 'com.budiyev.android:circular-progress-bar:1.2.2'
+    implementation 'com.github.jakob-grabner:Circle-Progress-View:v1+'
+    implementation 'com.jjoe64:graphview:4.2.2'
 }

@@ -11,7 +11,7 @@
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/sysTransparent"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
     <ScrollView
@@ -39,9 +39,10 @@
                         android:paddingTop="15dp"
                         android:layout_width="128dp"
                         android:layout_height="128dp"
-                        android:background="@drawable/custombuttonping"
-                        android:drawableTop="@drawable/hap"
+                        android:background="@drawable/custom_button"
+                        android:drawableTop="@drawable/optionshap"
                         android:layout_gravity="center"
+                        android:gravity="center"
                         android:textColor="#F3CAE5"
                         android:typeface="sans"
 
@@ -63,9 +64,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:fontFamily="serif"
-                    android:textColor="@color/Baby_Blue"
-                    android:textColorHint="@color/Baby_Blue"
+                    android:fontFamily="@font/baloo"
+                    android:textColor="@color/AppColor"
+                    android:textColorHint="@color/AppColor"
                     android:hint="İLAÇ ADI GİRİNİZ"
                     android:padding="8dp" />
 
@@ -74,11 +75,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:fontFamily="serif"
+                    android:fontFamily="@font/baloo"
+                    android:textColor="@color/AppColor"
                     android:hint="SAAT GİRİNİZ"
+                    android:textColorHint="@color/AppColor"
                     android:padding="8dp"
-                    android:textSize="18dp"
-                    android:textColor="@color/Baby_Blue" />
+                    android:textSize="18dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -92,7 +94,8 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="18dp"
-                        android:textColor="@color/Baby_Blue"
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/black"
                         android:text="  AÇ/TOK" />
 
                     <Spinner
@@ -117,7 +120,8 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:textSize="18dp"
-                        android:textColor="@color/Baby_Blue"
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/black"
                         android:text="  ALARM DURUMU" />
 
                     <Spinner
@@ -152,8 +156,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@drawable/golgelibuton"
-                        android:textColor="@color/Baby_Blue"
-                        android:fontFamily="serif"
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/AppColor"
                         android:onClick="AddEmployee"
                         android:text="EKLE" />
 
@@ -167,9 +171,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@drawable/golgelibuton"
-                        android:fontFamily="serif"
                         android:onClick="AddEmployee"
-                        android:textColor="@color/Baby_Blue"
+                        android:fontFamily="@font/baloo"
+                        android:textColor="@color/AppColor"
                         android:text="GÜNCELLE" />
                 </LinearLayout>
 
@@ -188,8 +192,9 @@
                     android:layout_weight="2"
                     android:gravity="center"
                     android:text="İLAÇ ADI"
-                    android:textColor="@color/Baby_Blue"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/baloo"
+                    android:textColor="@color/AppColor"
+                    />
 
                 <TextView
 
@@ -198,8 +203,9 @@
                     android:layout_weight="2"
                     android:gravity="center"
                     android:text="SAAT"
-                    android:textColor="@color/Baby_Blue"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/baloo"
+                    android:textColor="@color/AppColor"
+                  />
 
                 <TextView
                     android:layout_width="0dp"
@@ -207,8 +213,9 @@
                     android:layout_weight="2"
                     android:gravity="center"
                     android:text="AÇ/TOK"
-                    android:textColor="@color/Baby_Blue"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/baloo"
+                    android:textColor="@color/AppColor"
+                     />
 
                 <TextView
                     android:layout_width="0dp"
@@ -216,15 +223,17 @@
                     android:layout_weight="2"
                     android:gravity="center"
                     android:text="ALARM DURUMU"
-                    android:textColor="@color/Baby_Blue"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/baloo"
+                    android:textColor="@color/AppColor"
+                     />
             </LinearLayout>
             <ListView
                 android:id="@+id/List"
                 android:layout_width="match_parent"
                 android:layout_height="393dp"
                 android:layout_below="@+id/a"
-                android:divider="#8DB3E1"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/AppColor"
                 android:dividerHeight="2dp" />
         </LinearLayout>
     </ScrollView>

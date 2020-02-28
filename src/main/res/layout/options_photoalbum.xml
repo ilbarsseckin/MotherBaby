@@ -9,7 +9,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/sysTransparent"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:gravity="right"
@@ -81,7 +81,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="2.Ay"
-                    android:textColor="@color/Baby_Blue"
+                    android:textColor="@color/AppColor"
+                    android:fontFamily="@font/baloo"
                     android:textSize="18dp" />
 
                 <TextView
@@ -91,7 +92,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="3.Ay"
-                    android:textColor="@color/Baby_Blue"
+                    android:textColor="@color/AppColor"
+                    android:fontFamily="@font/baloo"
                     android:textSize="18dp"  />
             </LinearLayout>
 
@@ -134,7 +136,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="4.Ay"
-                    android:textColor="@color/Baby_Blue"
+                    android:textColor="@color/AppColor"
+                    android:fontFamily="@font/baloo"
                     android:textSize="18dp"  />
 
                 <TextView
@@ -144,7 +147,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="5.Ay"
-                    android:textColor="@color/Baby_Blue"
+                    android:textColor="@color/AppColor"
+                    android:fontFamily="@font/baloo"
                     android:textSize="18dp" />
             </LinearLayout>
 
@@ -186,7 +190,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="6.Ay"
-                    android:textColor="@color/Baby_Blue"
+                    android:textColor="@color/AppColor"
+                    android:fontFamily="@font/baloo"
                     android:textSize="18dp"  />
 
                 <TextView
@@ -196,7 +201,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="7.Ay"
-                    android:textColor="@color/Baby_Blue"
+                    android:textColor="@color/AppColor"
+                    android:fontFamily="@font/baloo"
                     android:textSize="18dp"  />
             </LinearLayout>
 
@@ -239,7 +245,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="8.Ay"
-                    android:textColor="@color/Baby_Blue"
+                    android:textColor="@color/AppColor"
+                    android:fontFamily="@font/baloo"
                     android:textSize="18dp"  />
 
                 <TextView
@@ -249,7 +256,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="9.Ay"
-                    android:textColor="@color/Baby_Blue"
+                    android:textColor="@color/AppColor"
+                    android:fontFamily="@font/baloo"
                     android:textSize="18dp" />
             </LinearLayout>
 

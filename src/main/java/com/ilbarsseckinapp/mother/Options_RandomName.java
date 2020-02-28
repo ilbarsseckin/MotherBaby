@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,6 +49,7 @@ public class Options_RandomName extends Activity{
         setContentView(R.layout.options_randomname);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
         toolbar.setTitle("Bebeğimin İsmi");
+        toolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(), R.color.AppColor));
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         Objects.requireNonNull(mSensorManager).registerListener(mSensorListener, mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                 SensorManager.SENSOR_DELAY_NORMAL);

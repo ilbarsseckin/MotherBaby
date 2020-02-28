@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -58,6 +59,8 @@ public class Options_KgFollow extends Activity {
         setContentView(R.layout.options_kgfollow);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
         toolbar.setTitle("Kilo Takip");
+        toolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(), R.color.AppColor));
+
         userList = (ListView) findViewById(R.id.List);
         enterkg=(TextView)findViewById(R.id.enterkgtxt);
         clean=(Button)findViewById(R.id.kgclean);
@@ -107,7 +110,9 @@ public class Options_KgFollow extends Activity {
                         }
                     }
                     displayData();
-
+                    Toast.makeText(getApplicationContext(), "Eklendi.",
+                            Toast.LENGTH_LONG).show();
+                    YoYo.with(Techniques.Wave).playOn(findViewById(R.id.List));
                 }else{
               /*      YoYo.with(Techniques.Tada)
                             .duration(700)
@@ -280,7 +285,8 @@ public class Options_KgFollow extends Activity {
                 .setNegativeButton("İPTAL",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog,int id) {
-                                dialog.cancel();
+                                intent = new Intent(Options_KgFollow.this, Options.class);
+                                startActivity(intent);
                             }
                         });
 

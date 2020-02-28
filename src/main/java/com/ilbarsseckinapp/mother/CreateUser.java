@@ -50,7 +50,7 @@ public class CreateUser extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.createuser);
-        getSupportActionBar().hide();
+
         init();
         initData();
 
@@ -105,13 +105,13 @@ public class CreateUser extends AppCompatActivity implements View.OnClickListene
     private void initData() {
 
         String[] arraySpinner = new String[]{"KIZ", "ERKEK", "BELLİ DEĞİL"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item, arraySpinner);
+        adapter.setDropDownViewResource(R.layout.spinner_item);
         babysex.setAdapter(adapter);
 
         String[] arraySpinnerkin = new String[]{"ANNE", "BABA", "DAYI", "AMCA", "KARDEŞ", "ABİ", "ABLA"};
-        ArrayAdapter<String> adapterkin = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arraySpinnerkin);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapterkin = new ArrayAdapter<String>(this, R.layout.spinner_item, arraySpinnerkin);
+        adapter.setDropDownViewResource(R.layout.spinner_item);
         babykin.setAdapter(adapterkin);
 
 

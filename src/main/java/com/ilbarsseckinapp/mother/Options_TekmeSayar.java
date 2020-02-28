@@ -20,6 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -53,7 +54,7 @@ public class Options_TekmeSayar extends Activity implements View.OnClickListener
         info.Info();
         String getinfo= info.getBabyname();
         toolbar.setTitle("Tekme Sayar");
-
+        toolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(), R.color.AppColor));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -56,6 +56,7 @@ public class Options_PhotoAlbum extends Activity implements View.OnClickListener
         setContentView(R.layout.options_photoalbum);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Foto Albüm");
+        toolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(), R.color.AppColor));
         scrol=(ScrollView) findViewById(R.id.scroll);
         share=(Button)findViewById(R.id.share);
         share.setOnClickListener(this);

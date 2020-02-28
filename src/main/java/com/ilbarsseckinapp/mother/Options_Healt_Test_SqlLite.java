@@ -95,16 +95,9 @@ public class Options_Healt_Test_SqlLite extends SQLiteOpenHelper {
         return String.valueOf(cursor.getCount());
 
     }
-    public void InfoOrder(){
-
-        //Bu methodda ise tablodaki tüm değerleri alıyoruz
-        //ArrayList adı üstünde Array lerin listelendiği bir Array.Burda hashmapleri listeleyeceğiz
-        //Herbir satırı değer ve value ile hashmap a atıyoruz. Her bir satır 1 tane hashmap arrayı demek.
-        //olusturdugumuz tüm hashmapleri ArrayList e atıp geri dönüyoruz(return).
-
+    public int TestCount(){
         SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT kg FROM " + TABLE_NAME+" ORDER BY date DESC LIMIT 1 OFFSET 1", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME+" WHERE durum= '1'", null);
         ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
 
         if (cursor.moveToFirst()) {
@@ -114,19 +107,18 @@ public class Options_Healt_Test_SqlLite extends SQLiteOpenHelper {
                 {
                     map.put(cursor.getColumnName(i), cursor.getString(i));
 
-                    //Log.e("merhabaxxxy",cursor.getColumnName(i)+"   "+cursor.getString(i));
+                 Log.e("merhabaxxxy", String.valueOf(cursor.getCount()));
 
                 }
-                oldkg= (cursor.getString(0));
-                Log.e("asasas",cursor.getString(0));
                 info.add(map);
             } while (cursor.moveToNext());
         }
         db.close();
         // return kitap liste
 
-        return;
+        return cursor.getCount();
     }
+
     public String orderkg(){
         return oldkg;
     }

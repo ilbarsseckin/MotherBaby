@@ -42,8 +42,9 @@
                         android:layout_marginBottom="16dp"
                         android:drawableLeft="@drawable/babyicon"
                         android:hint="Bebeğinizin İsmi"
-                        android:textColor="@color/Baby_Blue"
-                        android:textColorHint="@color/Baby_Blue"
+                        android:textColor="@color/AppColor"
+                        android:textColorHint="@color/AppColor"
+                        android:fontFamily="@font/baloo"
                         android:textSize="18dp" />
 
 
@@ -79,6 +80,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
+                            android:fontFamily="@font/baloo"
                             android:text="@string/mybabybirthdayrandom"
                             android:textColor="@color/lightslategray"
                             android:textSize="18dp" />
@@ -88,8 +90,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
+                            android:fontFamily="@font/baloo"
                             android:text="01.01.0000"
-                            android:textColor="@color/Baby_Blue"
+                            android:textColor="@color/AppColor"
                             android:textSize="18dp" />
 
 
@@ -106,6 +109,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:text="@string/lastadet"
+                            android:fontFamily="@font/baloo"
                             android:textColor="@color/lightslategray"
                             android:textSize="18dp" />
 
@@ -114,8 +118,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
+                            android:fontFamily="@font/baloo"
                             android:text="01.01.0000"
-                            android:textColor="@color/Baby_Blue"
+                            android:textColor="@color/AppColor"
                             android:textSize="18dp" />
 
 
@@ -127,46 +132,55 @@
 
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <FrameLayout
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/savesetbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/hamile"
-                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:text="Kaydet"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/AppColor" />
 
-            <com.github.ybq.android.spinkit.SpinKitView
-                style="@style/SpinKitView.Large.DoubleBounce"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:SpinKit_Color="#DC143C" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        </FrameLayout>
+                <Button
+                    android:id="@+id/savesetbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/hamile" />
 
-    </LinearLayout>
+                <com.github.ybq.android.spinkit.SpinKitView
+                    style="@style/SpinKitView.Large.DoubleBounce"
+                    app:SpinKit_Color="#EA6D7F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/Baby_Blue"
-        android:text="Kaydet" />
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:padding="8dp"
-        android:layout_margin="16dp"
-        android:src="@drawable/gifbaby"
-        />
+
+            </FrameLayout>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:src="@drawable/gifbaby" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

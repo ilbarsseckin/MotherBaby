@@ -10,116 +10,115 @@
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/sysTransparent"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="193dp"
-        android:orientation="vertical">
-
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="16dp"
-            android:padding="8dp"
-            android:src="@drawable/gifbaby" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:orientation="horizontal">
-
+        android:theme="?attr/actionBarTheme">
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/shake"
-            android:gravity="left" />
-    </LinearLayout>
+            android:paddingRight="20dp"
+            android:gravity="right" />
+    </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+
+
+
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#F7F7F7"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <ToggleButton
-                android:id="@+id/nametoggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/sysTransparent"
-                android:drawableTop="@drawable/togglecustom"
-                android:text=""
-                android:textOff="KIZ"
-                android:textOn="ERKEK" />
-
-            <Button
-                android:id="@+id/rotate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:backgroundTint="#ff0044"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F7F7F7"
                 android:gravity="center"
-                android:onClick="ii"
-                android:text="İSİM BUL"
-                android:visibility="gone" />
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/nametoggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/sysTransparent"
+                        android:drawableTop="@drawable/togglecustom"
+                        android:text=""
+                        android:textOff="KIZ"
+                        android:textOn="ERKEK" />
+
+                    <Button
+                        android:id="@+id/rotate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#ff0044"
+                        android:gravity="center"
+                        android:onClick="ii"
+                        android:text="İSİM BUL"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/i"
+                        android:layout_width="300dp"
+                        android:layout_height="314dp"
+                        android:layout_gravity="center"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/getrandomnametxt"
+                        android:layout_width="150dp"
+                        android:layout_height="128dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/Baby_Blue"
+                        android:textSize="30dp"
+                        android:typeface="sans" />
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo"
+                    android:paddingStart="10dp"
+                    android:text="Anlamı:"
+                    android:textColor="@color/AppColor"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nameplaintxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:fontFamily="@font/sf2"
+                    android:paddingStart="5dp"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
         </LinearLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/i"
-                android:layout_width="300dp"
-                android:layout_height="314dp"
-                android:layout_gravity="center"
-
-                />
-
-            <TextView
-                android:id="@+id/getrandomnametxt"
-                android:layout_width="150dp"
-                android:layout_height="128dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text=""
-                android:textColor="@color/Baby_Blue"
-                android:textSize="30dp"
-                android:typeface="sans" />
-
-
-        </FrameLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="5dp"
-            android:text="Anlamı:"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-        <TextView
-            android:id="@+id/nameplaintxt"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:paddingStart="5dp"
-            android:textSize="18dp" />
-
-    </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

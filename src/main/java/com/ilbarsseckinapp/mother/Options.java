@@ -1,41 +1,34 @@
 package com.ilbarsseckinapp.mother;
 
+
+
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.shashank.sony.fancygifdialoglib.FancyGifDialog;
-import com.shashank.sony.fancygifdialoglib.FancyGifDialogListener;
 
 public class Options extends AppCompatActivity implements View.OnClickListener {
-    private Button Kgtakip, kasilmasayar, tekmesayar, ayarlar, sagliktesti, isimler, album, ilactakip, back, dogumcantasi;
-    private Button ihtiyaclistesi, puan;
+    private ImageView Kgtakip, kasilmasayar, tekmesayar, ayarlar, sagliktesti, isimler, album, ilactakip,ihtiyaclistesi, dogumcantasi;
     private Intent intent;
-    final String PREFS_NAME = "MyPrefsFile";
-    final String SHAREDPREF_DATE = "SharedPrefDate";
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options);
 
-        Kgtakip = (Button) findViewById(R.id.KgBtn);
-        kasilmasayar = (Button) findViewById(R.id.KasilmaBtn);
-        tekmesayar = (Button) findViewById(R.id.TekmeBtn);
-        ayarlar = (Button) findViewById(R.id.SetBtn);
-        sagliktesti = (Button) findViewById(R.id.SaglikTestBtn);
-        isimler = (Button) findViewById(R.id.namebtn);
-        album = (Button) findViewById(R.id.albumbtn);
-        ilactakip = (Button) findViewById(R.id.Drugbtn);
-        ihtiyaclistesi = (Button) findViewById(R.id.ihtiyacbtn);
-        back = (Button) findViewById(R.id.oneribtn);
-        dogumcantasi = (Button) findViewById(R.id.dogumcntasibtn);
-        puan = (Button) findViewById(R.id.puanbtn);
+        Kgtakip = (ImageView) findViewById(R.id.kgbtn);
+        kasilmasayar = (ImageView) findViewById(R.id.kasilmabtn);
+        tekmesayar = (ImageView) findViewById(R.id.tekmebtn);
+        sagliktesti = (ImageView) findViewById(R.id.testbtn);
+        isimler = (ImageView) findViewById(R.id.namebtn);
+        album = (ImageView) findViewById(R.id.fotobtn);
+        ihtiyaclistesi = (ImageView) findViewById(R.id.ihtiyacbtn);
+        dogumcantasi = (ImageView) findViewById(R.id.bagbtn);
+        ilactakip = (ImageView) findViewById(R.id.ilacbtn);
+        ayarlar = (ImageView) findViewById(R.id.ayarlarbtn);
 
         Kgtakip.setOnClickListener(this);
         kasilmasayar.setOnClickListener(this);
@@ -46,55 +39,46 @@ public class Options extends AppCompatActivity implements View.OnClickListener {
         album.setOnClickListener(this);
         ilactakip.setOnClickListener(this);
         ihtiyaclistesi.setOnClickListener(this);
-        back.setOnClickListener(this);
         dogumcantasi.setOnClickListener(this);
-        puan.setOnClickListener(this);
 
-        Options_Settings_SqlLite info = new Options_Settings_SqlLite(this);
-        info.Info();
-        String getinfo = info.getBabyname();
-        getSupportActionBar().setTitle(getinfo + "-" + info.getBabyakraba());
+
+
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.KgBtn:
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.kgbtn:
                 Kg();
                 break;
-            case R.id.KasilmaBtn:
+            case R.id.kasilmabtn:
                 Kasilma();
                 break;
-            case R.id.TekmeBtn:
+            case R.id.tekmebtn:
                 Tekme();
                 break;
-            case R.id.SetBtn:
+            case R.id.ayarlarbtn:
                 Ayarlar();
                 break;
-            case R.id.SaglikTestBtn:
+            case R.id.testbtn:
                 SaglikTesti();
                 break;
             case R.id.namebtn:
                 isimler();
                 break;
-            case R.id.albumbtn:
+            case R.id.fotobtn:
                 album();
                 break;
-            case R.id.Drugbtn:
+            case R.id.ilacbtn:
                 ilactakip();
                 break;
             case R.id.ihtiyacbtn:
                 ihtiyac();
                 break;
-            case R.id.dogumcntasibtn:
+            case R.id.bagbtn:
                 dogumcantasi();
                 break;
-            case R.id.oneribtn:
-                setBack();
-                break;
-            case R.id.puanbtn:
-                setrating();
-                break;
+
         }
     }
 
@@ -135,13 +119,7 @@ public class Options extends AppCompatActivity implements View.OnClickListener {
         this.finish();
     }
 
-    private void setBack() {
-       /* intent = new Intent(Options.this, MainActivity.class);
-        startActivity(intent);
-        this.finish();*/
-        shareIt();
 
-    }
 
     private void isimler() {
 
@@ -185,63 +163,4 @@ public class Options extends AppCompatActivity implements View.OnClickListener {
         this.finish();
         super.onBackPressed();
     }
-
-    private void setrating() {
-        new FancyGifDialog.Builder(Options.this)
-                .setTitle("Uygulamayı Puanla")
-                .setMessage("")
-                .setNegativeBtnText("İptal")
-                .setPositiveBtnBackground("#95B9C7")
-                .setPositiveBtnText("Puan Ver")
-                .setNegativeBtnBackground("#FFC0CB")//FFE5B4
-                .setGifResource(R.drawable.puan)   //Pass your Gif here
-                .isCancellable(true)
-                .OnPositiveClicked(new FancyGifDialogListener() {
-                    @Override
-                    public void OnClick() {
-                        final String appPackageName = "com.ilbarsseckinapp.mother";
-
-                        try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-                        } catch (android.content.ActivityNotFoundException anfe) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
-                        }
-                    }
-                })
-                .OnNegativeClicked(new FancyGifDialogListener() {
-                    @Override
-                    public void OnClick() {
-                        intent = new Intent(Options.this, Options.class);
-                        startActivity(intent);
-                    }
-                })
-                .build();
-
-
-    }
-
-    private void shareIt() {
-        String s = "Bilgiler:\n";
-        s += "OS Version: " + System.getProperty("os.version") + "(" + android.os.Build.VERSION.INCREMENTAL + ")\n";
-        s += "OS API Level: " + android.os.Build.VERSION.RELEASE + "(" + android.os.Build.VERSION.SDK_INT + ")\n";
-        s += "Device: " + android.os.Build.DEVICE + "\n";
-        s += "Model (and Product): " + android.os.Build.MODEL + " (" + android.os.Build.PRODUCT + ")\n";
-        s += "Android SDK: " + Build.VERSION.RELEASE;
-        s += "Android SDK: " + Build.VERSION.SDK_INT;
-        String email = "ilbarsseckin@gmail.com"; /* Your email address here */
-        String subject = "ilbarsseckin@gmail.com"; /* Your subject here */
-        String body = s + "\nÖNERİNİZ:\n";/* Your body here */
-        String chooserTitle = "Bebeğim";/* Your chooser title here */
-        Uri uri = Uri.parse("mailto:" + email)
-                .buildUpon()
-                .appendQueryParameter("subject", subject)
-                .appendQueryParameter("body", body)
-                .build();
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, uri);
-        startActivity(Intent.createChooser(emailIntent, chooserTitle));
-
-
-    }
-
-
 }

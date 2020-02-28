@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:font="@font/baloo"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="  BEBEĞİM"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:textColor="@color/white"
+        android:textSize="22dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/white"
+            android:text="Gün" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white"
+            android:text="Hafta" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.budiyev.android.circularprogressbar.CircularProgressBar
+            android:id="@+id/yourCircularProgressbar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:animateProgress="true"
+            app:backgroundStrokeColor="@color/white"
+            app:backgroundStrokeWidth="4dp"
+            app:drawBackgroundStroke="true"
+            app:foregroundStrokeCap="butt"
+            app:foregroundStrokeColor="@color/Baby_Blue"
+            app:foregroundStrokeWidth="5dp"
+            app:indeterminate="false"
+            app:indeterminateMinimumAngle="45"
+            app:indeterminateRotationAnimationDuration="1200"
+            app:indeterminateSweepAnimationDuration="600"
+            app:maximum="100"
+            app:progress="50"
+            app:progressAnimationDuration="100"
+            app:startAngle="270" />
+
+        <TextView
+            android:id="@+id/toolbarguntxt"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:text="%60"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+        <com.budiyev.android.circularprogressbar.CircularProgressBar
+            android:id="@+id/yourCircularProgressbarr"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="70dp"
+            app:animateProgress="true"
+            app:backgroundStrokeColor="@color/white"
+            app:backgroundStrokeWidth="4dp"
+            app:drawBackgroundStroke="true"
+            app:foregroundStrokeCap="butt"
+            app:foregroundStrokeColor="@color/Baby_Blue"
+            app:foregroundStrokeWidth="5dp"
+            app:indeterminate="false"
+            app:indeterminateMinimumAngle="45"
+            app:indeterminateRotationAnimationDuration="1200"
+            app:indeterminateSweepAnimationDuration="600"
+            app:maximum="100"
+            app:progress="50"
+            app:progressAnimationDuration="100"
+            app:startAngle="270" />
+
+        <TextView
+            android:id="@+id/toolbarhaftatxt"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:layout_marginLeft="70dp"
+            android:text="%60"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+</LinearLayout>

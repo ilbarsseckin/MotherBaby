@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +36,8 @@ public class Options_IhtiyacListesi extends Activity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_ihtiyaclistesi);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
-        toolbar.setTitle("ihtiyaç Listesi");
+        toolbar.setTitle("İhtiyaç Listesi");
+        toolbar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(), R.color.AppColor));
         initView();
         displayDataalinacak("0");
         displayDataalindi("1");

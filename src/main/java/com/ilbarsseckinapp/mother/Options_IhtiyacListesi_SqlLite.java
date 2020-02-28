@@ -144,5 +144,28 @@ public class Options_IhtiyacListesi_SqlLite extends SQLiteOpenHelper {
         return info;
     }*/
 
+    public int IhtiyacCount(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME+" WHERE durum= '1'", null);
+        ArrayList<HashMap<String, String>> info = new ArrayList<HashMap<String, String>>();
+
+        if (cursor.moveToFirst()) {
+            do {
+                HashMap<String, String> map = new HashMap<String, String>();
+                for(int i=0; i<cursor.getColumnCount();i++)
+                {
+                    map.put(cursor.getColumnName(i), cursor.getString(i));
+
+                    Log.e("merhabaxxxy", String.valueOf(cursor.getCount()));
+
+                }
+                info.add(map);
+            } while (cursor.moveToNext());
+        }
+        db.close();
+        // return kitap liste
+
+        return cursor.getCount();
+    }
 
 }
