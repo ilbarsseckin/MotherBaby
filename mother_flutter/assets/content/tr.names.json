@@ -1,0 +1,1566 @@
+{
+    "girls":  [
+                  {
+                      "n":  "Açangül",
+                      "m":  "Açılan gül çiçeği"
+                  },
+                  {
+                      "n":  "Açılay",
+                      "m":  "Ay’ın şekilleri, yansıması"
+                  },
+                  {
+                      "n":  "Adal",
+                      "m":  "Ün kazan"
+                  },
+                  {
+                      "n":  "Afet",
+                      "m":  "Ortalığı birbirine katacak kadar güzel kadın"
+                  },
+                  {
+                      "n":  "Ağça",
+                      "m":  "Temiz, saf"
+                  },
+                  {
+                      "n":  "Ahenk",
+                      "m":  "Uyum"
+                  },
+                  {
+                      "n":  "Ahsen",
+                      "m":  "Çok güzel, olağanüstü güzel"
+                  },
+                  {
+                      "n":  "Ahu",
+                      "m":  "Ceylan, karaca"
+                  },
+                  {
+                      "n":  "Ahuse",
+                      "m":  "Coşkulu güzellik"
+                  },
+                  {
+                      "n":  "Ajlan",
+                      "m":  "Hızlı, çabuk, telaşlı"
+                  },
+                  {
+                      "n":  "Akasya",
+                      "m":  "Güzel kokulu bir süs bitkisi"
+                  },
+                  {
+                      "n":  "Akel",
+                      "m":  "Eli uğurlu anlamında"
+                  },
+                  {
+                      "n":  "Akgün",
+                      "m":  "Parlak gün, uğurlu gün, ışıklı gün"
+                  },
+                  {
+                      "n":  "Aksu",
+                      "m":  "Anadolu’da değişik boylarda bir çok akarsuyun adı"
+                  },
+                  {
+                      "n":  "Akşin",
+                      "m":  "Beyaz tenli kadın"
+                  },
+                  {
+                      "n":  "Aktan",
+                      "m":  "Ak renkli tan; Kutlu tan, uğurlu tan"
+                  },
+                  {
+                      "n":  "Ala",
+                      "m":  "Ela karışık renkli, alaca; Benekli; Tam olgunlaşmamış, yarı olmuş"
+                  },
+                  {
+                      "n":  "Alçin",
+                      "m":  "Kızıl renkli küçük bir kuş"
+                  },
+                  {
+                      "n":  "Aleda",
+                      "m":  "Nazlı, kaprisli"
+                  },
+                  {
+                      "n":  "Alev",
+                      "m":  "Yanan cisimlerin görüntüsünü tarif etmek için kullanılan bir kelime"
+                  },
+                  {
+                      "n":  "Aleyna",
+                      "m":  "Bizim üzerimize olsun"
+                  },
+                  {
+                      "n":  "Algın",
+                      "m":  "Birine gönül vermiş, vurgun, tutkun"
+                  },
+                  {
+                      "n":  "Bade",
+                      "m":  "Aşk, kutsal sevgi"
+                  },
+                  {
+                      "n":  "Baha",
+                      "m":  "Değerli, kıymeti çok"
+                  },
+                  {
+                      "n":  "Bahar",
+                      "m":  "Yazla kış arasında olan mevsim"
+                  },
+                  {
+                      "n":  "Bala",
+                      "m":  "Yavru çocuk"
+                  },
+                  {
+                      "n":  "Balca",
+                      "m":  "Bal gibi, bala benzer"
+                  },
+                  {
+                      "n":  "Balın",
+                      "m":  "Yar, sevgili"
+                  },
+                  {
+                      "n":  "Balkın",
+                      "m":  "Pırıldayan, parlak"
+                  },
+                  {
+                      "n":  "Balkız",
+                      "m":  "Bal kadar tatlı kız"
+                  },
+                  {
+                      "n":  "Banu",
+                      "m":  "Prenses; Hanımefendi"
+                  },
+                  {
+                      "n":  "Başak",
+                      "m":  "Arpa çavdar gibi ekinlerin tanelerini taşıyan baş kısmı"
+                  },
+                  {
+                      "n":  "Bediz",
+                      "m":  "Resim, tasvir, süs, bezek"
+                  },
+                  {
+                      "n":  "Begüm",
+                      "m":  "Hanım; Timuroğulları’ndan gelen prenses"
+                  },
+                  {
+                      "n":  "Behin",
+                      "m":  "İyinin iyisi"
+                  },
+                  {
+                      "n":  "Belde",
+                      "m":  "Memleket, şehir, kasaba"
+                  },
+                  {
+                      "n":  "Belemir",
+                      "m":  "Peygamber çiçeği olarak biliniyor.Açtığı kokusunun dağilmasıyla anlaşılan gizli çiçek anlamında"
+                  },
+                  {
+                      "n":  "Belen",
+                      "m":  "Bel, geçit; İki dağ arasından geçen yol"
+                  },
+                  {
+                      "n":  "Cana",
+                      "m":  "“Can”ın"
+                  },
+                  {
+                      "n":  "Canan",
+                      "m":  "Gönülden sevilmiş, yar"
+                  },
+                  {
+                      "n":  "Candan",
+                      "m":  "İçten, gönülden"
+                  },
+                  {
+                      "n":  "Candaş",
+                      "m":  "Candan, değerli dost"
+                  },
+                  {
+                      "n":  "Caneda",
+                      "m":  "İçten, sevimli kişi"
+                  },
+                  {
+                      "n":  "Canfeza",
+                      "m":  "Müzikte bileşik bir makam"
+                  },
+                  {
+                      "n":  "Cankız",
+                      "m":  "Sevilen, sevimli, şirin kız"
+                  },
+                  {
+                      "n":  "Cankut",
+                      "m":  "Sevimli, cana yakın"
+                  },
+                  {
+                      "n":  "Cansu",
+                      "m":  "Yaşam veren su"
+                  },
+                  {
+                      "n":  "Cemre",
+                      "m":  "Ateş parçası, kor; Şubat ayında bir hafta arayla hava, su ve toprakta oluştuğu sanılan sıcaklık yükselişi"
+                  },
+                  {
+                      "n":  "Ceren",
+                      "m":  "Çok hızlı koşan, gözlerinin güzelliğiyle ünlü, ince bacaklı, zarif hayvan; ceylan"
+                  },
+                  {
+                      "n":  "Cevza",
+                      "m":  "İkizler burcunun eski adı"
+                  },
+                  {
+                      "n":  "Ceyda",
+                      "m":  "İnce-uzun boyunlu ve güzel"
+                  },
+                  {
+                      "n":  "Çevren",
+                      "m":  "Gökyüzünün yerle bitişik gibi görünen kenarları, ufuk"
+                  },
+                  {
+                      "n":  "Çiçek",
+                      "m":  "Bir bitkinin değişik renklerle bezenmiş kokulu bölümü"
+                  },
+                  {
+                      "n":  "Çiğdem",
+                      "m":  "Akdeniz çevresinde yetişen çok renkli kır bitkisi"
+                  },
+                  {
+                      "n":  "Çığlık",
+                      "m":  "İnce ve keskin bağırış"
+                  },
+                  {
+                      "n":  "Çiler",
+                      "m":  "Şarkılar söyleyen, şakıyan"
+                  },
+                  {
+                      "n":  "Çise(M)",
+                      "m":  "Hafif yağan yağmur(um)"
+                  },
+                  {
+                      "n":  "Çisil",
+                      "m":  "İnce ince yağan yağmur"
+                  },
+                  {
+                      "n":  "Çolpan",
+                      "m":  "Çoban yıldızı"
+                  },
+                  {
+                      "n":  "Dalga",
+                      "m":  "Hareketli su kütlesi; Denizin rüzgarlı havada kabarıp kıyıya sürüklenmesi"
+                  },
+                  {
+                      "n":  "Damla",
+                      "m":  "Yağmur ya da bir sıvının çok küçük yuvarlak biçimli parçası"
+                  },
+                  {
+                      "n":  "Defne",
+                      "m":  "Yaprakları güzel kokulu, yaz-kış yeşil olan bir bitki"
+                  },
+                  {
+                      "n":  "Demet",
+                      "m":  "Çiçek bağlamı, deste"
+                  },
+                  {
+                      "n":  "Demre",
+                      "m":  "Noel Baba’nın doğduğu sanılan tarihi yer"
+                  },
+                  {
+                      "n":  "Deniz",
+                      "m":  "Yeryüzünün çoğunu örten engin su"
+                  },
+                  {
+                      "n":  "Deren",
+                      "m":  "Toplayan, düzenleyen, pekiştiren"
+                  },
+                  {
+                      "n":  "Derin",
+                      "m":  "Sığ olmayan"
+                  },
+                  {
+                      "n":  "Derya",
+                      "m":  "Büyük deniz anlamında"
+                  },
+                  {
+                      "n":  "Desen",
+                      "m":  "Çiçek, çizgi gibi süs şekilleri"
+                  },
+                  {
+                      "n":  "Destegül",
+                      "m":  "Mevlevi dervişlerinin giydiği ince kumaştan yelek"
+                  },
+                  {
+                      "n":  "Devin",
+                      "m":  "Hareket, kımıldanış"
+                  },
+                  {
+                      "n":  "Devrim",
+                      "m":  "Yerleşik toplumsal düzeni, köklü, hızlı ve geniş kapsamlı olarak niteliksel değiştirme ve yeniden biçimlendirme işlemi"
+                  },
+                  {
+                      "n":  "Dicle",
+                      "m":  "Bir nehir adı"
+                  },
+                  {
+                      "n":  "Dide",
+                      "m":  "Göz, göz bebeği"
+                  },
+                  {
+                      "n":  "Didem",
+                      "m":  "Gözüm gibi sevdiğim, sevgilim"
+                  },
+                  {
+                      "n":  "Dilara",
+                      "m":  "Gönül alan, gönül okşayan."
+                  },
+                  {
+                      "n":  "Dilay",
+                      "m":  "Gönle ışık saçan, ay kadar güzel"
+                  },
+                  {
+                      "n":  "Ece",
+                      "m":  "Türdeşleri arasında üstünlüğü yeteneği olan kadın, güzel kadın; Kraliçe"
+                  },
+                  {
+                      "n":  "Ecegün",
+                      "m":  "Çok güzel bir günde doğan"
+                  },
+                  {
+                      "n":  "Ecem",
+                      "m":  "Kraliçem, sevgili kraliçe anlamında"
+                  },
+                  {
+                      "n":  "Ecmel",
+                      "m":  "Çok güzel"
+                  },
+                  {
+                      "n":  "Eda",
+                      "m":  "Naz, cilve anlamında"
+                  },
+                  {
+                      "n":  "Efsun",
+                      "m":  "Büyü, sihir"
+                  },
+                  {
+                      "n":  "Ege",
+                      "m":  "Türkiye’nin batısında yer alan deniz"
+                  },
+                  {
+                      "n":  "Elçin",
+                      "m":  "Deste, tutam"
+                  },
+                  {
+                      "n":  "Elif",
+                      "m":  "Arap alfabesinin ilk harfi; Anadolu’da kibar, narin yapılı"
+                  },
+                  {
+                      "n":  "Elvan",
+                      "m":  "Renkler,çeşitler"
+                  },
+                  {
+                      "n":  "Emet",
+                      "m":  "Bereket, bolluk"
+                  },
+                  {
+                      "n":  "Ener",
+                      "m":  "Dağ eteği"
+                  },
+                  {
+                      "n":  "Erem",
+                      "m":  "Cennet"
+                  },
+                  {
+                      "n":  "Erendiz",
+                      "m":  "Jüpiter gezegeninin adı"
+                  },
+                  {
+                      "n":  "Erke",
+                      "m":  "Enerji, iş başarma gücü; Nazlı"
+                  },
+                  {
+                      "n":  "Esen",
+                      "m":  "Sağlıklı, salim"
+                  },
+                  {
+                      "n":  "Eser",
+                      "m":  "Emek sonucu ortaya çıkan ürün, yapıt; Yok olmuş bir nesneden kalan parça"
+                  },
+                  {
+                      "n":  "Esin",
+                      "m":  "Sabah rüzgarı"
+                  },
+                  {
+                      "n":  "Esna",
+                      "m":  "Yüksek, yüce"
+                  },
+                  {
+                      "n":  "Filiz",
+                      "m":  "Tohumdan çıkan sürgün"
+                  },
+                  {
+                      "n":  "Firuze",
+                      "m":  "Açık mavi renkte, değerli bir süs taşı"
+                  },
+                  {
+                      "n":  "Fulya",
+                      "m":  "Nergisgillerden güzel kokulu sarı bir çiçek"
+                  },
+                  {
+                      "n":  "Füruzan",
+                      "m":  "Parlayan, parlak"
+                  },
+                  {
+                      "n":  "Füsun",
+                      "m":  "Büyü"
+                  },
+                  {
+                      "n":  "Gamze",
+                      "m":  "1. Süzgün ve yan bakış. 2. Çenedeki ya da yanaktaki çukurluk."
+                  },
+                  {
+                      "n":  "Gizem",
+                      "m":  "Aklın erişemediği veya çözülemeyen şey, sır."
+                  },
+                  {
+                      "n":  "Gökçe",
+                      "m":  "1. Güzel, gösterişli, mavi gözlü kimse. 2. Melek."
+                  },
+                  {
+                      "n":  "Görkem",
+                      "m":  "Gösterişli, göz alıcı olma."
+                  },
+                  {
+                      "n":  "Gülay",
+                      "m":  "Güllerin açtığı ay."
+                  },
+                  {
+                      "n":  "Gülçin",
+                      "m":  "Gül toplayan, gül devşiren."
+                  },
+                  {
+                      "n":  "Hande",
+                      "m":  "Gülüş, gülme."
+                  },
+                  {
+                      "n":  "Hatice",
+                      "m":  "Erken doğan kız çocuğu."
+                  },
+                  {
+                      "n":  "Hayrünnisa",
+                      "m":  "Kadınların hayırlısı, uğurlusu."
+                  },
+                  {
+                      "n":  "Hazal",
+                      "m":  "Kuruyup dökülen ağaç yaprakları"
+                  },
+                  {
+                      "n":  "Hülya",
+                      "m":  "1. Tatlı düş. 2. Kuruntu, vehim, hayal."
+                  },
+                  {
+                      "n":  "Hümeyra",
+                      "m":  "Kızıllık, pembelik."
+                  },
+                  {
+                      "n":  "Ilgaz",
+                      "m":  "1. Atın dört nala koşması. 2. Hücum, akın. 3. Çankırı ilinin ilçe merkezi. 4. Anadolu’da bir dağ adı."
+                  },
+                  {
+                      "n":  "Ilgın",
+                      "m":  "1. Serap, belli belirsiz görünme. 2. Gök erimi, ufuk."
+                  },
+                  {
+                      "n":  "Işıl",
+                      "m":  "Işıldayan, parlayan."
+                  },
+                  {
+                      "n":  "Itır",
+                      "m":  "Işıldayan, parlayan."
+                  },
+                  {
+                      "n":  "İclal",
+                      "m":  "1. Büyüklük, ululuk. 2. Saygı gösterme, ağırlama, ikram."
+                  },
+                  {
+                      "n":  "İdil",
+                      "m":  "1. Volga Nehri’ne Türklerin verdiği isim. 2. Aşkla ilgili olup, köy ve kır yaşayışını anlatan kısa şiir veya yazı. 3. Yun. İçten ve saf aşk."
+                  },
+                  {
+                      "n":  "İlayda",
+                      "m":  "Su perisi."
+                  },
+                  {
+                      "n":  "İlkay",
+                      "m":  "Ayın hilâl durumu, yeni ay."
+                  },
+                  {
+                      "n":  "İrem",
+                      "m":  "1. Cennete benzetilerek yapılan bahçe. 2. Efsanelerde, masallarda ve edebiyatta adı geçen mutluluk simgesi olan şehir veya bahçe."
+                  },
+                  {
+                      "n":  "İzgi",
+                      "m":  "İyi, güzel, akıllı; adaletli."
+                  },
+                  {
+                      "n":  "Jale",
+                      "m":  "Kırağı, çiy."
+                  },
+                  {
+                      "n":  "Jeyan",
+                      "m":  "Coşmuş, kükremiş, kızgın."
+                  },
+                  {
+                      "n":  "Julide",
+                      "m":  "Karmakarışık, dağınık, birbirine girmiş."
+                  },
+                  {
+                      "n":  "Kadriye",
+                      "m":  "Değer, kıymet, onurla ilgili."
+                  },
+                  {
+                      "n":  "Kayra",
+                      "m":  "Büyük bir kimseden gelen iyilik, ihsan"
+                  },
+                  {
+                      "n":  "Kıvanç",
+                      "m":  "1. Övünç, iftihar"
+                  },
+                  {
+                      "n":  "Kumru",
+                      "m":  "Güvercinden küçük boz renkli kuş"
+                  },
+                  {
+                      "n":  "Kübra",
+                      "m":  "En büyük, çok büyük olan."
+                  },
+                  {
+                      "n":  "Leman",
+                      "m":  "Parlama, parıldama"
+                  },
+                  {
+                      "n":  "Lerzan",
+                      "m":  "Titreyen, titrek."
+                  },
+                  {
+                      "n":  "Leyla",
+                      "m":  "1. Gece. 2. mec. Saçları gece gibi simsiyah olan (kadın). 3. Arabî ayların son gecesi."
+                  },
+                  {
+                      "n":  "Meltem",
+                      "m":  "Yazın karadan denize doğru esen mevsim rüzgârı."
+                  },
+                  {
+                      "n":  "Meriç",
+                      "m":  "Balkan yarımadasının güneydoğu kesiminden geçen akarsu."
+                  },
+                  {
+                      "n":  "Merve",
+                      "m":  "Mekke`de hacıların yedi kez gidip geldikleri kutsal dağın adı."
+                  },
+                  {
+                      "n":  "Mina",
+                      "m":  "1. Şarap şişesi. 2. Mine. 3. Gökyüzü. 4. Ar. Liman."
+                  },
+                  {
+                      "n":  "Mine",
+                      "m":  "1. Metal eşya üzerine vurulan renkli cam katmanı. 2. İnce ve parlak nakış. 3. Çiçekleri başak durumunda, alacalı, mavi veya menekşe renginde, ıtırlı bir bitki."
+                  },
+                  {
+                      "n":  "Müge",
+                      "m":  "İnci çiçeği."
+                  },
+                  {
+                      "n":  "Naz",
+                      "m":  "Kendini beğendirmek için yapılan davranış, cilve."
+                  },
+                  {
+                      "n":  "Nazan",
+                      "m":  "Nazlanan, nazlı, cilveli."
+                  },
+                  {
+                      "n":  "Nehir",
+                      "m":  "1. Akarsu; ırmak. 2. Çok, bol, fazla."
+                  },
+                  {
+                      "n":  "Neva",
+                      "m":  "1. Ses, ahenk, nağme. 2. Refah, mutluluk."
+                  },
+                  {
+                      "n":  "Nevin",
+                      "m":  "Yeni, çok yeni."
+                  },
+                  {
+                      "n":  "Olcay",
+                      "m":  "1. Baht, talih, şans. 2. Bahtlı, talihli."
+                  },
+                  {
+                      "n":  "Oya",
+                      "m":  "1. Genellikle ipek ibrişim kullanılarak iğne, mekik, tığ veya firkete ile yapılan ince dantel. 2. mec. İnce, güzel, nazik."
+                  },
+                  {
+                      "n":  "Oylum",
+                      "m":  "1. Vadi, koyak. 2. Çukur, oyuk."
+                  },
+                  {
+                      "n":  "Oytun",
+                      "m":  "1. Kutsal, mübarek. 2. Beğenilen, güzel yer. 3. Alçak yer, ova."
+                  },
+                  {
+                      "n":  "Özge",
+                      "m":  "1. Başka. 2. Yabancı. 3. İyi, güzel. 4. İki dağ arasındaki dereciklerin birleştiği yer. 5. Şakacı. 6. Cana yakın, sıcakkanlı."
+                  },
+                  {
+                      "n":  "Özgen",
+                      "m":  "Özü geniş, rahat, sakin kimse."
+                  },
+                  {
+                      "n":  "Özgü",
+                      "m":  "1. Kutsal. 2. Özellikle birine ya da bir şeye ait olan."
+                  },
+                  {
+                      "n":  "Pelin",
+                      "m":  "Bileşikgillerden, yapraklarında acı, ıtırlı bir madde bulunan, hekimlikte ve içki yapımında kullanılan bir bitki."
+                  },
+                  {
+                      "n":  "Perçem",
+                      "m":  "1. Kâkül. 2. Yele. 3. Mızrak, bayrak gibi şeylerin başlarına konan püskül."
+                  },
+                  {
+                      "n":  "Peren",
+                      "m":  "Ülker yıldızı."
+                  },
+                  {
+                      "n":  "Perihan",
+                      "m":  "1. Büyücü; perileri davet eden. 2. Periler hükümdarı."
+                  },
+                  {
+                      "n":  "Piraye",
+                      "m":  "Süs; ziynet."
+                  },
+                  {
+                      "n":  "Rabia",
+                      "m":  "1. Dördüncü. 2. Saatteki salisenin altmışta biri. 3. Tanzimat`tan sonra memurlukta bir rütbe."
+                  },
+                  {
+                      "n":  "Rana",
+                      "m":  "Güzel, göze hoş görünen."
+                  },
+                  {
+                      "n":  "Rengin",
+                      "m":  "1. Renkli, parlak renkli. 2. Güzel, hoş. 3. Süslü."
+                  },
+                  {
+                      "n":  "Reyhan",
+                      "m":  "Güzel kokulu bir süs bitkisi, fesleğen."
+                  },
+                  {
+                      "n":  "Ruşen",
+                      "m":  "Aydın, parlak."
+                  },
+                  {
+                      "n":  "Rüya",
+                      "m":  "1. Düş. 2. Hayal; umut."
+                  },
+                  {
+                      "n":  "Sertap",
+                      "m":  "İnatçı, direngen."
+                  },
+                  {
+                      "n":  "Sıla",
+                      "m":  "Doğup büyüdüğü yere gidip, ayrı kaldığı yakınlarına kavuşma."
+                  },
+                  {
+                      "n":  "Sibel",
+                      "m":  "1. Buğday başağı. 2. Henüz yere düşmemiş yağmur damlası."
+                  },
+                  {
+                      "n":  "Simay",
+                      "m":  "Gümüşten ay, gümüş gibi parlak ay."
+                  },
+                  {
+                      "n":  "Sinem",
+                      "m":  "“Gönlüm,yüreğim; çok sevdiğim” anlamında kullanılır."
+                  },
+                  {
+                      "n":  "Sude",
+                      "m":  "1. Sürmüş, sürülmüş. 2. Ezilmiş, dövülmüş."
+                  },
+                  {
+                      "n":  "Süreyya",
+                      "m":  "Ülker yıldızı."
+                  },
+                  {
+                      "n":  "Şebnem",
+                      "m":  "Havada buğu durumunda iken gecenin serinliğiyle yerde veya bitkilerin üzerinde toplanan su damlacıkları, çiy."
+                  },
+                  {
+                      "n":  "Şenay",
+                      "m":  "Parlak, canlı, neşeli ay."
+                  },
+                  {
+                      "n":  "Şevval",
+                      "m":  "Hicri takvime göre yılın onuncu ayı; ilk üç günü Ramazan Bayramıdır."
+                  },
+                  {
+                      "n":  "Şeyda",
+                      "m":  "Çılgın; çok tutkun, âşık."
+                  },
+                  {
+                      "n":  "Şimal",
+                      "m":  "Eski dilde kuzey"
+                  },
+                  {
+                      "n":  "Şule",
+                      "m":  "Alev, ateş alevi."
+                  },
+                  {
+                      "n":  "Şükran",
+                      "m":  "İyilik bilme, gönül borcu."
+                  },
+                  {
+                      "n":  "Tuba",
+                      "m":  "1. Güzellik, iyilik, hoşluk. 2. Cennette bulunduğuna inanılan, dalları bütün cenneti gölgeleyen ilâhî ağaç. TUĞÇE Küçük tuğ."
+                  },
+                  {
+                      "n":  "Tuna",
+                      "m":  "1. Çok, bol. 2. Yavru. 3.Karaormanlardan doğan, Karadeniz`e dökülen, Avrupa`nın Volga`dan sonra en uzun ırmağı. 4. Görkemli, gösterişli."
+                  },
+                  {
+                      "n":  "Uğur",
+                      "m":  "Kimi şeylerde, insanlarda görülen ve iyilik getirdiğine inanılan belirti veya iyilik kaynağı."
+                  },
+                  {
+                      "n":  "Umay",
+                      "m":  "1. Orhun Yazıtları´nda geçen, çocukları ve hayvan yavrularını koruduğuna inanılan kadın Tanrı. 2. Devlet kuşu."
+                  },
+                  {
+                      "n":  "Umut",
+                      "m":  "Ummaktan doğan güven duygusu, ümit."
+                  },
+                  {
+                      "n":  "Utku",
+                      "m":  "Üstünlük, zafer."
+                  },
+                  {
+                      "n":  "Ülkem",
+                      "m":  "Yurdum, vatanım."
+                  },
+                  {
+                      "n":  "Ülker",
+                      "m":  "Boğa burcunda yedi yıldızdan oluşan takım. Ülkü Amaç edinilen, ulaşmak istenen şey."
+                  },
+                  {
+                      "n":  "Ülkü",
+                      "m":  "Amaç edinilen, ulaşılmak istenen şey."
+                  },
+                  {
+                      "n":  "Ümit",
+                      "m":  "Umut"
+                  },
+                  {
+                      "n":  "Verda",
+                      "m":  "Gül."
+                  },
+                  {
+                      "n":  "Vuslat",
+                      "m":  "1. Ulaşma, yetişme. * 2. Kavuşma, sevgiliye kavuşma."
+                  },
+                  {
+                      "n":  "Yağmur",
+                      "m":  "Hava yuvarındaki su buğusunun yoğunlaşmasıyla oluşan ve yeryüzüne düşen yağışın sıvı durumunda olanı."
+                  },
+                  {
+                      "n":  "Yalın",
+                      "m":  "1.Gösterişsiz, sade. 2. Alev, ateş."
+                  },
+                  {
+                      "n":  "Yankı",
+                      "m":  "Sesin bir yere çarpıp geri dönmesiyle duyulan ikinci ses, ses yansıması."
+                  },
+                  {
+                      "n":  "Yaprak",
+                      "m":  "Bitkilerin solunumunu sağlayan, çoğunlukla yeşil ve türlü biçimlerdeki bölümü."
+                  },
+                  {
+                      "n":  "Yasemin",
+                      "m":  "Beyaz, kırmızı veya sarı renkli, kokulu çiçekler açan bir ağaç"
+                  },
+                  {
+                      "n":  "Zehra",
+                      "m":  "Yüzü pek beyaz ve parlak olan."
+                  },
+                  {
+                      "n":  "Zeren",
+                      "m":  "Anlayışlı, kavrayışlı, zeki."
+                  },
+                  {
+                      "n":  "Zerrin",
+                      "m":  "1. Altından yapılmış. 2. Altın gibi sarı, parlak. 3. Fulya."
+                  }
+              ],
+    "boys":  [
+                 {
+                     "n":  "Acar",
+                     "m":  "Atılgan,çevik, Gürcü soyundan"
+                 },
+                 {
+                     "n":  "Acun",
+                     "m":  "Evren, kainat"
+                 },
+                 {
+                     "n":  "Abdullah",
+                     "m":  "Allahın kulu"
+                 },
+                 {
+                     "n":  "Adal",
+                     "m":  "Ün kazan"
+                 },
+                 {
+                     "n":  "Adar",
+                     "m":  "Uygur metinlerinde geçen bir Türk adı; olgunluk, erginlik; omuzdaş"
+                 },
+                 {
+                     "n":  "Adnan",
+                     "m":  "İnsanlardan üstün olan; Vatan tutmak; Cennetin orta yerinin adı"
+                 },
+                 {
+                     "n":  "Adsay",
+                     "m":  "Moğol hakanlarından biri (Ölümü 1434)"
+                 },
+                 {
+                     "n":  "Afşin",
+                     "m":  "Zırh,silah; Sultan Alparslan’ın komutanlarından biri"
+                 },
+                 {
+                     "n":  "Ahsen",
+                     "m":  "En güzel"
+                 },
+                 {
+                     "n":  "Akal",
+                     "m":  "Beyaz ve kırmızı"
+                 },
+                 {
+                     "n":  "Akan",
+                     "m":  "Akmakta olan"
+                 },
+                 {
+                     "n":  "Akanay",
+                     "m":  "Akıp giden ay"
+                 },
+                 {
+                     "n":  "Akarsu",
+                     "m":  "Sürekli akıp giden su"
+                 },
+                 {
+                     "n":  "Akdora",
+                     "m":  "Karlı dağın doruk noktası"
+                 },
+                 {
+                     "n":  "Akel",
+                     "m":  "Eli uğurlu anlamında"
+                 },
+                 {
+                     "n":  "Akın",
+                     "m":  "Düşman topraklarına yapılan saldırı. Birşeyin ardıarkası kesilmeyen geliş durumunda olması"
+                 },
+                 {
+                     "n":  "Akınalp",
+                     "m":  "Savaşan yiğit kişi"
+                 },
+                 {
+                     "n":  "Akgiray",
+                     "m":  "Temiz ve yaraşır"
+                 },
+                 {
+                     "n":  "Akgün",
+                     "m":  "Parlak gün, uğurlu gün"
+                 },
+                 {
+                     "n":  "Ksoy",
+                     "m":  "Temizsoy, paksoy; Uğurlu soy, kutlu soy"
+                 },
+                 {
+                     "n":  "Aksu",
+                     "m":  "Kayalardan sızan tatlı ve duru su. Anadolu’da birçok akarsu ve yer adı."
+                 },
+                 {
+                     "n":  "Babür",
+                     "m":  "Büyük Moğol devletini kuran hükümdarın adı"
+                 },
+                 {
+                     "n":  "Baha",
+                     "m":  "Değer, kıymet, üstünlük"
+                 },
+                 {
+                     "n":  "Bahadır",
+                     "m":  "Savaşlarda yılmazlığıyla üstünlük kazanan kişi"
+                 },
+                 {
+                     "n":  "Balkan",
+                     "m":  "Sarp ve ormanlık sıradağlar"
+                 },
+                 {
+                     "n":  "Balkar",
+                     "m":  "Kafkasya’da yaşayan Kıpkaç’ların bir kolu"
+                 },
+                 {
+                     "n":  "Balkır",
+                     "m":  "Şimşek"
+                 },
+                 {
+                     "n":  "Baran",
+                     "m":  "Direnci kıran, ulu, yüksek"
+                 },
+                 {
+                     "n":  "Barbaros",
+                     "m":  "Avrupa’lılar tarafından Hayrettin Paşa’ya verilen isim"
+                 },
+                 {
+                     "n":  "Barış",
+                     "m":  "Savaşın bittiğinin bir anlaşmayla belirlenmesinden sonraki durum"
+                 },
+                 {
+                     "n":  "Barlas",
+                     "m":  "Cenkçi, savaşçı"
+                 },
+                 {
+                     "n":  "Bartu",
+                     "m":  "En eski Türk hanlarından biri"
+                 },
+                 {
+                     "n":  "Başar",
+                     "m":  "Başarılı ol anlamında"
+                 },
+                 {
+                     "n":  "Batın",
+                     "m":  "Karın, kuşak, nesil"
+                 },
+                 {
+                     "n":  "Batu",
+                     "m":  "Güçlü, kuvvetli"
+                 },
+                 {
+                     "n":  "Batuhan",
+                     "m":  "Batının hanı; Güçlü, kuvvetli han"
+                 },
+                 {
+                     "n":  "Batur",
+                     "m":  "Savaşlarda yılmazlığıyla üstünlük kazanan kişi"
+                 },
+                 {
+                     "n":  "Baturalp",
+                     "m":  "Yiğitler yiğidi"
+                 },
+                 {
+                     "n":  "Can",
+                     "m":  "Yaşamı sağladığına ve ölümle vücuttan ayrıldığına inanılan soyut varlık"
+                 },
+                 {
+                     "n":  "Canalp",
+                     "m":  "CAN+ALP=Cana yakın, sevimli yiğit"
+                 },
+                 {
+                     "n":  "Canberk",
+                     "m":  "Sağlam, canlı, metin"
+                 },
+                 {
+                     "n":  "Candaş",
+                     "m":  "Candan, değerli dost"
+                 },
+                 {
+                     "n":  "Cem",
+                     "m":  "Hükümdar,şah"
+                 },
+                 {
+                     "n":  "Cemre",
+                     "m":  "Şubat ayında birer hafta aralıklarla önce havada, sonra suda ve en sonra toprakta oluştuğu sanılan sıcaklık yükselişi “Bu cemre sözü Arapça kor ateş manasındadır.”"
+                 },
+                 {
+                     "n":  "Cenk",
+                     "m":  "Savaş"
+                 },
+                 {
+                     "n":  "Cesur",
+                     "m":  "Cesaretli,gözüpek,korkusuz"
+                 },
+                 {
+                     "n":  "Ceyhan",
+                     "m":  "Akdeniz bölgesinde bir nehir"
+                 },
+                 {
+                     "n":  "Çağdaş",
+                     "m":  "Çağın koşullarına uyguna uygun; Aynı çağda yaşayan"
+                 },
+                 {
+                     "n":  "Çağhan",
+                     "m":  "Çağın hanı; Çağdaş han"
+                 },
+                 {
+                     "n":  "Çağıl",
+                     "m":  "Çağlamak eyleminden çağıl; Küçük taş parçacıkları, çakıl"
+                 },
+                 {
+                     "n":  "Çağın",
+                     "m":  "Yıldırım; Çağa ilişkin"
+                 },
+                 {
+                     "n":  "Çağlar",
+                     "m":  "Çağlayan, çağlayıp akan; Şelale"
+                 },
+                 {
+                     "n":  "Çağlayan",
+                     "m":  "Köpürerek yüksekten düşen su"
+                 },
+                 {
+                     "n":  "Çağrı",
+                     "m":  "Davet"
+                 },
+                 {
+                     "n":  "Çakabey",
+                     "m":  "Oğuzlarda bir Türk beyi"
+                 },
+                 {
+                     "n":  "Çakır",
+                     "m":  "Göz rengi mavi, benekli"
+                 },
+                 {
+                     "n":  "Çelik",
+                     "m":  "Özel bir metal alaşımı; Sağlam"
+                 },
+                 {
+                     "n":  "Çetin",
+                     "m":  "Çözümlemesi güç olan"
+                 },
+                 {
+                     "n":  "Dağhan",
+                     "m":  "Oğuz tanrılarından biri; Yerkabuğunun çıkıntılı bölümleri; Eski Türklerde dağ tanrısı"
+                 },
+                 {
+                     "n":  "Dalay",
+                     "m":  "Deniz"
+                 },
+                 {
+                     "n":  "Dalga",
+                     "m":  "Denizin rüzgarlı havada kabarıp kıyıya sürüklenmesi; Hareketli su kütlesi"
+                 },
+                 {
+                     "n":  "Darcan",
+                     "m":  "Sabırsız, aceleci"
+                 },
+                 {
+                     "n":  "Değer",
+                     "m":  "Yüksek nitelikleri olan kimse"
+                 },
+                 {
+                     "n":  "Deha",
+                     "m":  "İnsan zekasının ulaştığı en yüksek nokta"
+                 },
+                 {
+                     "n":  "Demir",
+                     "m":  "Yeraltından çıkarılan işlemeye çok elverişli bir metel"
+                 },
+                 {
+                     "n":  "Deniz",
+                     "m":  "Yerkabuğunun çukur bölümlerini kaplayan birbirine bağlantılı tuzlu su yığını; derya"
+                 },
+                 {
+                     "n":  "Denizhan",
+                     "m":  "DENİZ+HAN"
+                 },
+                 {
+                     "n":  "Derin",
+                     "m":  "Çok gelişmiş, çok ilerlemiş"
+                 },
+                 {
+                     "n":  "Derman",
+                     "m":  "Güç"
+                 },
+                 {
+                     "n":  "Destan",
+                     "m":  "Efsane"
+                 },
+                 {
+                     "n":  "Devran",
+                     "m":  "Zaman; devir"
+                 },
+                 {
+                     "n":  "Devrim",
+                     "m":  "Hızlı,geniş kapsamlı niteliksel değişim"
+                 },
+                 {
+                     "n":  "Dinç",
+                     "m":  "Güçlü ve sağlıklı kimse"
+                 },
+                 {
+                     "n":  "Dirim",
+                     "m":  "Yaşama gücü"
+                 },
+                 {
+                     "n":  "Doğa",
+                     "m":  "Yaradılış ve yapı özelliklerinin tümü; tabiat"
+                 },
+                 {
+                     "n":  "Doğaç",
+                     "m":  "Önceden düşünülüp hazırlanmadan ortaya çıkan düşünce, eylem"
+                 },
+                 {
+                     "n":  "Doğan",
+                     "m":  "Kartalgillerden alıştırılarak kuş avında kullanılan yırtıcı bir kuş"
+                 },
+                 {
+                     "n":  "Ecevit",
+                     "m":  "Çevik, atılgan"
+                 },
+                 {
+                     "n":  "Ediz",
+                     "m":  "Yüksek yer, herşeyin yükseği"
+                 },
+                 {
+                     "n":  "Efe",
+                     "m":  "Batı Anadolunun yiğidi"
+                 },
+                 {
+                     "n":  "Efkan",
+                     "m":  "Çığlıklar, inlemeler"
+                 },
+                 {
+                     "n":  "Eflatun",
+                     "m":  "Açık mor"
+                 },
+                 {
+                     "n":  "Efsun",
+                     "m":  "Büyü"
+                 },
+                 {
+                     "n":  "Ege",
+                     "m":  "Yaşça büyük,ulu"
+                 },
+                 {
+                     "n":  "Egehan",
+                     "m":  "Engin denizlerin hükümdarı"
+                 },
+                 {
+                     "n":  "Egemen",
+                     "m":  "Gücü yeter olup buyruğunu yürüten"
+                 },
+                 {
+                     "n":  "Ekim",
+                     "m":  "Sonbahar mevsiminde bir ay; Toprağı ekme eylemi"
+                 },
+                 {
+                     "n":  "Ekin",
+                     "m":  "Tahılın tarlaya atılmasından harman oluncaya kadarki adı"
+                 },
+                 {
+                     "n":  "Elçi",
+                     "m":  "Uzlaştırmacı"
+                 },
+                 {
+                     "n":  "Elgin",
+                     "m":  "Yurdundan evinden uzak düşmüş kişi"
+                 },
+                 {
+                     "n":  "Elhan",
+                     "m":  "Nameler, ezgiler"
+                 },
+                 {
+                     "n":  "Emir",
+                     "m":  "Buyruk, komut"
+                 },
+                 {
+                     "n":  "Emrah",
+                     "m":  "Saz çalıp, oynayan"
+                 },
+                 {
+                     "n":  "Emre",
+                     "m":  "Dost, beylerbeyi, büyük erkek kardeş"
+                 },
+                 {
+                     "n":  "Ferruh",
+                     "m":  "Uğurlu, kutsal"
+                 },
+                 {
+                     "n":  "Fethi",
+                     "m":  "Fetih ile ilgili"
+                 },
+                 {
+                     "n":  "Fevzi",
+                     "m":  "Zaferle ilgili; Galip, üstün gelen anlamında"
+                 },
+                 {
+                     "n":  "Feyezan",
+                     "m":  "Su baskını ,sel"
+                 },
+                 {
+                     "n":  "Feyyaz",
+                     "m":  "Bol,verimli,gür"
+                 },
+                 {
+                     "n":  "Feyzullah",
+                     "m":  "Allahın bilimi"
+                 },
+                 {
+                     "n":  "Feza",
+                     "m":  "Uzay"
+                 },
+                 {
+                     "n":  "Fırat",
+                     "m":  "Türkiye’nin en uzun nehrinin adı"
+                 },
+                 {
+                     "n":  "Fikret",
+                     "m":  "Düşünce, akıl, anlayış"
+                 },
+                 {
+                     "n":  "Fikri",
+                     "m":  "Düşünceyle ilgili"
+                 },
+                 {
+                     "n":  "Fuat",
+                     "m":  "Kalp, gönül"
+                 },
+                 {
+                     "n":  "Furkan",
+                     "m":  "İyi ile kötü arasındaki farkı gösteren herşey"
+                 },
+                 {
+                     "n":  "Giray",
+                     "m":  "Eskiden Kırım hanlarının ve han ailesinden olan prenslerin kullandığı san."
+                 },
+                 {
+                     "n":  "Gökalp",
+                     "m":  "Mavi gözlü yiğit."
+                 },
+                 {
+                     "n":  "Gökçe",
+                     "m":  "1. Güzel, gösterişli kimse. 2. Yiğit, cesur. 3. Mavi gözlü kimse."
+                 },
+                 {
+                     "n":  "Görkem",
+                     "m":  "1. Gösteriş, heybet. 2. İyi gelişmiş, gürbüz."
+                 },
+                 {
+                     "n":  "Hakan",
+                     "m":  "1. Türk, Moğol ve Tatar hanları için “hükümdarlar hükümdarı” anlamında kullanılan bir unvan. 2. Osmanlı padişahlarına verilen unvan."
+                 },
+                 {
+                     "n":  "Halil",
+                     "m":  "Sadık, samimî, dost."
+                 },
+                 {
+                     "n":  "Haluk",
+                     "m":  "İyi ahlâk sahibi, iyi huylu, geçimli kimse."
+                 },
+                 {
+                     "n":  "Hasan",
+                     "m":  "1. Güzel"
+                 },
+                 {
+                     "n":  "Ilgaz",
+                     "m":  "1. Atın dört nala koşması. 2. Hücum, akın. 3. Çankırı ilinin ilçe merkezi. 4. Anadolu’da bir dağ adı."
+                 },
+                 {
+                     "n":  "Ilgın",
+                     "m":  "1. Serap, belli belirsiz görünme."
+                 },
+                 {
+                     "n":  "İbrahim",
+                     "m":  "İbranice’de hakların babası anlamındadır."
+                 },
+                 {
+                     "n":  "İhsan",
+                     "m":  "1. İyilik etme, iyilik. 2. Bağış, bağışlama. 3. Bağışlanan şey."
+                 },
+                 {
+                     "n":  "İlker",
+                     "m":  "İlk doğan erkek çocuklara verilen adlardan biri."
+                 },
+                 {
+                     "n":  "İsmail",
+                     "m":  "Kutsal kitaplarda adı geçen, ibrahim Peygamberin oğlu olan İbranî peygamberi."
+                 },
+                 {
+                     "n":  "İsmet",
+                     "m":  "1. Masumluk, günahsızlık, temizlik. 2. Haramdan çekinme, namus."
+                 },
+                 {
+                     "n":  "Kağan",
+                     "m":  "1. Hanların hanı, hükümdar. 2. Tarihte Çin ve Moğol hükümdarlarına verilen ad."
+                 },
+                 {
+                     "n":  "Kayra",
+                     "m":  "Büyük bir kimseden gelen iyilik, ihsan"
+                 },
+                 {
+                     "n":  "Kemal",
+                     "m":  "1. Olgunluk, yetkinlik, eksiksizlik. 2. En yüksek değer. 3. Erdem, bilgi."
+                 },
+                 {
+                     "n":  "Kerem",
+                     "m":  "1. Soyluluk. 2. Cömertlik, el açıklığı, bağış."
+                 },
+                 {
+                     "n":  "Kıvanç",
+                     "m":  "1. Övünç, iftihar"
+                 },
+                 {
+                     "n":  "Korcan",
+                     "m":  "Ateşli, canlı, hareketli kimse."
+                 },
+                 {
+                     "n":  "Kutay",
+                     "m":  "1. Kutlu, uğurlu ay. 2. İpek, ipekli kumaş."
+                 },
+                 {
+                     "n":  "Kürşat",
+                     "m":  "Göktürk prenslerinden birinin adı."
+                 },
+                 {
+                     "n":  "Laçin",
+                     "m":  "1. Bir cins şahin. 2. Sarp, yalçın. 3. Şiddetli."
+                 },
+                 {
+                     "n":  "Levent",
+                     "m":  "1. Osmanlı donanmasında ve kıyılarda görev yapan asker sınıfı. 2. Yiğit denizci. 3. Boylu boslu yakışıklı kimse."
+                 },
+                 {
+                     "n":  "Lütfi",
+                     "m":  "1. İyilik ve güzellikle ilgili. 2. İhsan, bağışla ilgili"
+                 },
+                 {
+                     "n":  "Mahmut",
+                     "m":  "Övülmeye değer"
+                 },
+                 {
+                     "n":  "Mazhar",
+                     "m":  "1. Bir şeyin göründüğü çıktığı yer. 2. Şereflenme, onurlanma."
+                 },
+                 {
+                     "n":  "Melih",
+                     "m":  "Güzel, şirin, sevimli."
+                 },
+                 {
+                     "n":  "Meriç",
+                     "m":  "Balkan yarımadasının güneydoğu kesiminden geçen akarsu."
+                 },
+                 {
+                     "n":  "Mert",
+                     "m":  "1. Erkek. 2. Özü sözü doğru olan."
+                 },
+                 {
+                     "n":  "Mete",
+                     "m":  "Büyük Türk-Hun İmparatoru."
+                 },
+                 {
+                     "n":  "Necati",
+                     "m":  "Kurtuluşla ilgili; kurtulmuş."
+                 },
+                 {
+                     "n":  "Nedim",
+                     "m":  "1. Sohbet arkadaşı. 2. Güzel öykü anlatan, tatlı konuşan. 3. Ünlü Osmanlı şairi."
+                 },
+                 {
+                     "n":  "Nevzat",
+                     "m":  "Yeni doğmuş, yeni doğan çocuk."
+                 },
+                 {
+                     "n":  "Nihat",
+                     "m":  "Doğa, huy, yaradılış"
+                 },
+                 {
+                     "n":  "Niyazi",
+                     "m":  "1. Yalvarma, yakarma. 2. İstek. Arzu. 3. Dua."
+                 },
+                 {
+                     "n":  "Oğuz",
+                     "m":  "1. Sağlam, gürbüz, güçlü delikanlı. 2. Temiz kalpli, dost, iyi arkadaş. 3. Kır adamı, köylü. 4. Saf, deneyimsiz kimse. 5. Türklerin en büyük boylarından birinin ve bu boydan olan kimselerin adı."
+                 },
+                 {
+                     "n":  "Okan",
+                     "m":  "1. Anlayışlı. 2. Tanrı, ogan."
+                 },
+                 {
+                     "n":  "Olcay",
+                     "m":  "1. Baht, talih, şans. 2. Bahtlı, talihli."
+                 },
+                 {
+                     "n":  "Onur",
+                     "m":  "1. İnsanın kendine karşı duyduğu saygı. 2. Başkalarının gösterdiği saygının dayandığı değer, şeref."
+                 },
+                 {
+                     "n":  "Ömer",
+                     "m":  "1. Yaşama, yaşayış; hayat, canlılık. 2. İkinci halife."
+                 },
+                 {
+                     "n":  "Özge",
+                     "m":  "1. Başka. 2. Yabancı. 3. İyi, güzel. 4. İki dağ arasındaki dereciklerin birleştiği yer, derenin başlangıcı. 5. Şakacı. 6. Cana yakın, sıcakkanlı. 7. Yürekli, gözü pek."
+                 },
+                 {
+                     "n":  "Özgen",
+                     "m":  "Özü geniş, rahat, sakin kimse."
+                 },
+                 {
+                     "n":  "Özgü",
+                     "m":  "1. Kutsal. 2. Özellikle birine ya da bir şeye ait olan."
+                 },
+                 {
+                     "n":  "Özgün",
+                     "m":  "1. Nitelikleri bakımından benzerlerinden ayrı ve üstün olan. 2. Yalnız kendine özgü bir nitelik taşıyan."
+                 },
+                 {
+                     "n":  "Pamir",
+                     "m":  "Herşeye gücü yeten"
+                 },
+                 {
+                     "n":  "Polat",
+                     "m":  "1. Çelik. 2. Güç, kuvvet."
+                 },
+                 {
+                     "n":  "Poyraz",
+                     "m":  "1. Kuzeydoğudan esen soğuk rüzgâr. 2. Kuzey yönü."
+                 },
+                 {
+                     "n":  "Recep",
+                     "m":  "1. Gösterişli, heybetli. 2. Arabî ayların yedincisi ve kutsal sayılan üç aylardan birincisi."
+                 },
+                 {
+                     "n":  "Rıfat",
+                     "m":  "Yükseklik, yücelik, büyük aşama."
+                 },
+                 {
+                     "n":  "Ruşen",
+                     "m":  "Aydın, parlak."
+                 },
+                 {
+                     "n":  "Rüstem",
+                     "m":  "1. Yiğit, kahraman. 2. İran’ın efsanevi ünlü pehlivanı ve savaşçısı."
+                 },
+                 {
+                     "n":  "Rüzgar",
+                     "m":  "1. Zaman, devir. 2. Dünya. 3. T. Yel."
+                 },
+                 {
+                     "n":  "Salih",
+                     "m":  "1. Elverişli, iyi, uygun, yakışır. 2. Yetkisi hakkı olan. 3. Dinin buyruklarına uygun harekette bulunan."
+                 },
+                 {
+                     "n":  "Samet",
+                     "m":  "Sonsuz, ebedi"
+                 },
+                 {
+                     "n":  "Sarp",
+                     "m":  "1. Çetin, sert, şiddetli. 2. Dik, çıkılması ve geçilmesi güç."
+                 },
+                 {
+                     "n":  "Selçuk",
+                     "m":  "Güzel konuşma yeteneği olan, uz dilli."
+                 },
+                 {
+                     "n":  "Selim",
+                     "m":  "Sağlam, kusursuz, doğru."
+                 },
+                 {
+                     "n":  "Şadan",
+                     "m":  "Sevinçli, keyifli, hoşnut."
+                 },
+                 {
+                     "n":  "Şakir",
+                     "m":  "Şükreden, durumundan memnun olan (kimse)."
+                 },
+                 {
+                     "n":  "Şenol",
+                     "m":  "“Şen ve mutlu ol” anlamında kullanılır."
+                 },
+                 {
+                     "n":  "Şinasi",
+                     "m":  "Tanımaya, anlamaya özgü, tanımak, bilmekle ilgili."
+                 },
+                 {
+                     "n":  "Tamer",
+                     "m":  "Tümüyle nitelikli kişi."
+                 },
+                 {
+                     "n":  "Tarık",
+                     "m":  "Sabah yıldızı, Venüs."
+                 },
+                 {
+                     "n":  "Taylan",
+                     "m":  "1. İnce, kibar, güzel, boylu boslu kimse (genç) 2. Çok yağmur yağmasına karşın işlenebilir durumda toprak."
+                 },
+                 {
+                     "n":  "Teoman",
+                     "m":  "Hun İmparatoru Mete´nin babası."
+                 },
+                 {
+                     "n":  "Tolga",
+                     "m":  "Savaşçıların başlarına giydikleri demir başlık."
+                 },
+                 {
+                     "n":  "Uğur",
+                     "m":  "1. Kimi olaylarda görülen ve insana iyilik getirdiğine inanılan belirti ya da kimi nesnelerde olduğuna inanılan iyilik kaynağı. 2. İyilik, şans, talih, baht. 3. Fırsat, tesadüf."
+                 },
+                 {
+                     "n":  "Ulaş",
+                     "m":  "Amacına ermiş, isteğine kavuşmuş."
+                 },
+                 {
+                     "n":  "Umur",
+                     "m":  "Görgü, bilgi, deneyim."
+                 },
+                 {
+                     "n":  "Umut",
+                     "m":  "Ummaktan doğan güven duygusu, ümit."
+                 },
+                 {
+                     "n":  "Uras",
+                     "m":  "Talih, şans."
+                 },
+                 {
+                     "n":  "Ülker",
+                     "m":  "Boğa burcunda yedi yıldızdan oluşan takım. Ülkü Amaç edinilen, ulaşmak istenen şey."
+                 },
+                 {
+                     "n":  "Ümit",
+                     "m":  "Umut"
+                 },
+                 {
+                     "n":  "Ünal",
+                     "m":  "Adın duyulsun, tanın, ün kazan."
+                 },
+                 {
+                     "n":  "Ünsal",
+                     "m":  "Adın duyulsun, ünlen."
+                 },
+                 {
+                     "n":  "Vedat",
+                     "m":  "Sevgi, dostluk."
+                 },
+                 {
+                     "n":  "Vefa",
+                     "m":  "1. Sözünde duran, dostluğu sürdüren. * 2. Yetişme, yetme. 3. Ödeme."
+                 },
+                 {
+                     "n":  "Veli",
+                     "m":  "1. Sahip. 2. Ermiş, eren. 3. Bir çocuğun her türlü durumundan sorumlu olan kimse."
+                 },
+                 {
+                     "n":  "Yağız",
+                     "m":  "1. Esmer. 2. Doru. 3. Yiğit. 4. Bakımlı hayvan."
+                 },
+                 {
+                     "n":  "Yakup",
+                     "m":  "1. Erkek keklik. 2. İbranicede “Takip eden, izleyen” anlamındadır."
+                 },
+                 {
+                     "n":  "Yalın",
+                     "m":  "1. Gösterişsiz, süssüz, sade. 2. Alev, ateş. 3. Taş, büyük kaya. 4. Çıplak, örtüsüz."
+                 },
+                 {
+                     "n":  "Yankı",
+                     "m":  "Sesin bir yere çarpıp geri dönmesiyle duyulan ikinci ses, ses yansıması."
+                 },
+                 {
+                     "n":  "Yaren",
+                     "m":  "Arkadaş, yakın dost."
+                 },
+                 {
+                     "n":  "Yılmaz",
+                     "m":  "Yılmayan, bıkmayan, azimli, sebatlı."
+                 },
+                 {
+                     "n":  "Zeki",
+                     "m":  "Anlayışlı, kavrayışlı, zekâ sahibi."
+                 }
+             ]
+}
