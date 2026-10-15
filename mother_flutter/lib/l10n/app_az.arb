@@ -203,5 +203,13 @@
   "monthAxis": "{month} ay",
   "otherTools": "Digər alətlər",
   "noRecords": "Hələ qeyd yoxdur.",
-  "dailyMsgSetting": "Sabahınız xeyir mesajları"
+  "dailyMsgSetting": "Sabahınız xeyir mesajları",
+  "premiumTitle": "Reklamları sil",
+  "premiumDesc": "Birdəfəlik ödənişlə tətbiqdən reklamsız istifadə et. Bu alış eyni mağaza hesabı olan digər cihazlarında da keçərlidir.",
+  "premiumBuy": "Reklamsız et – {price}",
+  "premiumBuyNoPrice": "Mağaza hazırda əlçatan deyil",
+  "premiumRestore": "Alışı bərpa et",
+  "premiumActive": "Reklamsız versiya aktivdir. Dəstəyin üçün təşəkkürlər 💕",
+  "premiumUnavailable": "Alış tamamlanmadı. Zəhmət olmasa, sonra yenidən cəhd et.",
+  "premiumThanks": "Təşəkkürlər! Artıq reklam görməyəcəksən 💕"
 }

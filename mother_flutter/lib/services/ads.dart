@@ -5,6 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import 'premium.dart';
+
 /// Reklam birimi kimlikleri. Debug derlemede her zaman Google test reklamları.
 /// Gerçek kimlik boş ('') ise release derlemede o reklam hiç istenmez.
 class AdIds {
@@ -56,6 +58,8 @@ class Ads {
 
   /// runApp'ten sonra çağrılır (onay formu bir ekran ister).
   static void start() {
+    // Reklamsız sürümde onay formu da reklam SDK'sı da başlatılmaz.
+    if (Premium.isPremium.value) return;
     ConsentInformation.instance.requestConsentInfoUpdate(
       ConsentRequestParameters(),
       () async {
@@ -142,6 +146,7 @@ class Interstitials {
 
   /// Bir araç ekranından çıkıldığında çağrılır.
   void onToolClosed() {
+    if (Premium.isPremium.value) return;
     _returns++;
     final ad = _ad;
     if (ad == null) {
@@ -183,6 +188,16 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   void initState() {
     super.initState();
     Ads.ready.addListener(_tryLoad);
+    Premium.isPremium.addListener(_onPremium);
+  }
+
+  void _onPremium() {
+    if (!Premium.isPremium.value || !mounted) return;
+    _ad?.dispose();
+    setState(() {
+      _ad = null;
+      _loaded = false;
+    });
   }
 
   @override
@@ -192,7 +207,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   }
 
   void _tryLoad() {
-    if (_started || !mounted || !Ads.ready.value) return;
+    if (_started || !mounted || !Ads.ready.value || Premium.isPremium.value) return;
     _started = true;
     _load();
   }
@@ -221,6 +236,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   @override
   void dispose() {
     Ads.ready.removeListener(_tryLoad);
+    Premium.isPremium.removeListener(_onPremium);
     _ad?.dispose();
     super.dispose();
   }
@@ -228,7 +244,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   @override
   Widget build(BuildContext context) {
     final ad = _ad;
-    if (!_loaded || ad == null) return const SizedBox.shrink();
+    if (!_loaded || ad == null || Premium.isPremium.value) return const SizedBox.shrink();
     return SafeArea(
       top: false,
       child: SizedBox(

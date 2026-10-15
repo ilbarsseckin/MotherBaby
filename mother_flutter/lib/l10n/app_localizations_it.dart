@@ -695,4 +695,33 @@ class LIt extends L {
 
   @override
   String get dailyMsgSetting => 'Messaggi del buongiorno';
+
+  @override
+  String get premiumTitle => 'Rimuovi pubblicità';
+
+  @override
+  String get premiumDesc =>
+      'Usa l\'app senza pubblicità con un pagamento unico. L\'acquisto vale anche sugli altri tuoi dispositivi con lo stesso account.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Senza pubblicità – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Lo store non è disponibile al momento';
+
+  @override
+  String get premiumRestore => 'Ripristina acquisto';
+
+  @override
+  String get premiumActive =>
+      'La versione senza pubblicità è attiva. Grazie per il tuo supporto 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'Impossibile completare l\'acquisto. Riprova più tardi.';
+
+  @override
+  String get premiumThanks => 'Grazie! Non vedrai più pubblicità 💕';
 }

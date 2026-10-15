@@ -693,4 +693,33 @@ class LPt extends L {
 
   @override
   String get dailyMsgSetting => 'Mensagens de bom dia';
+
+  @override
+  String get premiumTitle => 'Remover anúncios';
+
+  @override
+  String get premiumDesc =>
+      'Use o app sem anúncios com um pagamento único. A compra também vale nos seus outros aparelhos com a mesma conta.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Sem anúncios – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'A loja não está disponível agora';
+
+  @override
+  String get premiumRestore => 'Restaurar compra';
+
+  @override
+  String get premiumActive =>
+      'A versão sem anúncios está ativa. Obrigado pelo apoio 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'Não foi possível concluir a compra. Tente novamente mais tarde.';
+
+  @override
+  String get premiumThanks => 'Obrigado! Você não verá mais anúncios 💕';
 }

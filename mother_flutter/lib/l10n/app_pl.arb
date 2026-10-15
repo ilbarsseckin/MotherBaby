@@ -203,5 +203,13 @@
   "monthAxis": "{month} mies.",
   "otherTools": "Inne narzędzia",
   "noRecords": "Brak wpisów.",
-  "dailyMsgSetting": "Poranne wiadomości"
+  "dailyMsgSetting": "Poranne wiadomości",
+  "premiumTitle": "Usuń reklamy",
+  "premiumDesc": "Korzystaj z aplikacji bez reklam po jednorazowej płatności. Zakup obowiązuje też na innych urządzeniach z tym samym kontem.",
+  "premiumBuy": "Bez reklam – {price}",
+  "premiumBuyNoPrice": "Sklep jest teraz niedostępny",
+  "premiumRestore": "Przywróć zakup",
+  "premiumActive": "Wersja bez reklam jest aktywna. Dziękujemy za wsparcie 💕",
+  "premiumUnavailable": "Nie udało się dokończyć zakupu. Spróbuj ponownie później.",
+  "premiumThanks": "Dziękujemy! Nie zobaczysz już reklam 💕"
 }

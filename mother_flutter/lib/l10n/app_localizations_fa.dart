@@ -690,4 +690,33 @@ class LFa extends L {
 
   @override
   String get dailyMsgSetting => 'پیام‌های صبح بخیر';
+
+  @override
+  String get premiumTitle => 'حذف تبلیغات';
+
+  @override
+  String get premiumDesc =>
+      'با یک پرداخت یک‌باره، برنامه را بدون تبلیغات استفاده کنید. این خرید در دستگاه‌های دیگر شما با همان حساب فروشگاه هم معتبر است.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'بدون تبلیغات – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'فروشگاه در حال حاضر در دسترس نیست';
+
+  @override
+  String get premiumRestore => 'بازیابی خرید';
+
+  @override
+  String get premiumActive =>
+      'نسخه بدون تبلیغات فعال است. از حمایت شما سپاسگزاریم 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'خرید انجام نشد. لطفاً بعداً دوباره تلاش کنید.';
+
+  @override
+  String get premiumThanks => 'سپاسگزاریم! دیگر تبلیغی نخواهید دید 💕';
 }

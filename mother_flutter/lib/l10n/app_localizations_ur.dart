@@ -689,4 +689,33 @@ class LUr extends L {
 
   @override
   String get dailyMsgSetting => 'صبح بخیر کے پیغامات';
+
+  @override
+  String get premiumTitle => 'اشتہارات ہٹائیں';
+
+  @override
+  String get premiumDesc =>
+      'ایک بار ادائیگی کر کے ایپ کو بغیر اشتہارات کے استعمال کریں۔ یہ خریداری اسی اسٹور اکاؤنٹ والے آپ کے دوسرے آلات پر بھی لاگو ہوتی ہے۔';
+
+  @override
+  String premiumBuy(String price) {
+    return 'اشتہارات سے پاک – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'اسٹور اس وقت دستیاب نہیں';
+
+  @override
+  String get premiumRestore => 'خریداری بحال کریں';
+
+  @override
+  String get premiumActive =>
+      'اشتہارات سے پاک ورژن فعال ہے۔ آپ کے تعاون کا شکریہ 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'خریداری مکمل نہیں ہو سکی۔ براہ کرم بعد میں دوبارہ کوشش کریں۔';
+
+  @override
+  String get premiumThanks => 'شکریہ! اب آپ کو اشتہارات نظر نہیں آئیں گے 💕';
 }

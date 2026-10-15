@@ -692,4 +692,33 @@ class LNl extends L {
 
   @override
   String get dailyMsgSetting => 'Goedemorgenberichten';
+
+  @override
+  String get premiumTitle => 'Advertenties verwijderen';
+
+  @override
+  String get premiumDesc =>
+      'Gebruik de app zonder advertenties met een eenmalige betaling. De aankoop geldt ook op je andere apparaten met hetzelfde store-account.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Advertentievrij – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'De store is nu niet beschikbaar';
+
+  @override
+  String get premiumRestore => 'Aankoop herstellen';
+
+  @override
+  String get premiumActive =>
+      'De advertentievrije versie is actief. Bedankt voor je steun 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'De aankoop kon niet worden voltooid. Probeer het later opnieuw.';
+
+  @override
+  String get premiumThanks => 'Bedankt! Je ziet geen advertenties meer 💕';
 }

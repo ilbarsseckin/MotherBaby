@@ -8,6 +8,7 @@ import '../l10n/language.dart';
 import '../services/ads.dart';
 import '../services/notifications.dart';
 import '../services/photos.dart';
+import '../ui/premium_card.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
 import 'home_screen.dart';
@@ -250,6 +251,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ],
             if (!widget.onboarding) ...[
+              const PremiumCard(),
               const SizedBox(height: 28),
               _languagePicker(l),
               ValueListenableBuilder<bool>(

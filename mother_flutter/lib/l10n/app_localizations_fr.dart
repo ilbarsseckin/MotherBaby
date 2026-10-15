@@ -695,4 +695,34 @@ class LFr extends L {
 
   @override
   String get dailyMsgSetting => 'Messages du matin';
+
+  @override
+  String get premiumTitle => 'Supprimer les pubs';
+
+  @override
+  String get premiumDesc =>
+      'Utilise l\'application sans publicité grâce à un paiement unique. L\'achat est aussi valable sur tes autres appareils avec le même compte.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Sans pub – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice =>
+      'La boutique n\'est pas disponible pour le moment';
+
+  @override
+  String get premiumRestore => 'Restaurer l\'achat';
+
+  @override
+  String get premiumActive =>
+      'La version sans publicité est active. Merci pour ton soutien 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'L\'achat n\'a pas pu aboutir. Réessaie plus tard.';
+
+  @override
+  String get premiumThanks => 'Merci ! Tu ne verras plus de publicités 💕';
 }

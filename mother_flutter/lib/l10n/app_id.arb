@@ -203,5 +203,13 @@
   "monthAxis": "{month} bln",
   "otherTools": "Alat lainnya",
   "noRecords": "Belum ada catatan.",
-  "dailyMsgSetting": "Pesan selamat pagi"
+  "dailyMsgSetting": "Pesan selamat pagi",
+  "premiumTitle": "Hapus iklan",
+  "premiumDesc": "Gunakan aplikasi tanpa iklan dengan sekali bayar. Pembelian ini juga berlaku di perangkat lain dengan akun toko yang sama.",
+  "premiumBuy": "Bebas iklan – {price}",
+  "premiumBuyNoPrice": "Toko sedang tidak tersedia",
+  "premiumRestore": "Pulihkan pembelian",
+  "premiumActive": "Versi bebas iklan aktif. Terima kasih atas dukunganmu 💕",
+  "premiumUnavailable": "Pembelian tidak dapat diselesaikan. Coba lagi nanti.",
+  "premiumThanks": "Terima kasih! Kamu tidak akan melihat iklan lagi 💕"
 }

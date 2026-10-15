@@ -690,4 +690,33 @@ class LUk extends L {
 
   @override
   String get dailyMsgSetting => 'Ранкові повідомлення';
+
+  @override
+  String get premiumTitle => 'Прибрати рекламу';
+
+  @override
+  String get premiumDesc =>
+      'Користуйтеся застосунком без реклами після одноразової оплати. Покупка діє і на інших ваших пристроях з тим самим обліковим записом.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Без реклами – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Магазин зараз недоступний';
+
+  @override
+  String get premiumRestore => 'Відновити покупку';
+
+  @override
+  String get premiumActive =>
+      'Версія без реклами активна. Дякуємо за підтримку 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'Не вдалося завершити покупку. Спробуйте пізніше.';
+
+  @override
+  String get premiumThanks => 'Дякуємо! Реклами більше не буде 💕';
 }

@@ -203,5 +203,13 @@
   "monthAxis": "{month} mnd",
   "otherTools": "Andere hulpmiddelen",
   "noRecords": "Nog geen gegevens.",
-  "dailyMsgSetting": "Goedemorgenberichten"
+  "dailyMsgSetting": "Goedemorgenberichten",
+  "premiumTitle": "Advertenties verwijderen",
+  "premiumDesc": "Gebruik de app zonder advertenties met een eenmalige betaling. De aankoop geldt ook op je andere apparaten met hetzelfde store-account.",
+  "premiumBuy": "Advertentievrij – {price}",
+  "premiumBuyNoPrice": "De store is nu niet beschikbaar",
+  "premiumRestore": "Aankoop herstellen",
+  "premiumActive": "De advertentievrije versie is actief. Bedankt voor je steun 💕",
+  "premiumUnavailable": "De aankoop kon niet worden voltooid. Probeer het later opnieuw.",
+  "premiumThanks": "Bedankt! Je ziet geen advertenties meer 💕"
 }

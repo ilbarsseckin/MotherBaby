@@ -689,4 +689,32 @@ class LAr extends L {
 
   @override
   String get dailyMsgSetting => 'رسائل صباح الخير';
+
+  @override
+  String get premiumTitle => 'إزالة الإعلانات';
+
+  @override
+  String get premiumDesc =>
+      'استخدمي التطبيق بدون إعلانات بدفعة واحدة. يسري الشراء أيضًا على أجهزتك الأخرى بنفس حساب المتجر.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'بدون إعلانات – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'المتجر غير متاح حاليًا';
+
+  @override
+  String get premiumRestore => 'استعادة الشراء';
+
+  @override
+  String get premiumActive =>
+      'النسخة الخالية من الإعلانات مفعّلة. شكرًا لدعمك 💕';
+
+  @override
+  String get premiumUnavailable => 'تعذّر إتمام الشراء. يرجى المحاولة لاحقًا.';
+
+  @override
+  String get premiumThanks => 'شكرًا! لن تري إعلانات بعد الآن 💕';
 }

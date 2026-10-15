@@ -681,4 +681,31 @@ class LKo extends L {
 
   @override
   String get dailyMsgSetting => '아침 인사 메시지';
+
+  @override
+  String get premiumTitle => '광고 제거';
+
+  @override
+  String get premiumDesc =>
+      '한 번의 결제로 광고 없이 앱을 사용하세요. 같은 스토어 계정을 쓰는 다른 기기에서도 적용됩니다.';
+
+  @override
+  String premiumBuy(String price) {
+    return '광고 없이 – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => '지금은 스토어를 사용할 수 없습니다';
+
+  @override
+  String get premiumRestore => '구매 복원';
+
+  @override
+  String get premiumActive => '광고 없는 버전이 활성화되었습니다. 응원해 주셔서 감사합니다 💕';
+
+  @override
+  String get premiumUnavailable => '구매를 완료하지 못했습니다. 나중에 다시 시도해 주세요.';
+
+  @override
+  String get premiumThanks => '감사합니다! 이제 광고가 표시되지 않습니다 💕';
 }

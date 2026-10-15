@@ -690,4 +690,33 @@ class LRu extends L {
 
   @override
   String get dailyMsgSetting => 'Утренние сообщения';
+
+  @override
+  String get premiumTitle => 'Убрать рекламу';
+
+  @override
+  String get premiumDesc =>
+      'Пользуйтесь приложением без рекламы после единоразовой оплаты. Покупка действует и на других ваших устройствах с тем же аккаунтом.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Без рекламы – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Магазин сейчас недоступен';
+
+  @override
+  String get premiumRestore => 'Восстановить покупку';
+
+  @override
+  String get premiumActive =>
+      'Версия без рекламы активна. Спасибо за поддержку 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'Не удалось завершить покупку. Попробуйте позже.';
+
+  @override
+  String get premiumThanks => 'Спасибо! Рекламы больше не будет 💕';
 }

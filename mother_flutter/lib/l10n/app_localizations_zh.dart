@@ -680,4 +680,30 @@ class LZh extends L {
 
   @override
   String get dailyMsgSetting => '早安消息';
+
+  @override
+  String get premiumTitle => '移除广告';
+
+  @override
+  String get premiumDesc => '一次性付款即可无广告使用本应用。使用同一商店账号的其他设备也同样有效。';
+
+  @override
+  String premiumBuy(String price) {
+    return '去除广告 – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => '商店暂时不可用';
+
+  @override
+  String get premiumRestore => '恢复购买';
+
+  @override
+  String get premiumActive => '无广告版本已启用。感谢你的支持 💕';
+
+  @override
+  String get premiumUnavailable => '购买未能完成，请稍后再试。';
+
+  @override
+  String get premiumThanks => '谢谢！你将不会再看到广告 💕';
 }

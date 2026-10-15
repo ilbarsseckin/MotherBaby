@@ -203,5 +203,13 @@
   "monthAxis": "{month} ش",
   "otherTools": "أدوات أخرى",
   "noRecords": "لا توجد سجلات بعد.",
-  "dailyMsgSetting": "رسائل صباح الخير"
+  "dailyMsgSetting": "رسائل صباح الخير",
+  "premiumTitle": "إزالة الإعلانات",
+  "premiumDesc": "استخدمي التطبيق بدون إعلانات بدفعة واحدة. يسري الشراء أيضًا على أجهزتك الأخرى بنفس حساب المتجر.",
+  "premiumBuy": "بدون إعلانات – {price}",
+  "premiumBuyNoPrice": "المتجر غير متاح حاليًا",
+  "premiumRestore": "استعادة الشراء",
+  "premiumActive": "النسخة الخالية من الإعلانات مفعّلة. شكرًا لدعمك 💕",
+  "premiumUnavailable": "تعذّر إتمام الشراء. يرجى المحاولة لاحقًا.",
+  "premiumThanks": "شكرًا! لن تري إعلانات بعد الآن 💕"
 }

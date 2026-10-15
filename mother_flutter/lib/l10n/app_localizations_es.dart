@@ -691,4 +691,33 @@ class LEs extends L {
 
   @override
   String get dailyMsgSetting => 'Mensajes de buenos días';
+
+  @override
+  String get premiumTitle => 'Quitar anuncios';
+
+  @override
+  String get premiumDesc =>
+      'Usa la app sin anuncios con un pago único. La compra también vale en tus otros dispositivos con la misma cuenta.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Sin anuncios – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'La tienda no está disponible ahora';
+
+  @override
+  String get premiumRestore => 'Restaurar compra';
+
+  @override
+  String get premiumActive =>
+      'La versión sin anuncios está activa. Gracias por tu apoyo 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'No se pudo completar la compra. Inténtalo más tarde.';
+
+  @override
+  String get premiumThanks => '¡Gracias! Ya no verás anuncios 💕';
 }

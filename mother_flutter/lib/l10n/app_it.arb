@@ -203,5 +203,13 @@
   "monthAxis": "{month} mesi",
   "otherTools": "Altri strumenti",
   "noRecords": "Nessun dato.",
-  "dailyMsgSetting": "Messaggi del buongiorno"
+  "dailyMsgSetting": "Messaggi del buongiorno",
+  "premiumTitle": "Rimuovi pubblicità",
+  "premiumDesc": "Usa l'app senza pubblicità con un pagamento unico. L'acquisto vale anche sugli altri tuoi dispositivi con lo stesso account.",
+  "premiumBuy": "Senza pubblicità – {price}",
+  "premiumBuyNoPrice": "Lo store non è disponibile al momento",
+  "premiumRestore": "Ripristina acquisto",
+  "premiumActive": "La versione senza pubblicità è attiva. Grazie per il tuo supporto 💕",
+  "premiumUnavailable": "Impossibile completare l'acquisto. Riprova più tardi.",
+  "premiumThanks": "Grazie! Non vedrai più pubblicità 💕"
 }

@@ -690,4 +690,33 @@ class LHi extends L {
 
   @override
   String get dailyMsgSetting => 'सुप्रभात संदेश';
+
+  @override
+  String get premiumTitle => 'विज्ञापन हटाएँ';
+
+  @override
+  String get premiumDesc =>
+      'एक बार भुगतान करके ऐप को बिना विज्ञापनों के इस्तेमाल करें। यह खरीद उसी स्टोर खाते वाले आपके दूसरे डिवाइस पर भी मान्य है।';
+
+  @override
+  String premiumBuy(String price) {
+    return 'विज्ञापन-मुक्त – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'स्टोर अभी उपलब्ध नहीं है';
+
+  @override
+  String get premiumRestore => 'खरीद बहाल करें';
+
+  @override
+  String get premiumActive =>
+      'विज्ञापन-मुक्त संस्करण चालू है। आपके सहयोग के लिए धन्यवाद 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'खरीद पूरी नहीं हो सकी। कृपया बाद में फिर से कोशिश करें।';
+
+  @override
+  String get premiumThanks => 'धन्यवाद! अब आपको विज्ञापन नहीं दिखेंगे 💕';
 }

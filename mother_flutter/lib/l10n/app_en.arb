@@ -203,5 +203,13 @@
   "monthAxis": "{month} mo",
   "otherTools": "Other tools",
   "noRecords": "No records yet.",
-  "dailyMsgSetting": "Good-morning messages"
+  "dailyMsgSetting": "Good-morning messages",
+  "premiumTitle": "Remove ads",
+  "premiumDesc": "Use the app ad-free with a one-time payment. The purchase also applies to your other devices with the same store account.",
+  "premiumBuy": "Go ad-free – {price}",
+  "premiumBuyNoPrice": "Store is not available right now",
+  "premiumRestore": "Restore purchase",
+  "premiumActive": "Ad-free version is active. Thank you for your support 💕",
+  "premiumUnavailable": "The purchase could not be completed. Please try again later.",
+  "premiumThanks": "Thank you! You won't see ads anymore 💕"
 }

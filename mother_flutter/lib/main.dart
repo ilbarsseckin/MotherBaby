@@ -10,6 +10,7 @@ import 'screens/home_screen.dart';
 import 'screens/profile_screen.dart';
 import 'services/ads.dart';
 import 'services/notifications.dart';
+import 'services/premium.dart';
 import 'ui/theme.dart';
 
 Future<void> main() async {
@@ -18,9 +19,11 @@ Future<void> main() async {
   await initializeDateFormatting();
   await LanguageController.instance.init();
   await Notifications.loadSettings();
+  await Premium.loadCached();
   final profile = await Profile.load();
   runApp(BebegimApp(hasProfile: profile != null));
   Ads.start();
+  Premium.init();
   Notifications.scheduleMilestones();
 }
 

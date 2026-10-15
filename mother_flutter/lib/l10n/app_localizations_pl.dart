@@ -690,4 +690,33 @@ class LPl extends L {
 
   @override
   String get dailyMsgSetting => 'Poranne wiadomości';
+
+  @override
+  String get premiumTitle => 'Usuń reklamy';
+
+  @override
+  String get premiumDesc =>
+      'Korzystaj z aplikacji bez reklam po jednorazowej płatności. Zakup obowiązuje też na innych urządzeniach z tym samym kontem.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Bez reklam – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Sklep jest teraz niedostępny';
+
+  @override
+  String get premiumRestore => 'Przywróć zakup';
+
+  @override
+  String get premiumActive =>
+      'Wersja bez reklam jest aktywna. Dziękujemy za wsparcie 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'Nie udało się dokończyć zakupu. Spróbuj ponownie później.';
+
+  @override
+  String get premiumThanks => 'Dziękujemy! Nie zobaczysz już reklam 💕';
 }

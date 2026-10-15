@@ -681,4 +681,30 @@ class LJa extends L {
 
   @override
   String get dailyMsgSetting => 'おはようメッセージ';
+
+  @override
+  String get premiumTitle => '広告を削除';
+
+  @override
+  String get premiumDesc => '一度のお支払いで広告なしでアプリを使えます。同じストアアカウントの他の端末でも有効です。';
+
+  @override
+  String premiumBuy(String price) {
+    return '広告なしにする – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => '現在ストアを利用できません';
+
+  @override
+  String get premiumRestore => '購入を復元';
+
+  @override
+  String get premiumActive => '広告なし版が有効です。ご支援ありがとうございます 💕';
+
+  @override
+  String get premiumUnavailable => '購入を完了できませんでした。しばらくしてからもう一度お試しください。';
+
+  @override
+  String get premiumThanks => 'ありがとうございます！もう広告は表示されません 💕';
 }

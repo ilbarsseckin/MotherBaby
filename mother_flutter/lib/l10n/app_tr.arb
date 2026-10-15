@@ -242,5 +242,14 @@
   "@monthAxis": {"placeholders": {"month": {"type": "int"}}},
   "otherTools": "Diğer araçlar",
   "noRecords": "Henüz kayıt yok.",
-  "dailyMsgSetting": "Günaydın mesajları"
+  "dailyMsgSetting": "Günaydın mesajları",
+  "premiumTitle": "Reklamları kaldır",
+  "premiumDesc": "Tek seferlik ödemeyle uygulamayı reklamsız kullan. Bu satın alma, aynı mağaza hesabıyla diğer cihazlarında da geçerli olur.",
+  "premiumBuy": "Reklamsız yap – {price}",
+  "@premiumBuy": { "placeholders": { "price": { "type": "String" } } },
+  "premiumBuyNoPrice": "Mağaza şu an kullanılamıyor",
+  "premiumRestore": "Satın alımı geri yükle",
+  "premiumActive": "Reklamsız sürüm etkin. Desteğin için teşekkürler 💕",
+  "premiumUnavailable": "İşlem tamamlanamadı. Lütfen daha sonra tekrar dene.",
+  "premiumThanks": "Teşekkürler! Artık reklam görmeyeceksin 💕"
 }

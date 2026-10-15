@@ -691,4 +691,33 @@ class LTr extends L {
 
   @override
   String get dailyMsgSetting => 'Günaydın mesajları';
+
+  @override
+  String get premiumTitle => 'Reklamları kaldır';
+
+  @override
+  String get premiumDesc =>
+      'Tek seferlik ödemeyle uygulamayı reklamsız kullan. Bu satın alma, aynı mağaza hesabıyla diğer cihazlarında da geçerli olur.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Reklamsız yap – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Mağaza şu an kullanılamıyor';
+
+  @override
+  String get premiumRestore => 'Satın alımı geri yükle';
+
+  @override
+  String get premiumActive =>
+      'Reklamsız sürüm etkin. Desteğin için teşekkürler 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'İşlem tamamlanamadı. Lütfen daha sonra tekrar dene.';
+
+  @override
+  String get premiumThanks => 'Teşekkürler! Artık reklam görmeyeceksin 💕';
 }

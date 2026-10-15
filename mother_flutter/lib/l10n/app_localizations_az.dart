@@ -690,4 +690,33 @@ class LAz extends L {
 
   @override
   String get dailyMsgSetting => 'Sabahınız xeyir mesajları';
+
+  @override
+  String get premiumTitle => 'Reklamları sil';
+
+  @override
+  String get premiumDesc =>
+      'Birdəfəlik ödənişlə tətbiqdən reklamsız istifadə et. Bu alış eyni mağaza hesabı olan digər cihazlarında da keçərlidir.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Reklamsız et – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Mağaza hazırda əlçatan deyil';
+
+  @override
+  String get premiumRestore => 'Alışı bərpa et';
+
+  @override
+  String get premiumActive =>
+      'Reklamsız versiya aktivdir. Dəstəyin üçün təşəkkürlər 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'Alış tamamlanmadı. Zəhmət olmasa, sonra yenidən cəhd et.';
+
+  @override
+  String get premiumThanks => 'Təşəkkürlər! Artıq reklam görməyəcəksən 💕';
 }

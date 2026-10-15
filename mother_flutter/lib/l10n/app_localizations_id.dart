@@ -690,4 +690,34 @@ class LId extends L {
 
   @override
   String get dailyMsgSetting => 'Pesan selamat pagi';
+
+  @override
+  String get premiumTitle => 'Hapus iklan';
+
+  @override
+  String get premiumDesc =>
+      'Gunakan aplikasi tanpa iklan dengan sekali bayar. Pembelian ini juga berlaku di perangkat lain dengan akun toko yang sama.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Bebas iklan – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Toko sedang tidak tersedia';
+
+  @override
+  String get premiumRestore => 'Pulihkan pembelian';
+
+  @override
+  String get premiumActive =>
+      'Versi bebas iklan aktif. Terima kasih atas dukunganmu 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'Pembelian tidak dapat diselesaikan. Coba lagi nanti.';
+
+  @override
+  String get premiumThanks =>
+      'Terima kasih! Kamu tidak akan melihat iklan lagi 💕';
 }

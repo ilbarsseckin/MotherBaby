@@ -694,4 +694,33 @@ class LDe extends L {
 
   @override
   String get dailyMsgSetting => 'Guten-Morgen-Nachrichten';
+
+  @override
+  String get premiumTitle => 'Werbung entfernen';
+
+  @override
+  String get premiumDesc =>
+      'Nutze die App mit einer einmaligen Zahlung werbefrei. Der Kauf gilt auch auf deinen anderen Geräten mit demselben Store-Konto.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Werbefrei – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Der Store ist gerade nicht verfügbar';
+
+  @override
+  String get premiumRestore => 'Kauf wiederherstellen';
+
+  @override
+  String get premiumActive =>
+      'Die werbefreie Version ist aktiv. Danke für deine Unterstützung 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'Der Kauf konnte nicht abgeschlossen werden. Bitte versuch es später erneut.';
+
+  @override
+  String get premiumThanks => 'Danke! Du siehst ab jetzt keine Werbung mehr 💕';
 }

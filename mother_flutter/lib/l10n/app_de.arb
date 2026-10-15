@@ -203,5 +203,13 @@
   "monthAxis": "{month} Mon.",
   "otherTools": "Weitere Werkzeuge",
   "noRecords": "Noch keine Einträge.",
-  "dailyMsgSetting": "Guten-Morgen-Nachrichten"
+  "dailyMsgSetting": "Guten-Morgen-Nachrichten",
+  "premiumTitle": "Werbung entfernen",
+  "premiumDesc": "Nutze die App mit einer einmaligen Zahlung werbefrei. Der Kauf gilt auch auf deinen anderen Geräten mit demselben Store-Konto.",
+  "premiumBuy": "Werbefrei – {price}",
+  "premiumBuyNoPrice": "Der Store ist gerade nicht verfügbar",
+  "premiumRestore": "Kauf wiederherstellen",
+  "premiumActive": "Die werbefreie Version ist aktiv. Danke für deine Unterstützung 💕",
+  "premiumUnavailable": "Der Kauf konnte nicht abgeschlossen werden. Bitte versuch es später erneut.",
+  "premiumThanks": "Danke! Du siehst ab jetzt keine Werbung mehr 💕"
 }

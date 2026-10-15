@@ -690,4 +690,33 @@ class LEn extends L {
 
   @override
   String get dailyMsgSetting => 'Good-morning messages';
+
+  @override
+  String get premiumTitle => 'Remove ads';
+
+  @override
+  String get premiumDesc =>
+      'Use the app ad-free with a one-time payment. The purchase also applies to your other devices with the same store account.';
+
+  @override
+  String premiumBuy(String price) {
+    return 'Go ad-free – $price';
+  }
+
+  @override
+  String get premiumBuyNoPrice => 'Store is not available right now';
+
+  @override
+  String get premiumRestore => 'Restore purchase';
+
+  @override
+  String get premiumActive =>
+      'Ad-free version is active. Thank you for your support 💕';
+
+  @override
+  String get premiumUnavailable =>
+      'The purchase could not be completed. Please try again later.';
+
+  @override
+  String get premiumThanks => 'Thank you! You won\'t see ads anymore 💕';
 }

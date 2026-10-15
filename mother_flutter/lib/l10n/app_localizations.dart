@@ -1356,6 +1356,54 @@ abstract class L {
   /// In tr, this message translates to:
   /// **'Günaydın mesajları'**
   String get dailyMsgSetting;
+
+  /// No description provided for @premiumTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Reklamları kaldır'**
+  String get premiumTitle;
+
+  /// No description provided for @premiumDesc.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tek seferlik ödemeyle uygulamayı reklamsız kullan. Bu satın alma, aynı mağaza hesabıyla diğer cihazlarında da geçerli olur.'**
+  String get premiumDesc;
+
+  /// No description provided for @premiumBuy.
+  ///
+  /// In tr, this message translates to:
+  /// **'Reklamsız yap – {price}'**
+  String premiumBuy(String price);
+
+  /// No description provided for @premiumBuyNoPrice.
+  ///
+  /// In tr, this message translates to:
+  /// **'Mağaza şu an kullanılamıyor'**
+  String get premiumBuyNoPrice;
+
+  /// No description provided for @premiumRestore.
+  ///
+  /// In tr, this message translates to:
+  /// **'Satın alımı geri yükle'**
+  String get premiumRestore;
+
+  /// No description provided for @premiumActive.
+  ///
+  /// In tr, this message translates to:
+  /// **'Reklamsız sürüm etkin. Desteğin için teşekkürler 💕'**
+  String get premiumActive;
+
+  /// No description provided for @premiumUnavailable.
+  ///
+  /// In tr, this message translates to:
+  /// **'İşlem tamamlanamadı. Lütfen daha sonra tekrar dene.'**
+  String get premiumUnavailable;
+
+  /// No description provided for @premiumThanks.
+  ///
+  /// In tr, this message translates to:
+  /// **'Teşekkürler! Artık reklam görmeyeceksin 💕'**
+  String get premiumThanks;
 }
 
 class _LDelegate extends LocalizationsDelegate<L> {
