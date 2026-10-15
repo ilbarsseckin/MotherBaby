@@ -205,11 +205,11 @@
   "noRecords": "Aucun enregistrement.",
   "dailyMsgSetting": "Messages du matin",
   "premiumTitle": "Supprimer les pubs",
-  "premiumDesc": "Utilise l'application sans publicité grâce à un paiement unique. L'achat est aussi valable sur tes autres appareils avec le même compte.",
+  "premiumDesc": "Utilisez l'application sans publicité grâce à un paiement unique. L'achat est aussi valable sur vos autres appareils avec le même compte.",
   "premiumBuy": "Sans pub – {price}",
   "premiumBuyNoPrice": "La boutique n'est pas disponible pour le moment",
   "premiumRestore": "Restaurer l'achat",
-  "premiumActive": "La version sans publicité est active. Merci pour ton soutien 💕",
-  "premiumUnavailable": "L'achat n'a pas pu aboutir. Réessaie plus tard.",
-  "premiumThanks": "Merci ! Tu ne verras plus de publicités 💕"
+  "premiumActive": "La version sans publicité est active. Merci pour votre soutien 💕",
+  "premiumUnavailable": "L'achat n'a pas pu aboutir. Réessayez plus tard.",
+  "premiumThanks": "Merci ! Vous ne verrez plus de publicités 💕"
 }

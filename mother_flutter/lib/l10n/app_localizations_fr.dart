@@ -701,7 +701,7 @@ class LFr extends L {
 
   @override
   String get premiumDesc =>
-      'Utilise l\'application sans publicité grâce à un paiement unique. L\'achat est aussi valable sur tes autres appareils avec le même compte.';
+      'Utilisez l\'application sans publicité grâce à un paiement unique. L\'achat est aussi valable sur vos autres appareils avec le même compte.';
 
   @override
   String premiumBuy(String price) {
@@ -717,12 +717,12 @@ class LFr extends L {
 
   @override
   String get premiumActive =>
-      'La version sans publicité est active. Merci pour ton soutien 💕';
+      'La version sans publicité est active. Merci pour votre soutien 💕';
 
   @override
   String get premiumUnavailable =>
-      'L\'achat n\'a pas pu aboutir. Réessaie plus tard.';
+      'L\'achat n\'a pas pu aboutir. Réessayez plus tard.';
 
   @override
-  String get premiumThanks => 'Merci ! Tu ne verras plus de publicités 💕';
+  String get premiumThanks => 'Merci ! Vous ne verrez plus de publicités 💕';
 }
