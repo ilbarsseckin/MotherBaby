@@ -13,8 +13,8 @@ class AdIds {
   static const _pub = 'ca-app-pub-3096856257561140';
 
   // AdMob → "Bebeğim" uygulamaları oluşturulunca doldurulacak
-  static const _androidBanner = '';
-  static const _androidInterstitial = '';
+  static const _androidBanner = '3184198892';
+  static const _androidInterstitial = '6841117739';
   static const _iosBanner = '';
   static const _iosInterstitial = '';
 

@@ -33,7 +33,7 @@
         <!-- AdMob uygulama kimliği (şimdilik Google örnek kimliği; AdMob'da Bebeğim oluşturulunca değişecek) -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3096856257561140~6016402486"/>
         <!-- İlaç hatırlatıcıları (flutter_local_notifications) -->
         <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
         <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
