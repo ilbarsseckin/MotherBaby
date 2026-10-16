@@ -10,6 +10,11 @@ class LDe extends L {
   LDe([String locale = 'de']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'Woche $week';
+  }
+
+  @override
   String get appTitle => 'Mein Baby';
 
   @override

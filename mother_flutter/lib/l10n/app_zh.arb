@@ -1,5 +1,6 @@
 {
   "@@locale": "zh",
+  "weekN": "第{week}周",
   "appTitle": "我的宝宝",
   "cancel": "取消",
   "save": "保存",

@@ -10,6 +10,11 @@ class LEn extends L {
   LEn([String locale = 'en']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'Week $week';
+  }
+
+  @override
   String get appTitle => 'My Baby';
 
   @override

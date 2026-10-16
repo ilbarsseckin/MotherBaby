@@ -1,5 +1,6 @@
 {
   "@@locale": "fa",
+  "weekN": "هفتهٔ {week}",
   "appTitle": "کودک من",
   "cancel": "لغو",
   "save": "ذخیره",

@@ -10,6 +10,11 @@ class LEs extends L {
   LEs([String locale = 'es']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'Semana $week';
+  }
+
+  @override
   String get appTitle => 'Mi Bebé';
 
   @override

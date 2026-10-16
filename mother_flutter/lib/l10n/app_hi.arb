@@ -1,5 +1,6 @@
 {
   "@@locale": "hi",
+  "weekN": "सप्ताह {week}",
   "appTitle": "मेरा बेबी",
   "cancel": "रद्द करें",
   "save": "सहेजें",

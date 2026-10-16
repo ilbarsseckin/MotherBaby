@@ -10,6 +10,11 @@ class LZh extends L {
   LZh([String locale = 'zh']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return '第$week周';
+  }
+
+  @override
   String get appTitle => '我的宝宝';
 
   @override

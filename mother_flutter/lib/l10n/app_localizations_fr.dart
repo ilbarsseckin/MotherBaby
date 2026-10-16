@@ -10,6 +10,11 @@ class LFr extends L {
   LFr([String locale = 'fr']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'Semaine $week';
+  }
+
+  @override
   String get appTitle => 'Mon Bébé';
 
   @override

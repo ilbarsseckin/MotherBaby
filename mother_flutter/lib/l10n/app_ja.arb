@@ -1,5 +1,6 @@
 {
   "@@locale": "ja",
+  "weekN": "{week}週目",
   "appTitle": "マイベビー",
   "cancel": "キャンセル",
   "save": "保存",

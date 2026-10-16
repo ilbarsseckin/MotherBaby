@@ -18,6 +18,7 @@ import 'baby_home_screen.dart';
 import 'checklist_screen.dart';
 import 'contraction_screen.dart';
 import 'kick_screen.dart';
+import 'week_view_screen.dart';
 import 'medicine_screen.dart';
 import 'names_screen.dart';
 import 'profile_screen.dart';
@@ -367,6 +368,28 @@ class _WeekCard extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 Image.asset(AppContent.weekImage(preg.week), fit: BoxFit.cover, cacheWidth: 900),
+                Material(
+                  type: MaterialType.transparency,
+                  child: InkWell(
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => WeekViewScreen(initialWeek: preg.week)),
+                    ),
+                  ),
+                ),
+                PositionedDirectional(
+                  end: 12,
+                  bottom: 12,
+                  child: IgnorePointer(
+                    child: Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.9),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.view_in_ar, color: AppColors.pink),
+                    ),
+                  ),
+                ),
                 PositionedDirectional(
                   start: 12,
                   top: 12,

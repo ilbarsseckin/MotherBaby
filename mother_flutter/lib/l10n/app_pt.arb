@@ -1,5 +1,6 @@
 {
   "@@locale": "pt",
+  "weekN": "Semana {week}",
   "appTitle": "Meu Bebê",
   "cancel": "Cancelar",
   "save": "Salvar",

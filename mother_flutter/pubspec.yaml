@@ -80,6 +80,7 @@ flutter:
 
   assets:
     - assets/weeks/
+    - assets/3d/
     - assets/img/
     - assets/icon/app_icon.png
     - assets/content/

@@ -133,6 +133,12 @@ abstract class L {
     Locale('zh'),
   ];
 
+  /// No description provided for @weekN.
+  ///
+  /// In tr, this message translates to:
+  /// **'{week}. hafta'**
+  String weekN(int week);
+
   /// No description provided for @appTitle.
   ///
   /// In tr, this message translates to:

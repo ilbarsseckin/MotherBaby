@@ -10,6 +10,11 @@ class LTr extends L {
   LTr([String locale = 'tr']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return '$week. hafta';
+  }
+
+  @override
   String get appTitle => 'Bebeğim';
 
   @override

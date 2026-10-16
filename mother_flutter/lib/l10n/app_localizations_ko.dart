@@ -10,6 +10,11 @@ class LKo extends L {
   LKo([String locale = 'ko']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return '$week주차';
+  }
+
+  @override
   String get appTitle => '마이 베이비';
 
   @override

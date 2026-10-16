@@ -10,6 +10,11 @@ class LNl extends L {
   LNl([String locale = 'nl']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'Week $week';
+  }
+
+  @override
   String get appTitle => 'Mijn Baby';
 
   @override

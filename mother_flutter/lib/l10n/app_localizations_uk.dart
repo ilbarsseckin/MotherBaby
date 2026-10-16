@@ -10,6 +10,11 @@ class LUk extends L {
   LUk([String locale = 'uk']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return '$week-й тиждень';
+  }
+
+  @override
   String get appTitle => 'Моє малятко';
 
   @override

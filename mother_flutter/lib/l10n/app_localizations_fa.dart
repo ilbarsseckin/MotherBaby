@@ -10,6 +10,11 @@ class LFa extends L {
   LFa([String locale = 'fa']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'هفتهٔ $week';
+  }
+
+  @override
   String get appTitle => 'کودک من';
 
   @override

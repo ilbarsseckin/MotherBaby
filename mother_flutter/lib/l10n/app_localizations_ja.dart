@@ -10,6 +10,11 @@ class LJa extends L {
   LJa([String locale = 'ja']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return '$week週目';
+  }
+
+  @override
   String get appTitle => 'マイベビー';
 
   @override

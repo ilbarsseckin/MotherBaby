@@ -10,6 +10,11 @@ class LAr extends L {
   LAr([String locale = 'ar']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'الأسبوع $week';
+  }
+
+  @override
   String get appTitle => 'طفلي';
 
   @override

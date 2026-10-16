@@ -1,5 +1,6 @@
 {
   "@@locale": "ar",
+  "weekN": "الأسبوع {week}",
   "appTitle": "طفلي",
   "cancel": "إلغاء",
   "save": "حفظ",

@@ -10,6 +10,11 @@ class LUr extends L {
   LUr([String locale = 'ur']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'ہفتہ $week';
+  }
+
+  @override
   String get appTitle => 'میرا بچہ';
 
   @override

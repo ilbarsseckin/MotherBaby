@@ -10,6 +10,11 @@ class LIt extends L {
   LIt([String locale = 'it']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'Settimana $week';
+  }
+
+  @override
   String get appTitle => 'Il Mio Bebè';
 
   @override

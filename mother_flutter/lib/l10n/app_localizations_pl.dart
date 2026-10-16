@@ -10,6 +10,11 @@ class LPl extends L {
   LPl([String locale = 'pl']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'Tydzień $week';
+  }
+
+  @override
   String get appTitle => 'Moje Dziecko';
 
   @override

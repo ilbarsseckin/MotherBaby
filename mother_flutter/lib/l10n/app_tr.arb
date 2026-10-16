@@ -1,5 +1,7 @@
 {
   "@@locale": "tr",
+  "weekN": "{week}. hafta",
+  "@weekN": {"placeholders": {"week": {"type": "int"}}},
   "appTitle": "Bebeğim",
   "cancel": "İptal",
   "save": "Kaydet",

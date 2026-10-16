@@ -10,6 +10,11 @@ class LRu extends L {
   LRu([String locale = 'ru']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return '$week-я неделя';
+  }
+
+  @override
   String get appTitle => 'Мой малыш';
 
   @override

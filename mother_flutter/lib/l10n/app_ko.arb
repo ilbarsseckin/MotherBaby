@@ -1,5 +1,6 @@
 {
   "@@locale": "ko",
+  "weekN": "{week}주차",
   "appTitle": "마이 베이비",
   "cancel": "취소",
   "save": "저장",

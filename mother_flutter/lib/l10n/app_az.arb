@@ -1,5 +1,6 @@
 {
   "@@locale": "az",
+  "weekN": "{week}-ci həftə",
   "appTitle": "Körpəm",
   "cancel": "Ləğv et",
   "save": "Yadda saxla",

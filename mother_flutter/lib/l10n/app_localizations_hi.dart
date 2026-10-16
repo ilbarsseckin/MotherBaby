@@ -10,6 +10,11 @@ class LHi extends L {
   LHi([String locale = 'hi']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'सप्ताह $week';
+  }
+
+  @override
   String get appTitle => 'मेरा बेबी';
 
   @override

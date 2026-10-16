@@ -10,6 +10,11 @@ class LId extends L {
   LId([String locale = 'id']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return 'Minggu ke-$week';
+  }
+
+  @override
   String get appTitle => 'Bayiku';
 
   @override

@@ -1,5 +1,6 @@
 {
   "@@locale": "ru",
+  "weekN": "{week}-я неделя",
   "appTitle": "Мой малыш",
   "cancel": "Отмена",
   "save": "Сохранить",

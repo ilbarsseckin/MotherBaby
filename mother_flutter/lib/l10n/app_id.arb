@@ -1,5 +1,6 @@
 {
   "@@locale": "id",
+  "weekN": "Minggu ke-{week}",
   "appTitle": "Bayiku",
   "cancel": "Batal",
   "save": "Simpan",

@@ -10,6 +10,11 @@ class LAz extends L {
   LAz([String locale = 'az']) : super(locale);
 
   @override
+  String weekN(int week) {
+    return '$week-ci həftə';
+  }
+
+  @override
   String get appTitle => 'Körpəm';
 
   @override
