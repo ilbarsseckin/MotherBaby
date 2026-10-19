@@ -1,0 +1,108 @@
+# Bebeğim — iOS derleyip TestFlight'a yükler (Mac gerekmez).
+#
+# Çalıştırma: GitHub → Actions → "iOS → TestFlight" → Run workflow
+#
+# Gerekli repo secret'ları (Settings → Secrets and variables → Actions):
+#   ASC_KEY_ID                App Store Connect API anahtarının Key ID'si
+#   ASC_ISSUER_ID             App Store Connect API Issuer ID
+#   ASC_KEY_P8                .p8 dosyasının TÜM içeriği
+#   APPLE_TEAM_ID             Apple Developer Team ID (10 karakter)
+#   CERTIFICATE_PRIVATE_KEY   Dağıtım sertifikasının RSA anahtarı
+#                             (Documents\ritualkey\ios_dagitim_sertifika_anahtari)
+#
+# İmzalama: Codemagic CLI araçları (ücretsiz, açık kaynak) API anahtarıyla
+# App Store dağıtım sertifikasını ve profilini oluşturur/yeniden kullanır.
+# Kayıtlı iPhone gerekmez. API anahtarı "Admin" rolünde olmalı.
+
+name: iOS → TestFlight
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: mother-ios-testflight
+  cancel-in-progress: false
+
+jobs:
+  ios:
+    runs-on: macos-15
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: mother_flutter
+
+    env:
+      BUNDLE_ID: com.ilbarsseckinapp.bebegim
+      # Codemagic CLI araçlarının okuduğu değişkenler
+      APP_STORE_CONNECT_KEY_IDENTIFIER: ${{ secrets.ASC_KEY_ID }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      APP_STORE_CONNECT_PRIVATE_KEY: ${{ secrets.ASC_KEY_P8 }}
+      CERTIFICATE_PRIVATE_KEY: ${{ secrets.CERTIFICATE_PRIVATE_KEY }}
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Secret kontrolü
+        run: |
+          for v in APP_STORE_CONNECT_KEY_IDENTIFIER APP_STORE_CONNECT_ISSUER_ID \
+                   APP_STORE_CONNECT_PRIVATE_KEY CERTIFICATE_PRIVATE_KEY APPLE_TEAM_ID; do
+            if [ -z "${!v}" ]; then echo "::error::$v secret'ı eksik"; exit 1; fi
+          done
+
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Codemagic CLI araçları
+        run: pip install codemagic-cli-tools
+
+      - name: Paketler
+        run: flutter pub get
+
+      - name: Testler
+        run: flutter test
+
+      - name: İmzalama (dağıtım sertifikası + App Store profili)
+        run: |
+          keychain initialize
+          app-store-connect fetch-signing-files "$BUNDLE_ID" \
+            --type IOS_APP_STORE \
+            --create
+          keychain add-certificates
+          # Projeyi bu profillerle elle imzalamaya ayarlar ve
+          # ~/export_options.plist dosyasını oluşturur
+          xcode-project use-profiles
+
+      - name: IPA derle
+        run: |
+          # Sürüm adı pubspec.yaml'dan, derleme numarası çalıştırma sayacından
+          flutter build ipa --release \
+            --build-number=${{ github.run_number }} \
+            --export-options-plist="$HOME/export_options.plist"
+
+      - name: TestFlight'a yükle
+        run: |
+          app-store-connect publish \
+            --path build/ios/ipa/*.ipa
+
+      - name: IPA'yı sakla
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bebegim-ios-${{ github.run_number }}
+          path: mother_flutter/build/ios/ipa/*.ipa
+          retention-days: 7
+
+      - name: Anahtarlığı temizle
+        if: always()
+        run: keychain use-login || true
