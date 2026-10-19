@@ -15,8 +15,8 @@ class AdIds {
   // AdMob → "Bebeğim" uygulamaları oluşturulunca doldurulacak
   static const _androidBanner = '3184198892';
   static const _androidInterstitial = '6841117739';
-  static const _iosBanner = '';
-  static const _iosInterstitial = '';
+  static const _iosBanner = '4087247291';
+  static const _iosInterstitial = '9391719873';
 
   static String? get banner => _pick(
         android: _androidBanner,
