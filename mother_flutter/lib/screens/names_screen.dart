@@ -146,6 +146,7 @@ class _NamesScreenState extends State<NamesScreen> with SingleTickerProviderStat
               ),
               const SizedBox(height: 32),
               SizedBox(
+                width: double.infinity,
                 height: 120,
                 child: _name != null
                     ? Column(

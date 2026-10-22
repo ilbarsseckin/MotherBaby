@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:in_app_review/in_app_review.dart';
+import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../data/baby_db.dart';
@@ -367,7 +368,23 @@ class _WeekCard extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               children: [
-                Image.asset(AppContent.weekImage(preg.week), fit: BoxFit.cover, cacheWidth: 900),
+                ModelViewer(
+                  key: ValueKey(preg.week.clamp(1, 40)),
+                  src: WeekViewScreen.model(preg.week),
+                  alt: L.of(context).weekN(preg.week.clamp(1, 40)),
+                  backgroundColor: const Color(0xFFFFF4F6),
+                  environmentImage: 'neutral',
+                  exposure: 1.1,
+                  shadowIntensity: 0.8,
+                  cameraOrbit: '0deg 75deg auto',
+                  cameraControls: false,
+                  disableZoom: true,
+                  autoRotate: true,
+                  autoRotateDelay: 0,
+                  rotationPerSecond: '20deg',
+                  interactionPrompt: InteractionPrompt.none,
+                  ar: false,
+                ),
                 Material(
                   type: MaterialType.transparency,
                   child: InkWell(

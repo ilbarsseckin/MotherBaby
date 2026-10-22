@@ -13,6 +13,8 @@ class WeekViewScreen extends StatefulWidget {
   const WeekViewScreen({super.key, required this.initialWeek});
   final int initialWeek;
 
+  static String model(int week) => 'assets/3d/models/hafta_${week.clamp(1, 40).toString().padLeft(2, '0')}.glb';
+
   @override
   State<WeekViewScreen> createState() => _WeekViewScreenState();
 }
@@ -27,7 +29,7 @@ class _WeekViewScreenState extends State<WeekViewScreen> {
 
   void _set(int week) => setState(() => _week = _modelWeek = week.clamp(1, 40));
 
-  static String _model(int week) => 'assets/3d/models/hafta_${week.toString().padLeft(2, '0')}.glb';
+  static String _model(int week) => WeekViewScreen.model(week);
 
   @override
   Widget build(BuildContext context) {
