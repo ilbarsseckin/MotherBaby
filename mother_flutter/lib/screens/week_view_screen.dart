@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:model_viewer_plus/model_viewer_plus.dart';
 
 import '../data/content.dart';
 import '../l10n/app_localizations.dart';
 import '../ui/theme.dart';
 
-/// Haftadan haftaya anne ve bebek görünümü (1–40). Kaydırarak gezilir.
+/// Haftadan haftaya bebeğin döndürülebilir 3D modeli (1–40).
 ///
-/// Görseller `assets/3d/wNN.webp` (örn. w04.webp, w40.webp) olarak eklenir;
-/// bir hafta için 3D görsel yoksa o haftanın eski fotoğrafı gösterilir.
+/// Modeller `assets/3d/models/hafta_NN.glb`; parmakla döndürülür,
+/// iki parmakla yakınlaştırılır.
 class WeekViewScreen extends StatefulWidget {
   const WeekViewScreen({super.key, required this.initialWeek});
   final int initialWeek;
@@ -18,59 +18,71 @@ class WeekViewScreen extends StatefulWidget {
 }
 
 class _WeekViewScreenState extends State<WeekViewScreen> {
-  static Set<String>? _assets;
-
-  late final PageController _pages = PageController(initialPage: widget.initialWeek.clamp(1, 40) - 1);
+  /// Ekranda yazan hafta (sürgü sürüklenirken anında değişir).
   late int _week = widget.initialWeek.clamp(1, 40);
 
-  @override
-  void initState() {
-    super.initState();
-    if (_assets == null) {
-      AssetManifest.loadFromAssetBundle(rootBundle).then((m) {
-        _assets = m.listAssets().where((a) => a.startsWith('assets/3d/')).toSet();
-        if (mounted) setState(() {});
-      });
-    }
-  }
+  /// 3D görüntüleyicide yüklü hafta; sürgü bırakılınca güncellenir,
+  /// böylece sürüklerken her hafta için model yeniden yüklenmez.
+  late int _modelWeek = _week;
 
-  @override
-  void dispose() {
-    _pages.dispose();
-    super.dispose();
-  }
+  void _set(int week) => setState(() => _week = _modelWeek = week.clamp(1, 40));
 
-  static String _image(int week) {
-    final path = 'assets/3d/w${week.toString().padLeft(2, '0')}.webp';
-    return (_assets?.contains(path) ?? false) ? path : AppContent.weekImage(week);
-  }
-
-  void _go(int delta) =>
-      _pages.animateToPage(_week - 1 + delta, duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
+  static String _model(int week) => 'assets/3d/models/hafta_${week.toString().padLeft(2, '0')}.glb';
 
   @override
   Widget build(BuildContext context) {
     final l = L.of(context);
+    final size = AppContent.current.babySize(_week);
+    final trimester = _week <= 13 ? 1 : (_week <= 27 ? 2 : 3);
     return Scaffold(
       appBar: AppBar(title: Text(l.weekN(_week))),
       body: Column(
         children: [
           Expanded(
-            child: PageView.builder(
-              controller: _pages,
-              itemCount: 40,
-              onPageChanged: (i) => setState(() => _week = i + 1),
-              itemBuilder: (context, i) => _WeekPage(week: i + 1, image: _image(i + 1)),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: ModelViewer(
+                  key: ValueKey(_modelWeek),
+                  src: _model(_modelWeek),
+                  alt: l.weekN(_modelWeek),
+                  backgroundColor: const Color(0xFFFFF4F6),
+                  cameraControls: true,
+                  autoRotate: true,
+                  autoRotateDelay: 1500,
+                  rotationPerSecond: '20deg',
+                  disableZoom: false,
+                  interactionPrompt: InteractionPrompt.none,
+                  ar: false,
+                ),
+              ),
             ),
           ),
+          const SizedBox(height: 12),
+          Text(
+            l.weekN(_week),
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: AppColors.ink),
+          ),
+          Text(
+            l.trimester(trimester),
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.w700, color: AppColors.pink),
+          ),
+          if (size != null)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 6, 16, 0),
+              child: Text(size, textAlign: TextAlign.center, style: TextStyle(color: Colors.grey.shade700, fontSize: 15)),
+            ),
           SafeArea(
             top: false,
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+              padding: const EdgeInsets.fromLTRB(8, 4, 8, 8),
               child: Row(
                 children: [
                   IconButton(
-                    onPressed: _week > 1 ? () => _go(-1) : null,
+                    onPressed: _week > 1 ? () => _set(_week - 1) : null,
                     icon: const Icon(Icons.chevron_left),
                     iconSize: 32,
                   ),
@@ -81,11 +93,12 @@ class _WeekViewScreenState extends State<WeekViewScreen> {
                       max: 40,
                       divisions: 39,
                       label: '$_week',
-                      onChanged: (v) => _pages.jumpToPage(v.round() - 1),
+                      onChanged: (v) => setState(() => _week = v.round()),
+                      onChangeEnd: (v) => _set(v.round()),
                     ),
                   ),
                   IconButton(
-                    onPressed: _week < 40 ? () => _go(1) : null,
+                    onPressed: _week < 40 ? () => _set(_week + 1) : null,
                     icon: const Icon(Icons.chevron_right),
                     iconSize: 32,
                   ),
@@ -95,50 +108,6 @@ class _WeekViewScreenState extends State<WeekViewScreen> {
           ),
         ],
       ),
-    );
-  }
-}
-
-class _WeekPage extends StatelessWidget {
-  const _WeekPage({required this.week, required this.image});
-  final int week;
-  final String image;
-
-  @override
-  Widget build(BuildContext context) {
-    final l = L.of(context);
-    final size = AppContent.current.babySize(week);
-    final trimester = week <= 13 ? 1 : (week <= 27 ? 2 : 3);
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: AspectRatio(
-            aspectRatio: 1,
-            child: InteractiveViewer(
-              maxScale: 4,
-              child: Image.asset(image, fit: BoxFit.cover, cacheWidth: 1200),
-            ),
-          ),
-        ),
-        const SizedBox(height: 16),
-        Text(
-          l.weekN(week),
-          textAlign: TextAlign.center,
-          style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppColors.ink),
-        ),
-        const SizedBox(height: 4),
-        Text(
-          l.trimester(trimester),
-          textAlign: TextAlign.center,
-          style: const TextStyle(fontWeight: FontWeight.w700, color: AppColors.pink),
-        ),
-        if (size != null) ...[
-          const SizedBox(height: 8),
-          Text(size, textAlign: TextAlign.center, style: TextStyle(color: Colors.grey.shade700, fontSize: 15)),
-        ],
-      ],
     );
   }
 }
