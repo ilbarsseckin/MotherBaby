@@ -57,6 +57,11 @@ android {
                 } else {
                     signingConfigs.getByName("debug")
                 }
+            // R8, WorkManager'ın Room veritabanı sınıfını silip açılışta çökmeye yol açıyordu.
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 }
@@ -69,6 +74,7 @@ kotlin {
 
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
+    implementation("androidx.work:work-runtime:2.10.1")
 }
 
 flutter {
